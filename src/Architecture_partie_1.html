@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ARCHITECTURE 1 - EXERCICES" href="Architecture_partie_1_exercices.html" />
+    <link rel="prev" title="NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE" href="../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="active">
+    <a href="">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="langage_exercices.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/src/Architecture_partie_1.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Architecture_partie_1.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#de-lobjet-conceptuel" class="nav-link">De l’objet conceptuel…</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#au-modele-darchitecture-de-von-neumann" class="nav-link">Au modèle d’architecture de von Neumann</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#modele-d-architecture-sequentielle-dite-de-von-neumann" class="nav-link">Modèle d’architecture séquentielle (dite de von Neumann)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#les-composants-essentiels" class="nav-link">Les composants essentiels</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#l-unite-arithmetique-et-logique-ual" class="nav-link">L’unité arithmétique et logique (UAL)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#l-unite-de-commande-ou-unite-de-controle" class="nav-link">L’unité de commande  ou unité de contrôle</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#les-memoires" class="nav-link">Les mémoires</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#les-entrees-sorties" class="nav-link">Les entrées-sorties</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#les-bus" class="nav-link">Les bus</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#qu-en-est-il-aujourd-hui" class="nav-link">Qu’en est-il aujourd’hui ?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#alternative-architecture-de-harvard" class="nav-link">Alternative: architecture de Harvard</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="architecture-des-ordinateurs-modele-de-von-neumann">
+<h1>ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN<a class="headerlink" href="#architecture-des-ordinateurs-modele-de-von-neumann" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reperes-historiques">
+<h2>Repères historiques<a class="headerlink" href="#reperes-historiques" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="de-lobjet-conceptuel">
+<h3>De l’objet conceptuel…<a class="headerlink" href="#de-lobjet-conceptuel" title="Permalink to this headline">¶</a></h3>
+<p>En 1936, <strong>Alan Turing</strong> - un des plus brillants mathématiciens du XX e siècle - décrit une machine
+abstraite pour donner un support formel aux notions d’algorithme et de calcul : la fameuse «machine de Turing». Tout algorithme (procédé systématique de calcul) peut être réalisé par une machine de Turing.<br />
+Il s’agit d’un automate imaginaire muni d’un programme (sous la forme d’une
+table de transition entre états) et pouvant lire et écrire des caractères sur un ruban de longueur illimitée.<br />
+Le coup de génie de Turing est de démontrer l’existence d’une <strong>Machine Universelle</strong>: si on fournit à cette dernière la table de transition d’une machine de Turing particulière, autrement dit le programme d’un algorithme, <strong>elle est capable de reproduire le fonctionnement de cette machine, donc d’exécuter le programme en question</strong>!</p>
+<p><img alt="machine turing" src="../_images/turingmachine.png" /></p>
+<p><em>Pour les plus curieux</em>: voir article sur <a class="reference external" href="https://interstices.info/alan-turing-du-concept-a-la-machine/">https://interstices.info/alan-turing-du-concept-a-la-machine/</a></p>
+</div>
+<div class="section" id="au-modele-darchitecture-de-von-neumann">
+<h3>Au modèle d’architecture de von Neumann<a class="headerlink" href="#au-modele-darchitecture-de-von-neumann" title="Permalink to this headline">¶</a></h3>
+<p>En 1945, <strong>John von Neumann</strong> (1903-1957), mathématicien américano-hongrois qui avait déjà
+rencontré Alan Turing et qui connaissait ses travaux, publia un rapport dans lequel il définit le
+modèle de l’ordinateur à «programme enregistré». La mémoire de cet ordinateur <strong>contient à la fois les programmes et les données, comme dans la machine de Turing universelle</strong>!</p>
+<p><img alt="von neumann" src="../_images/IAS_von_Neumann.jpg" /></p>
+</div>
+</div>
+<div class="section" id="modele-d-architecture-sequentielle-dite-de-von-neumann">
+<h2>Modèle d’architecture séquentielle (<em>dite de von Neumann</em>)<a class="headerlink" href="#modele-d-architecture-sequentielle-dite-de-von-neumann" title="Permalink to this headline">¶</a></h2>
+<p>Un des grands points faibles du premier calculateur électronique l’<a class="reference external" href="https://fr.wikipedia.org/wiki/ENIAC">ENIAC</a> était le fait que
+les données étaient lues sur cartes perforées, alors que le programme était représenté sur un <strong>support externe</strong>, sous la forme d’un panneau de connexion analogue à celui d’un standard téléphonique.
+L’idée fondamentale de John von Neumann a été de stocker <strong>les données et les instructions des programmes en mémoire centrale</strong>.</p>
+<div class="section" id="les-composants-essentiels">
+<h3>Les composants essentiels<a class="headerlink" href="#les-composants-essentiels" title="Permalink to this headline">¶</a></h3>
+<p>En juin 1945 dans la première version du rapport  sur la conception de <a class="reference external" href="https://fr.wikipedia.org/wiki/Electronic_Discrete_Variable_Automatic_Computer">l’EDVAC</a>  John von Neumann décrit un schéma d’architecture d’un calculateur organisé autour des éléments suivants:</p>
+<ul class="simple">
+<li><p>une unité centrale ou <strong>processeur</strong> (on dit aussi CPU pour Central Processing Unit), formée d’une <strong>unité arithmétique et logique</strong> (<em>UAL</em>) et d’une <strong>unité de commande</strong> (<em>Control Unit</em>);</p></li>
+<li><p>la <strong>mémoire</strong>;</p></li>
+<li><p>des <strong>unités d’entrée/sortie</strong> qui permettent de communiquer avec l’extérieur.</p></li>
+</ul>
+<p>Ces éléments étant reliés entre eux par des <strong>bus</strong>.</p>
+<p><img alt="Modèle d'architecture" src="../_images/modele-originel2.png" /></p>
+<div class="section" id="l-unite-arithmetique-et-logique-ual">
+<h4>L’unité arithmétique et logique (UAL)<a class="headerlink" href="#l-unite-arithmetique-et-logique-ual" title="Permalink to this headline">¶</a></h4>
+<p>Elle est chargée d’effectuer le traitements des opérations arithmétiques ou booléennes:</p>
+<ul class="simple">
+<li><p>addition, multiplication, soustraction, division</p></li>
+<li><p>ET, OU et NON logiques;</p></li>
+<li><p>décalages de bits dans des registres</p></li>
+</ul>
+<p>L’UAL est entourée généralement de <strong>registres de données</strong> (mémoires rapides) et d’un accumulateur qui accueille les opérandes des opérations ou le résultat.</p>
+</div>
+<div class="section" id="l-unite-de-commande-ou-unite-de-controle">
+<h4>L’unité de commande  ou unité de contrôle<a class="headerlink" href="#l-unite-de-commande-ou-unite-de-controle" title="Permalink to this headline">¶</a></h4>
+<p>Elle est chargée de contrôler les échanges, gérer l’enchainement des instructions et les transferts entre les différents éléments.
+<img alt="Schema d'une unité de contrôle" src="../_images/control_unit.png" />
+On y trouve, entre autres:</p>
+<ul class="simple">
+<li><p>un compteur ordinal ou “program counter PC” qui contient l’adresse de la prochaine instruction;</p></li>
+<li><p>un registre d’instruction “IR” ou “CIR” (current instruction register) qui contient l’instruction lue;</p></li>
+<li><p>un décodeur d’instruction (ou de <em>fonctions</em>);</p></li>
+<li><p>un registre d’adresse “MAR” (memory address register) qui contient l’adresse de l’instruction à lire;</p></li>
+<li><p>une horloge.</p></li>
+</ul>
+</div>
+<div class="section" id="les-memoires">
+<h4>Les mémoires<a class="headerlink" href="#les-memoires" title="Permalink to this headline">¶</a></h4>
+<p>Le rôle des mémoires est d’enregistrer les programmes et les données pouvant être executées par le microprocesseur. On peut classer les mémoires en deux grandes catégories:</p>
+<ul class="simple">
+<li><p>les mémoires de travail;</p></li>
+<li><p>les mémoires de stockage.</p></li>
+</ul>
+<p>Les <strong>registres</strong> sont des mémoires internes au microprocesseur. Ils sont très rapides et en nombre limité.<br />
+La <strong>mémoire cache</strong> est un intermédiaire entre une unité du microprocesseur et la RAM. Elle stocke des données provenant de celle-ci et permet ainsi d’accélérer leurs traitements.<br />
+Les <strong>mémoires vives ou RAM</strong> (<em>Random Access Memory</em>) permettent des opérations de lecture et d’écriture. Elles sont volatiles.<br />
+Les mémoires accessibles uniquement en lecture sont connues sous le nom de ROM (<em>Read Only Memory</em>).</p>
+<p>Les <strong>mémoires de stockage</strong> (ou <em>mémoire de masse</em>) se présentent souvent sous la forme de disque.<br />
+Même si la fonction est la même (<em>mémorisation de l’information</em>), toutes ces mémoires ont des caractéristiques différentes.</p>
+<p><img alt="mémoires" src="../_images/DiU002.png" /></p>
+</div>
+<div class="section" id="les-entrees-sorties">
+<h4>Les entrées-sorties<a class="headerlink" href="#les-entrees-sorties" title="Permalink to this headline">¶</a></h4>
+<p>Les périphériques d’entrée-sortie permettent à l’ordinateur de communiquer avec l’homme
+ou d’autres machines. Ils étaient initialement commandés par l’unité centrale. Depuis le début des
+années 1960 ils sont sous le contrôle de processeurs autonomes.</p>
+<p>Exemple de fonctionnement d’un périphérique d’entrée-sortie : le disque dur. Supposons que l’unité centrale veuille lire un bloc sur le disque dur. Les principales étapes sont
+les suivantes:</p>
+<ul class="simple">
+<li><p>l’unité centrale formule cette demande en écrivant à l’adresse mémoire du contrôleur de disque;</p></li>
+<li><p>le contrôleur de disque se charge d’écrire directement en mémoire les octets lus depuis le disque;</p></li>
+<li><p>le contrôleur de disque signale la fin de la lecture sur le disque par le biais d’un mécanisme d’interruption (non abordé ici) ;</p></li>
+<li><p>l’unité centrale execute la routine d’interruption puis reprend le flot d’instructions où il a été interrompu.</p></li>
+</ul>
+<p><img alt="disque" src="../_images/ioprocessing.png" /></p>
+</div>
+</div>
+<div class="section" id="les-bus">
+<h3>Les bus<a class="headerlink" href="#les-bus" title="Permalink to this headline">¶</a></h3>
+<p>Les différentes unités sont interconnectées par des systèmes de câblage appelé bus. Autour du processeur on trouve:</p>
+<ul class="simple">
+<li><p>le bus d’adresse (unidirectionnel);</p></li>
+<li><p>le bus de données (bidirectionnel);</p></li>
+<li><p>le bus de contrôle (bidirectionnel).</p></li>
+</ul>
+<p><em>Remarque</em>: les ordinateurs récents possèdent d’autres types de bus.</p>
+</div>
+</div>
+<div class="section" id="qu-en-est-il-aujourd-hui">
+<h2>Qu’en est-il aujourd’hui ?<a class="headerlink" href="#qu-en-est-il-aujourd-hui" title="Permalink to this headline">¶</a></h2>
+<p>Presque 75 ans après sa présentation le modèle d’architecture de Von Neumann est toujours valable.
+Cependant, les différences de vitesse entre le processeur et la mémoire ont conduit les fabricants d’ordinateur à intercaler des <strong>mémoires caches</strong> très rapides entre la mémoire centrale et le processeur.<br />
+Par ailleurs, les ordinateurs actuels comportent plusieurs processeurs (on dit aussi plusieurs “coeurs”) intégrés sur une même puce. Cette tendance au “parallélisme” dans le traitement et la circulation des informations a conduit à une augmentation de la puissance de calcul sans augmenter la fréquence des processeurs individuels.</p>
+<p>Enfin, une différence, peu significative, par rapport au modèle original est que les dispositifs d’entrées/sorties peuvent communiquer avec la mémoire par le biais de contrôleur dédié (<a class="reference external" href="https://fr.wikipedia.org/wiki/Acc%C3%A8s_direct_%C3%A0_la_m%C3%A9moire">DMA</a>). Si bien que le schéma actuel serait plutôt le suivant:
+<img alt="schema actuel" src="../_images/modele-actuel.png" /></p>
+</div>
+<div class="section" id="alternative-architecture-de-harvard">
+<h2>Alternative: architecture de Harvard<a class="headerlink" href="#alternative-architecture-de-harvard" title="Permalink to this headline">¶</a></h2>
+<p>Dans le modèle d’architecture de Harvard les instructions et les données sont situées dans des mémoires différentes et sont véhiculés sur des bus indépendants.</p>
+<p><img alt="harvard.001.jpg" src="../_images/harvard.001.jpg" /></p>
+<p>La vitesse d’execution est de fait améliorée car en un seul cycle d’horloge on peut récupérer les données et le code instruction.<br />
+L’architecture de Harvard se retrouve beaucoup dans les systèmes embarqués.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE</a>
+    <a class='right-next' id="next-link" href="Architecture_partie_1_exercices.html" title="next page">ARCHITECTURE 1 - EXERCICES</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

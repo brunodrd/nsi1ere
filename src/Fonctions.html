@@ -1,0 +1,593 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Les fonctions &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="S’approprier les fonctions - exercices" href="Fonctions_exercices.html" />
+    <link rel="prev" title="Eléments du langage - exercices" href="langage_exercices.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="langage_exercices.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="active">
+    <a href="">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/src/Fonctions.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#notion-de-fonction-premiere-approche" class="nav-link">Notion de fonction: première approche</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#definir-une-fonction" class="nav-link">Définir une fonction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#specifier-une-fonction" class="nav-link">Spécifier une fonction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#fonctions-de-la-bibliotheque-standard" class="nav-link">Fonctions de la bibliothèque standard</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#a-retenir" class="nav-link">A retenir</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="les-fonctions">
+<h1>Les fonctions<a class="headerlink" href="#les-fonctions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reperes-historiques">
+<h2>Repères historiques<a class="headerlink" href="#reperes-historiques" title="Permalink to this headline">¶</a></h2>
+<p><a title="&quot;null0&quot; [CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:John_McCarthy_Stanford.jpg"><img width="128" alt="John McCarthy Stanford" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/128px-John_McCarthy_Stanford.jpg"></a> <br />
+<a class="reference external" href="https://fr.wikipedia.org/wiki/John_McCarthy">John McCarthy</a> <em>(1927-2011)</em> auteur du langage <a class="reference external" href="https://fr.wikipedia.org/wiki/Lisp">Lisp</a> en 1958, dont la principale construction est la définition de <strong>fonctions</strong>. Il joua un rôle majeur dans la programmation en intelligence artificielle, écrivant un des premiers programmes jouant aux échecs.</p>
+</div>
+<div class="section" id="notion-de-fonction-premiere-approche">
+<h2>Notion de fonction: première approche<a class="headerlink" href="#notion-de-fonction-premiere-approche" title="Permalink to this headline">¶</a></h2>
+<p>Supposons que l’on doive afficher les valeurs des puissances de 2 les plus utilisées en architecture machine (8, 16, 32 et 64). On peut utiliser le programme du chapitre précédent:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>256
+65536
+4294967296
+18446744073709551616
+</pre></div>
+</div>
+</div>
+</div>
+<p>Procéder de cette façon met en évidence plusieurs problèmes. On peut citer:</p>
+<ul class="simple">
+<li><p>les répétitions;</p></li>
+<li><p>la difficulté de maintenance du code <em>(que devrait-on faire si on souhaite ensuite les puissances de 16?)</em></p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>Une solution consiste à <strong>isoler la partie de code qui se répète, à lui donner un nom et l’appeler lorsque c’est nécessaire</strong>.</p>
+</div>
+<div class="section" id="definir-une-fonction">
+<h2>Définir une fonction<a class="headerlink" href="#definir-une-fonction" title="Permalink to this headline">¶</a></h2>
+<p>Le langage python, comme la plupart des autres langages, possède une construction permettant de résoudre le problème précédent: la <strong>fonction</strong>. Une fonction est <strong>un bloc de code associé à un nom</strong>. On la définit avec:</p>
+<ul class="simple">
+<li><p>le mot clé <code class="docutils literal notranslate"><span class="pre">def</span></code> suivi d’un nom;</p></li>
+<li><p>une paire de parenthèses à l’intérieur desquelles figurent éventuellement des paramètres;</p></li>
+<li><p>un <em>deux-points</em> <code class="docutils literal notranslate"><span class="pre">:</span></code> terminant la ligne.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nom_fonction</span><span class="p">(</span><span class="n">paramètre</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+    <span class="n">bloc_instructions</span>
+</pre></div>
+</div>
+<p>Le nom de la fonction <strong>doit commencer par une lettre, ne doit pas être un mot reservé</strong> et doit être autant que possible explicite. Le bloc d’instructions, qui constitue le corps de la fonction, <strong>DOIT</strong> être indenté. La fonction peut avoir 0, 1 ou plus de paramètres.</p>
+<p>Créons une première version d’une fonction destinée à afficher les puissances de 2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lorsqu’on exécute ce code, il ne se passe <strong>rien</strong>. A ce stade on a définit la fonction, il faut maintenant l’appeler pour que tout son code soit exécuté. L’appel d’une fonction consiste à écrire <strong>son nom suivi de parenthèses ouvrantes-fermantes</strong> à l’intérieur desquelles on place d’éventuels <strong>arguments</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">puissance</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">puissance</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">puissance</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>256
+65536
+4294967296
+18446744073709551616
+</pre></div>
+</div>
+</div>
+</div>
+<p>La définition de la fonction <code class="docutils literal notranslate"><span class="pre">puissance(n)</span></code> peut apparaître différente de la fonction en mathématique. En effet, pour un <span class="math notranslate nohighlight">\(n\)</span> donné elle ne renvoie pas de valeur.<br />
+Si on veut forcer python à renvoyer <strong>explicitement</strong> une valeur, on la fait précéder du mot clé <code class="docutils literal notranslate"><span class="pre">return</span></code>. Cette instruction provoque en outre, <strong>la fin de l’exécution</strong> de la fonction, même si des instructions sont encore présentes.<br />
+Lorsqu’une fonction ne possède pas d’instruction <code class="docutils literal notranslate"><span class="pre">return</span></code>, python renvoie <em>implicitement</em> une valeur particulière <code class="docutils literal notranslate"><span class="pre">None</span></code> qui signifie ‘rien’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">p</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mi">64</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>256
+65536
+4294967296
+18446744073709551616
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="specifier-une-fonction">
+<h2>Spécifier une fonction<a class="headerlink" href="#specifier-une-fonction" title="Permalink to this headline">¶</a></h2>
+<p>En plus d’un nom explicite une fonction devrait être convenablement documentée. Cette documentation devra comporter les <strong>spécifications</strong> de la fonction, c’est-à-dire:</p>
+<ul class="simple">
+<li><p>ce qu’elle réalise et la nature du résultat (les <strong>post-conditions</strong>);</p></li>
+<li><p>les hypothèses faites sur les entrées (les <strong>pré-conditions</strong>).</p></li>
+</ul>
+<p>En python, la documentation suit immédiatement la définition de la fonction et est encadrée par des triples double quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>.</p>
+<p>Pour garantir les post-conditions ou les pré-conditions, on utilise généralement des <strong>assertions</strong>. Une assertion est une expression qui doit être vraie (<code class="docutils literal notranslate"><span class="pre">True</span></code> en python) sinon le programme est arrêté. La syntaxe d’une assertion en python est:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">expression</span><span class="p">,</span> <span class="s2">&quot;Message d&#39;erreur explicite&quot;</span>
+</pre></div>
+</div>
+<p>La documentation d’une fonction est en outre accessible avec la fonction native <code class="docutils literal notranslate"><span class="pre">help()</span></code></p>
+<p>Exemple d’une fonction correctement documentée et son utilisation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie la puissance n-ième de x;</span>
+<span class="sd">    x: flottant</span>
+<span class="sd">    n: entier naturel</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;Erreur n doit être entier&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Erreur n doit être entier naturel&quot;</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">puissance</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on function puissance in module __main__:
+
+puissance(x, n)
+    renvoie la puissance n-ième de x;
+    x: flottant
+    n: entier naturel
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1024
+</pre></div>
+</div>
+</div>
+</div>
+<p>Décommenter l’appel de la fonction et exécuter cette cellule.
+Comment analyser le résultat obtenu ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#puissance(2, 2.5)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fonctions-de-la-bibliotheque-standard">
+<h2>Fonctions de la bibliothèque standard<a class="headerlink" href="#fonctions-de-la-bibliotheque-standard" title="Permalink to this headline">¶</a></h2>
+<p>La plupart des langages de programmation proposent des fonctions toutes prêtes. Ces fonctions fournies avec le langage sont regroupées au sein d’une <strong>bibliothèque standard</strong>. Il s’agit d’un ensemble de modules spécialisés (par exemple <em>math</em> ou <em>random</em>). Pour pouvoir utiliser les fonctions d’un module, il faut d’abord <strong>importer</strong> celui-ci avec l’instruction <code class="docutils literal notranslate"><span class="pre">import</span></code>.<br />
+Exemple</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour obtenir la documentation d’une fonction de la bibliothèque, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">help()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on built-in function radians in module math:
+
+radians(x, /)
+    Convert angle x from degrees to radians.
+
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour connaître les fonctions disponibles dans un module, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">dir()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;,
+ &#39;__file__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;acos&#39;,
+ &#39;acosh&#39;,
+ &#39;asin&#39;,
+ &#39;asinh&#39;,
+ &#39;atan&#39;,
+ &#39;atan2&#39;,
+ &#39;atanh&#39;,
+ &#39;ceil&#39;,
+ &#39;comb&#39;,
+ &#39;copysign&#39;,
+ &#39;cos&#39;,
+ &#39;cosh&#39;,
+ &#39;degrees&#39;,
+ &#39;dist&#39;,
+ &#39;e&#39;,
+ &#39;erf&#39;,
+ &#39;erfc&#39;,
+ &#39;exp&#39;,
+ &#39;expm1&#39;,
+ &#39;fabs&#39;,
+ &#39;factorial&#39;,
+ &#39;floor&#39;,
+ &#39;fmod&#39;,
+ &#39;frexp&#39;,
+ &#39;fsum&#39;,
+ &#39;gamma&#39;,
+ &#39;gcd&#39;,
+ &#39;hypot&#39;,
+ &#39;inf&#39;,
+ &#39;isclose&#39;,
+ &#39;isfinite&#39;,
+ &#39;isinf&#39;,
+ &#39;isnan&#39;,
+ &#39;isqrt&#39;,
+ &#39;ldexp&#39;,
+ &#39;lgamma&#39;,
+ &#39;log&#39;,
+ &#39;log10&#39;,
+ &#39;log1p&#39;,
+ &#39;log2&#39;,
+ &#39;modf&#39;,
+ &#39;nan&#39;,
+ &#39;perm&#39;,
+ &#39;pi&#39;,
+ &#39;pow&#39;,
+ &#39;prod&#39;,
+ &#39;radians&#39;,
+ &#39;remainder&#39;,
+ &#39;sin&#39;,
+ &#39;sinh&#39;,
+ &#39;sqrt&#39;,
+ &#39;tan&#39;,
+ &#39;tanh&#39;,
+ &#39;tau&#39;,
+ &#39;trunc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour appeler une fonction d’un module ou une constante, on doit préfixer son nom du nom du module suivi d’un point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+
+<span class="c1"># Utilisation de la fonction sinus et de la constante pi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sinus de pi/4: &quot;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Sinus de pi/4:  0.7071067811865475
+</pre></div>
+</div>
+</div>
+</div>
+<p>On peut être tenté de raccourcir l’écriture précédente, avec la construction ci-dessous où <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> signifie que l’on importe <em>tous les noms présents dans le module</em>. Dans la mesure du possible, on évitera cette pratique.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sinus de pi/4:&quot;</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Sinus de pi/4: 0.7071067811865475
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-retenir">
+<h2>A retenir<a class="headerlink" href="#a-retenir" title="Permalink to this headline">¶</a></h2>
+<p>Une fonction permet une écriture plus concise du code, une maintenance plus aisée. On la déclare de la manière suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nom_fonction</span><span class="p">(</span><span class="n">paramètre</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+    <span class="n">bloc_instructions</span>
+</pre></div>
+</div>
+<p>L’appel se fait en écrivant le nom de la fonction suivi d’éventuels paramètres entre parenthèses.<br />
+La bibliothèque standard est constituée de modules contenant des fonctions prêtes à l’emploi. Après importation du module avec l’instruction <code class="docutils literal notranslate"><span class="pre">import</span></code>, on appelle la fonction suivant la syntaxe <code class="docutils literal notranslate"><span class="pre">nom_module.nom_fonction()</span></code>.</p>
+<p><em>Bruno DARID</em> 2020-2021</p>
+<p><img alt="licence" src="../_images/licence.svg.png" /></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="langage_exercices.html" title="previous page">Eléments du langage - exercices</a>
+    <a class='right-next' id="next-link" href="Fonctions_exercices.html" title="next page">S’approprier les fonctions - exercices</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

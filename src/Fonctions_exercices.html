@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>S’approprier les fonctions - exercices &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Les fonctions" href="Fonctions.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="langage_exercices.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="active">
+    <a href="">S’approprier les fonctions - exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/src/Fonctions_exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#maximum" class="nav-link">Maximum</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#volume-d-un-ballon" class="nav-link">Volume d’un ballon</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#longueur-d-un-tweet" class="nav-link">Longueur d’un tweet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#distance-euclidienne-france-ioi" class="nav-link">Distance euclidienne (France IOI)</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="s-approprier-les-fonctions-exercices">
+<h1>S’approprier les fonctions - exercices<a class="headerlink" href="#s-approprier-les-fonctions-exercices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="maximum">
+<h2>Maximum<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h2>
+<p>Définissez une fonction <code class="docutils literal notranslate"><span class="pre">maximum(n1,n2,n3)</span></code> qui renvoie le plus grand de 3 nombres <span class="math notranslate nohighlight">\(n_1, n_2,
+n_3\)</span> fournis en paramètres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">):</span>
+    <span class="c1"># Supprimer l&#39;instruction pass et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter la ligne suivante et exécuter cette cellule</span>
+<span class="c1">#assert maximum(2, 3, 5) == 5, &quot;Erreur: valeur renvoyée incorrecte&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="volume-d-un-ballon">
+<h2>Volume d’un ballon<a class="headerlink" href="#volume-d-un-ballon" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">volume_ballon</span></code> qui prend en paramètre un rayon <span class="math notranslate nohighlight">\(r\)</span> et qui retourne le volume <span class="math notranslate nohighlight">\(V\)</span> d’un ballon de rayon <span class="math notranslate nohighlight">\(r\)</span>.<br />
+Rappel: <span class="math notranslate nohighlight">\(V=\dfrac{4}{3}\times\pi r^{3}\)</span></p>
+<p><strong>Documenter</strong> la fonction. Afficher le volume d’un ballon de football (<span class="math notranslate nohighlight">\(r=11\)</span> cm) puis de basket (<span class="math notranslate nohighlight">\(r=12.4\)</span> cm) en arrondissant les résultats (voir la fonction native <code class="docutils literal notranslate"><span class="pre">round()</span></code>).</p>
+</div>
+<div class="section" id="longueur-d-un-tweet">
+<h2>Longueur d’un tweet<a class="headerlink" href="#longueur-d-un-tweet" title="Permalink to this headline">¶</a></h2>
+<p>La longueur maximale d’un message sur Tweeter est de 280 caractères. On souhaite écrire un programme qui indique le nombre de caractères d’un message qu’on souhaiterait publier.</p>
+<ol class="simple">
+<li><p>Que réalise la fonction native <code class="docutils literal notranslate"><span class="pre">len</span></code>?</p></li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">longueur_message(msg)</span></code> qui prend comme paramètre un message (<em>une chaine de caractère</em>) et qui renvoit le nombre de caractères de ce message.</p></li>
+<li><p>Ecrire le programme qui demande à l’utilisateur de rentrer son message et qui affiche la longueur de celui-ci. Utiliser la fonction précédente.</p></li>
+</ol>
+</div>
+<div class="section" id="distance-euclidienne-france-ioi">
+<h2>Distance euclidienne (<a class="reference external" href="http://www.france-ioi.org/">France IOI</a>)<a class="headerlink" href="#distance-euclidienne-france-ioi" title="Permalink to this headline">¶</a></h2>
+<p>Sur les feuilles à motifs que vous leur avez imprimées tout à l’heure, les jeunes gens souhaiteraient calculer la distance entre deux motifs, ce qui ce fait facilement si l’on perçoit la feuille comme un repère orthonormé.
+Ce que doit faire votre programme :</p>
+<p>Écrivez une fonction qui prend en paramètre les coordonnées <span class="math notranslate nohighlight">\((x_A,y_A)\)</span> et <span class="math notranslate nohighlight">\((x_B,y_B)\)</span> de deux points et retourne la distance euclidienne entre ces deux points. On rappelle que la distance euclidienne entre deux points est égale à :
+<span class="math notranslate nohighlight">\($\sqrt{(x_B−x_A)^2+(y_B−y_A)^2}\)</span>$</p>
+<p>Utilisez ensuite cette fonction dans un programme qui lit quatre nombres décimaux <span class="math notranslate nohighlight">\(x_A, y_A, x_B\)</span> et <span class="math notranslate nohighlight">\(y_B\)</span>
+tapés au clavier, puis affiche la distance entre les deux points correspondants.</p>
+<p>On pourra utiliser la fonction <span class="math notranslate nohighlight">\(sqrt(x)\)</span> du module <code class="docutils literal notranslate"><span class="pre">math</span></code>, qui retourne la racine carrée du paramètre <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Fonctions.html" title="previous page">Les fonctions</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

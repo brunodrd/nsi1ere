@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Langage - Constructions élémentaires &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Eléments du langage - exercices" href="langage_exercices.html" />
+    <link rel="prev" title="SYSTEME D’EXPLOITATION" href="systeme_exploitation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="active">
+    <a href="">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="langage_exercices.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/src/Langage.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Langage.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#le-langage-python" class="nav-link">Le langage Python</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#introduction" class="nav-link">Introduction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#les-entrees-sorties" class="nav-link">Les entrées/sorties</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#l-instruction-simple-declaration-affectation" class="nav-link">L’instruction simple déclaration-affectation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-instructions-composees" class="nav-link">Les instructions composées</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sequence-et-bloc-d-instructions" class="nav-link">Séquence  et bloc d’instructions</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#le-test" class="nav-link">Le test</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#le-test-simple" class="nav-link">Le test simple</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#le-test-avec-alternative" class="nav-link">Le test avec alternative</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#la-boucle" class="nav-link">La boucle</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#la-boucle-conditionnelle-non-bornee" class="nav-link">La boucle conditionnelle, non bornée</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#necessite" class="nav-link">Nécessité</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#syntaxe" class="nav-link">Syntaxe</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#danger-lie-a-l-utilisation-des-boucles-conditionnelles" class="nav-link">Danger lié à l’utilisation des boucles conditionnelles</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#la-boucle-inconditionnelle-ou-bornee" class="nav-link">La boucle inconditionnelle ou bornée</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="langage-constructions-elementaires">
+<h1>Langage - Constructions élémentaires<a class="headerlink" href="#langage-constructions-elementaires" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reperes-historiques">
+<h2>Repères historiques<a class="headerlink" href="#reperes-historiques" title="Permalink to this headline">¶</a></h2>
+<p><img alt="john_backus" src="../_images/John_Backus_3.png" /></p>
+<p>En 1954, <a class="reference external" href="https://fr.wikipedia.org/wiki/John_Backus">John Backus</a>(<em>1924-2007</em>) présente le premier vrai langage de programmation tel qu’on l’entend aujourd’hui: le <a class="reference external" href="https://fr.wikipedia.org/wiki/Fortran">Fortran</a>. Il mit au point vers la fin des années 50 le langage <a class="reference external" href="https://fr.wikipedia.org/wiki/Algol_(langage)">Algol</a>. Il a, par la suite, proposé la <em>forme Backus-Naur</em> notation qui permet de décrire la <em>grammaire</em> des langages de programmation.</p>
+</div>
+<div class="section" id="le-langage-python">
+<h2>Le langage Python<a class="headerlink" href="#le-langage-python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p>Un <strong>programme est un texte qui décrit un algorithme que l’on souhaite faire exécuter par une machine</strong>. Ce texte est écrit dans un langage particulier, appelé <em>langage de programmation</em>. Le premier langage abordé en spécialité NSI est le langage <strong>Python</strong> en version 3. C’est un langage de haut niveau (<em>d’abstraction</em>) et interprété (<em>un programme appelé interpréteur se charge d’exécuter ligne par ligne le code “source”</em>).<br />
+L’utilisation de python peut se faire de deux façons:</p>
+<ul class="simple">
+<li><p>en mode interactif: on écrit le code dans une cellule et on l’exécute. C’est un mode très intéressant pour l’apprentissage et pour des portions de code de taille moyenne. Ce sera le mode privilégié en 1ère.</p></li>
+<li><p>en mode programme: on écrit son programme dans un fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et on exécute python sur ce fichier. Par exemple: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">prog1.py</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="les-entrees-sorties">
+<h3>Les entrées/sorties<a class="headerlink" href="#les-entrees-sorties" title="Permalink to this headline">¶</a></h3>
+<p>Dans un langage de programmation on appelle <em>entrées/sorties</em> des constructions permettant une communication avec l’utilisateur, donnant ainsi un aspect interactif au programme.<br />
+En python, un effet (<em>de bord</em>) de la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> est d’afficher à l’écran les expressions passées en arguments:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Décommenter les lignes ci-dessous et exécuter la cellule</span>
+<span class="c1">#print(&quot;Hello World!&quot;)</span>
+<span class="c1">#print(&quot;Python version 3.&quot;, &quot;Environnement&quot;, &quot;Jupyter Notebook 5.7&quot;)</span>
+<span class="c1">#print(&quot;Python version 3.&quot;, &quot;Environnement&quot;, &quot;Jupyter Notebook 5.7&quot;, sep=&quot;//&quot;, end=&quot; &quot;)</span>
+<span class="c1">#print(&quot;Pas de retour à la ligne.&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les arguments optionnels comme <code class="docutils literal notranslate"><span class="pre">sep</span></code> ou <code class="docutils literal notranslate"><span class="pre">end</span></code> par exemple, permettent d’adapter l’affichage aux besoins.</p>
+<p>Un effet de la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> est d’interrompre le déroulement du programme et d’attendre que l’utilisateur tape quelque chose au clavier. Les caractères entrés sont généralement récupérés dans une <strong>variable</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter les lignes ci-dessous et exécuter la cellule</span>
+<span class="c1">#niveau = input(&quot;Quel est votre niveau en programmation (novice/intermédiaire/avancé)?&quot;)</span>
+<span class="c1">#moyenne = input(&quot;Quelle était votre moyenne annuelle en math ?&quot;)</span>
+<span class="c1">#print(&quot;Vous avez répondu:&quot;,niveau,&quot;avec &quot;, moyenne, &quot;en math!&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Remarques</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code> <strong>renvoie toujours une chaine de caractères</strong> (même si l’utilisateur entre un nombre!);</p></li>
+<li><p>la syntaxe employée à l’intérieur de la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> bien que correcte, sera adaptée dans les cours ultérieurs tenant compte des dernières évolutions du langage.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="l-instruction-simple-declaration-affectation">
+<h2>L’instruction simple déclaration-affectation<a class="headerlink" href="#l-instruction-simple-declaration-affectation" title="Permalink to this headline">¶</a></h2>
+<p>Pour pouvoir accéder aux données, un programme d’ordinateur fait abondamment usage de <strong>variables</strong>. En python, <strong>une variable est une référence désignant une adresse mémoire</strong> (<em>c’est-à-dire un emplacement précis dans la mémoire vive</em>).</p>
+<p>Contrairement à certains langages, les variables n’ont pas besoin d’être déclarées au préalable. La <strong>déclaration et l’affectation de variables</strong> peuvent se faire en une seule instruction. En python cette opération est réalisée selon le schéma <code class="docutils literal notranslate"><span class="pre">nom_variable</span> <span class="pre">=</span> <span class="pre">valeur</span></code>.</p>
+<p>Exemples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Affectation&quot;</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+</pre></div>
+</div>
+<p><em>Remarque</em>: le nom de variable doit commencer par une lettre et ne pas être un mot réservé (voir <a class="reference external" href="https://docs.python.org/fr/3.7/reference/lexical_analysis.html#keywords">liste</a>).</p>
+<p>Le <strong>type</strong> d’une variable est déterminé lors de l’affectation. Dans l’exemple précédent, <code class="docutils literal notranslate"><span class="pre">n</span></code> est du type entier <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">msg</span></code> est du type chaîne de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">pi</span></code> est du type <em>flottant</em> (représente les décimaux) <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+</div>
+<div class="section" id="les-instructions-composees">
+<h2>Les instructions composées<a class="headerlink" href="#les-instructions-composees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sequence-et-bloc-d-instructions">
+<h3>Séquence  et bloc d’instructions<a class="headerlink" href="#sequence-et-bloc-d-instructions" title="Permalink to this headline">¶</a></h3>
+<p>On peut définir une séquence d’instruction comme un ensemble de deux instructions exécutées l’une <strong>à la suite</strong> de l’autre (l’ordre est important!). Par exemple, les lignes</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>constituent une séquence d’instructions (<em>à condition que la variable x ait été affectée au préalable</em>). Nos programmes comporteront généralement des séquences de plus de deux instructions, on parlera alors de <strong>bloc d’instructions</strong>.<br />
+En python, un bloc d’instructions est repéré par son <strong>indentation</strong>, c’est-à-dire le décalage par rapport au bloc précédent (<em>typiquement un multiple de 4 espaces</em>).</p>
+<p><strong>Exercice d’application</strong></p>
+<p>Soit un disque de centre O et de rayon <span class="math notranslate nohighlight">\(r\)</span>. Ecrire un programme (<em>séquence d’instructions</em>) qui permet de calculer et d’afficher l’aire <span class="math notranslate nohighlight">\(S\)</span> de ce disque à partir de la valeur du rayon qui sera demandée à l’utilisateur. <em>Rappel</em>: <span class="math notranslate nohighlight">\(S=\pi*r^{2}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="c1">#Code à rajouter au dessous.</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-test">
+<h2>Le test<a class="headerlink" href="#le-test" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="le-test-simple">
+<h3>Le test simple<a class="headerlink" href="#le-test-simple" title="Permalink to this headline">¶</a></h3>
+<p>Une instruction (ou un bloc d’instructions) conditionnelle n’est executée que si une condition est vérifiée. En python, la syntaxe est la suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">bloc_instructions</span>
+</pre></div>
+</div>
+<p><strong>Exemple</strong><br />
+On cherche à savoir si un nombre saisi par l’utilisateur est pair. On se sert da la propriété suivante: <em>un nombre est pair si le</em> <strong>reste</strong> <em>de sa division euclidienne par 2 est nul</em>.<br />
+Eléments du langage nécessaires:</p>
+<ul class="simple">
+<li><p>le reste d’une division euclidienne est obtenu avec l’opérateur <code class="docutils literal notranslate"><span class="pre">%</span></code> en python;</p></li>
+<li><p>le test d’égalité se fait avec l’opérateur <code class="docutils literal notranslate"><span class="pre">==</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter puis exécuter cette cellule</span>
+
+<span class="c1">#entree = input(&quot;Entrer un nombre: &quot;)</span>
+<span class="c1">#x = int(entree) # rappel: input renvoie un chaine de caractère, d&#39;où la conversion en entier</span>
+<span class="c1">#if x % 2 == 0:</span>
+<span class="c1">#    print(&quot;Le reste de sa division par 2 est nul; &quot;, x, &quot; est pair!&quot;) </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour identifier sans ambiguités les instructions appartenant au bloc vérifiant la condition, on <strong>DOIT LES INDENTER</strong> en python.<br />
+La condition est souvent exprimée avec des <strong>opérateurs de comparaisons</strong>. Voici quelques exemples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="c1"># x est égal à y</span>
+<span class="n">x</span> <span class="o">!=</span> <span class="n">y</span> <span class="c1"># x est différent de y</span>
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="c1"># x est plus grand que y</span>
+<span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="c1"># x est plus petit que y</span>
+<span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span> <span class="c1"># x est plus grand que, ou égal à y</span>
+<span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="c1"># x est plus petit que, ou égal à y</span>
+</pre></div>
+</div>
+<p><strong>Exercice: nombre pair divisible par 8</strong><br />
+Ecrire un programme python qui affiche le message “N est pair et divisible par 8” si le nombre <span class="math notranslate nohighlight">\(N\)</span> demandé à l’utilisateur vérifie cette condition.<br />
+<em>Coup de pouce</em>: imbriquer des conditions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Votre code dans cette cellule</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-test-avec-alternative">
+<h3>Le test avec alternative<a class="headerlink" href="#le-test-avec-alternative" title="Permalink to this headline">¶</a></h3>
+<p>Dans un test avec alternative, on ajoute un bloc à traiter lorsque la condition <em>n’est pas</em> vérifiée. La syntaxe est la suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">bloc_instructions_SI</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">bloc_instructions_SINON</span>
+</pre></div>
+</div>
+<p>L’exemple traité au paragraphe précédent peut être complété en utilisant une structure de test avec alternative:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter puis exécuter cette cellule</span>
+
+<span class="c1">#entree = input(&quot;Entrer un nombre: &quot;)</span>
+<span class="c1">#x = int(entree) # rappel: input renvoie un chaine de caractère, d&#39;où la conversion en entier</span>
+<span class="c1">#if x % 2 == 0:</span>
+<span class="c1">#    print(&quot;Le reste de sa division par 2 est nul; &quot;, x, &quot; est pair!&quot;) </span>
+<span class="c1">#else:</span>
+<span class="c1">#    print(&quot;Le reste de sa division par 2 n&#39;est pas nul; &quot;, x, &quot; est impair!&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Question: aurait-on pu utiliser le code suivant pour tester la parité d’un nombre?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">entree</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrer un nombre: &quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">entree</span><span class="p">)</span> <span class="c1"># rappel: input renvoie un chaine de caractère, d&#39;où la conversion en entier</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le reste de sa division par 2 est nul; &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; est pair!&quot;</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le reste de sa division par 2 n&#39;est pas nul; &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; est impair!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="la-boucle">
+<h2>La boucle<a class="headerlink" href="#la-boucle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="la-boucle-conditionnelle-non-bornee">
+<h3>La boucle conditionnelle, <em>non bornée</em><a class="headerlink" href="#la-boucle-conditionnelle-non-bornee" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="necessite">
+<h4>Nécessité<a class="headerlink" href="#necessite" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Exécuter le programme ci-dessous pour des valeurs de <span class="math notranslate nohighlight">\(N\)</span> entières comprises entre 1 et 4. Que réalise-t-il?</p></li>
+<li><p>Quel commentaire peut-on faire à propos du bloc d’instruction conditionnel?</p></li>
+<li><p>Que faudrait-il apporter comme modification (<em>ne pas le faire!</em>) si on souhaitait rendre possible le calcul jusqu’à <span class="math notranslate nohighlight">\(N=10\)</span>?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">N</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+<p>La méthode précédente montre ses limites: pour des valeurs quelconques de <span class="math notranslate nohighlight">\(N\)</span> il faudrait répéter un grand nombre de fois les mêmes lignes. On aimerait exécuter les instructions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>tant que le test <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">!=</span> <span class="pre">0</span></code> est vérifié. Il s’agit d’une <strong>boucle conditionnelle</strong> ou encore <strong>boucle while</strong> (<em>en anglais</em>) ou <strong>boucle tant que</strong> (<em>en français</em>).</p>
+</div>
+<div class="section" id="syntaxe">
+<h4>Syntaxe<a class="headerlink" href="#syntaxe" title="Permalink to this headline">¶</a></h4>
+<p>En python, la boucle conditionnelle a la forme suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">bloc_instructions</span>
+</pre></div>
+</div>
+<p><em>Remarques</em></p>
+<ul class="simple">
+<li><p>la condition s’exprime généralement avec les opérateurs de comparaisons vu plus haut;</p></li>
+<li><p>le bloc d’instructions est indenté.</p></li>
+</ul>
+<p>Le programme précédent peut ainsi s’écrire (le vérifier en l’exécutant):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">N</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice d’application directe: table de multiplication</strong><br />
+Écrire un programme qui affiche les 10 premiers termes de la table de multiplication par 7 en utilisant une boucle conditionnelle.</p>
+</div>
+<div class="section" id="danger-lie-a-l-utilisation-des-boucles-conditionnelles">
+<h4>Danger lié à l’utilisation des boucles conditionnelles<a class="headerlink" href="#danger-lie-a-l-utilisation-des-boucles-conditionnelles" title="Permalink to this headline">¶</a></h4>
+<p>Il <strong>faut que la condition ne soit plus vérifiée</strong> à un moment donné pour assurer la <strong>terminaison</strong> de la boucle et éviter le bouclage infini. Ce point sera détaillé dans le cours d’algorithmique.<br />
+Dans le cas précédent, <span class="math notranslate nohighlight">\(c\)</span> est un entier positif et décroit à chaque tour de boucle. On est sûr d’avoir <span class="math notranslate nohighlight">\(c=0\)</span> et sortir ainsi de la boucle au bout d’un certain nombre <strong>d’itérations</strong> (tour de boucle).</p>
+</div>
+</div>
+<div class="section" id="la-boucle-inconditionnelle-ou-bornee">
+<h3>La boucle inconditionnelle ou <em>bornée</em><a class="headerlink" href="#la-boucle-inconditionnelle-ou-bornee" title="Permalink to this headline">¶</a></h3>
+<p>Lorsque le <strong>nombre d’itérations est connu d’avance</strong> la boucle devient <strong>inconditionnelle</strong>. On l’appelle encore <strong>boucle pour</strong> (<code class="docutils literal notranslate"><span class="pre">for</span></code> loop en anglais).<br />
+En python, la syntaxe de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>est la suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable_compteur</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="n">bloc_instructions</span>
+</pre></div>
+</div>
+<p><em>Remarques</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sequence</span></code> est une suite d’objets, comme des entiers, des caractères d’une chaine, etc, (d’autres séquences seront vus dans les prochains cours); typiquement une séquence d’entiers est obtenue avec l’objet <code class="docutils literal notranslate"><span class="pre">range(n)</span></code> qui fourni les entiers allant de 0 à <span class="math notranslate nohighlight">\(n-1\)</span>.</p></li>
+<li><p>Le bloc d’instructions doit être indenté.</p></li>
+</ul>
+<p>Le programme utilisé pour exposer la boucle conditionnelle peut s’écrire de la manière suivante:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Bruno DARID</em> 2020-2021</p>
+<p><img alt="licence" src="../_images/licence.svg.png" /></p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="systeme_exploitation.html" title="previous page">SYSTEME D’EXPLOITATION</a>
+    <a class='right-next' id="next-link" href="langage_exercices.html" title="next page">Eléments du langage - exercices</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

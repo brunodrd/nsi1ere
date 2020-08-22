@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>ARCHITECTURE 1 - EXERCICES &#8212; Spécialité NSI 1ère</title>
+    <title>S’approprier les fonctions - exercices &#8212; Spécialité NSI 1ère</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -31,8 +31,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SYSTEME D’EXPLOITATION" href="systeme_exploitation.html" />
-    <link rel="prev" title="ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN" href="Architecture_partie_1.html" />
+    <link rel="prev" title="Les fonctions" href="Fonctions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,8 +72,8 @@
   <li class="">
     <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
   </li>
-  <li class="active">
-    <a href="">ARCHITECTURE 1 - EXERCICES</a>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
   </li>
   <li class="">
     <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
@@ -88,8 +87,8 @@
   <li class="">
     <a href="Fonctions.html">Les fonctions</a>
   </li>
-  <li class="">
-    <a href="Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  <li class="active">
+    <a href="">S’approprier les fonctions - exercices</a>
   </li>
 </ul>
 </nav>
@@ -128,7 +127,7 @@
                 <!-- ipynb file if we had a myst markdown file -->
                 
                 <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../_sources/src/Architecture_partie_1_exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <a class="dropdown-buttons" href="../_sources/src/Fonctions_exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
                 <!-- Download PDF via print -->
                 <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
             </div>
@@ -147,7 +146,7 @@
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
             <div class="dropdown-buttons">
                 
-                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Architecture_partie_1_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
                 
                 
                 
@@ -164,11 +163,19 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#et-aujourd-hui" class="nav-link">Et aujourd’hui ?</a>
+            <a href="#maximum" class="nav-link">Maximum</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#qcm" class="nav-link">QCM</a>
+            <a href="#volume-d-un-ballon" class="nav-link">Volume d’un ballon</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#longueur-d-un-tweet" class="nav-link">Longueur d’un tweet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#distance-euclidienne-france-ioi" class="nav-link">Distance euclidienne (France IOI)</a>
         </li>
     
     </ul>
@@ -182,65 +189,54 @@
         
               <div>
                 
-  <div class="section" id="architecture-1-exercices">
-<h1>ARCHITECTURE 1 - EXERCICES<a class="headerlink" href="#architecture-1-exercices" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="et-aujourd-hui">
-<h2>Et aujourd’hui ?<a class="headerlink" href="#et-aujourd-hui" title="Permalink to this headline">¶</a></h2>
-<p>Un ordinateur personnel aujourd’hui, c’est un mélange de multiples composants.</p>
-<p><img alt="image ordi" src="../_images/img-004.jpg" /></p>
+  <div class="section" id="s-approprier-les-fonctions-exercices">
+<h1>S’approprier les fonctions - exercices<a class="headerlink" href="#s-approprier-les-fonctions-exercices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="maximum">
+<h2>Maximum<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h2>
+<p>Définissez une fonction <code class="docutils literal notranslate"><span class="pre">maximum(n1,n2,n3)</span></code> qui renvoie le plus grand de 3 nombres <span class="math notranslate nohighlight">\(n_1, n_2,
+n_3\)</span> fournis en paramètres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">):</span>
+    <span class="c1"># Supprimer l&#39;instruction pass et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter la ligne suivante et exécuter cette cellule</span>
+<span class="c1">#assert maximum(2, 3, 5) == 5, &quot;Erreur: valeur renvoyée incorrecte&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="volume-d-un-ballon">
+<h2>Volume d’un ballon<a class="headerlink" href="#volume-d-un-ballon" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">volume_ballon</span></code> qui prend en paramètre un rayon <span class="math notranslate nohighlight">\(r\)</span> et qui retourne le volume <span class="math notranslate nohighlight">\(V\)</span> d’un ballon de rayon <span class="math notranslate nohighlight">\(r\)</span>.<br />
+Rappel: <span class="math notranslate nohighlight">\(V=\dfrac{4}{3}\times\pi r^{3}\)</span></p>
+<p><strong>Documenter</strong> la fonction. Afficher le volume d’un ballon de football (<span class="math notranslate nohighlight">\(r=11\)</span> cm) puis de basket (<span class="math notranslate nohighlight">\(r=12.4\)</span> cm) en arrondissant les résultats (voir la fonction native <code class="docutils literal notranslate"><span class="pre">round()</span></code>).</p>
+</div>
+<div class="section" id="longueur-d-un-tweet">
+<h2>Longueur d’un tweet<a class="headerlink" href="#longueur-d-un-tweet" title="Permalink to this headline">¶</a></h2>
+<p>La longueur maximale d’un message sur Tweeter est de 280 caractères. On souhaite écrire un programme qui indique le nombre de caractères d’un message qu’on souhaiterait publier.</p>
 <ol class="simple">
-<li><p>Par rapport au modèle de Von Neumann, situer ces différents composants.</p></li>
-<li><p>Après avoir rappeler les éléments essentiels d’une architecture de type Von Neumann, repérer sur la photo le composant suceptible d’abriter une telle structure.</p></li>
+<li><p>Que réalise la fonction native <code class="docutils literal notranslate"><span class="pre">len</span></code>?</p></li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">longueur_message(msg)</span></code> qui prend comme paramètre un message (<em>une chaine de caractère</em>) et qui renvoit le nombre de caractères de ce message.</p></li>
+<li><p>Ecrire le programme qui demande à l’utilisateur de rentrer son message et qui affiche la longueur de celui-ci. Utiliser la fonction précédente.</p></li>
 </ol>
 </div>
-<div class="section" id="qcm">
-<h2>QCM<a class="headerlink" href="#qcm" title="Permalink to this headline">¶</a></h2>
-<p>A traiter de préférence après avoir consulté le document intitulé <em>Une brève Histoire de l’informatique</em> à cette adresse: <a class="reference external" href="https://www.math93.com/lycee/146-pedagogie/lycee/nsi/975-nsi-numerique-et-sciences-informatiques-une-histoire-de-l-informatique.html">https://www.math93.com/lycee/146-pedagogie/lycee/nsi/975-nsi-numerique-et-sciences-informatiques-une-histoire-de-l-informatique.html</a></p>
-<ol class="simple">
-<li><p>Quel est le rôle de l’Unité Arithmétique et Logique dans un processeur?</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] La gestion interne du processeur;</p></li>
-<li><p>[ ] Gérer la communication entre les différents périphériques;</p></li>
-<li><p>[ ] Gérer les entrées / sorties</p></li>
-<li><p>[ ] Effectuer les calculs</p></li>
-</ul>
-<ol class="simple">
-<li><p>Parmi les éléments suivants, lequel n’est pas un périphérique d’entrée sortie ?</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] La souris</p></li>
-<li><p>[ ] L’imprimante</p></li>
-<li><p>[ ] Le clavier</p></li>
-<li><p>[ ] La barette de mémoire</p></li>
-</ul>
-<ol class="simple">
-<li><p>Parmi les affirmations suivantes, laquelle est vraie ?</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] La RAM est une mémoire accessible en lecture seulement</p></li>
-<li><p>[ ] La RAM est une mémoire accessible en écriture seulement</p></li>
-<li><p>[ ] La RAM est une mémoire accessible en lecture et en écriture</p></li>
-<li><p>[ ] La RAM permet de stocker des données après extinction de la machine</p></li>
-</ul>
-<ol class="simple">
-<li><p>Dans le modèle d’architecture de Von Neumann, les trois éléments essentiels sont</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] Le processeur, la mémoire et les dispositifs d’entrées/sortie</p></li>
-<li><p>[ ] Le processeur, la carte graphique et l’écran</p></li>
-<li><p>[ ] La RAM, les registres et la mémoire cache</p></li>
-<li><p>[ ] Le clavier, l’écran et la souris</p></li>
-</ul>
-<ol class="simple">
-<li><p>Alan Turing</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] est un ingénieur qui construit des ordinateurs sous la direction de J. Von Neumann</p></li>
-<li><p>[ ] est le co-auteur, avec J. Von Neumann, du rapport conduisant à la construction du premier ordinateur</p></li>
-<li><p>[ ] est le mathématicien à l’origine d’un modèle abstrait de machine permettant d’exécuter un algorithme</p></li>
-<li><p>[ ] est le mathématicien qui utilisa l’ordinateur de Von Neumann pour résoudre ses problèmes de calcul</p></li>
-</ul>
+<div class="section" id="distance-euclidienne-france-ioi">
+<h2>Distance euclidienne (<a class="reference external" href="http://www.france-ioi.org/">France IOI</a>)<a class="headerlink" href="#distance-euclidienne-france-ioi" title="Permalink to this headline">¶</a></h2>
+<p>Sur les feuilles à motifs que vous leur avez imprimées tout à l’heure, les jeunes gens souhaiteraient calculer la distance entre deux motifs, ce qui ce fait facilement si l’on perçoit la feuille comme un repère orthonormé.
+Ce que doit faire votre programme :</p>
+<p>Écrivez une fonction qui prend en paramètre les coordonnées <span class="math notranslate nohighlight">\((x_A,y_A)\)</span> et <span class="math notranslate nohighlight">\((x_B,y_B)\)</span> de deux points et retourne la distance euclidienne entre ces deux points. On rappelle que la distance euclidienne entre deux points est égale à :
+<span class="math notranslate nohighlight">\($\sqrt{(x_B−x_A)^2+(y_B−y_A)^2}\)</span>$</p>
+<p>Utilisez ensuite cette fonction dans un programme qui lit quatre nombres décimaux <span class="math notranslate nohighlight">\(x_A, y_A, x_B\)</span> et <span class="math notranslate nohighlight">\(y_B\)</span>
+tapés au clavier, puis affiche la distance entre les deux points correspondants.</p>
+<p>On pourra utiliser la fonction <span class="math notranslate nohighlight">\(sqrt(x)\)</span> du module <code class="docutils literal notranslate"><span class="pre">math</span></code>, qui retourne la racine carrée du paramètre <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </div>
 </div>
 
@@ -253,8 +249,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Architecture_partie_1.html" title="previous page">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
-    <a class='right-next' id="next-link" href="systeme_exploitation.html" title="next page">SYSTEME D’EXPLOITATION</a>
+    <a class='left-prev' id="prev-link" href="Fonctions.html" title="previous page">Les fonctions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

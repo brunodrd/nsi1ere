@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>ARCHITECTURE 1 - EXERCICES &#8212; Spécialité NSI 1ère</title>
+    <title>Eléments du langage - exercices &#8212; Spécialité NSI 1ère</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -31,8 +31,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SYSTEME D’EXPLOITATION" href="systeme_exploitation.html" />
-    <link rel="prev" title="ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN" href="Architecture_partie_1.html" />
+    <link rel="next" title="Les fonctions" href="Fonctions.html" />
+    <link rel="prev" title="Langage - Constructions élémentaires" href="Langage.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,8 +73,8 @@
   <li class="">
     <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
   </li>
-  <li class="active">
-    <a href="">ARCHITECTURE 1 - EXERCICES</a>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
   </li>
   <li class="">
     <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
@@ -82,8 +82,8 @@
   <li class="">
     <a href="Langage.html">Langage - Constructions élémentaires</a>
   </li>
-  <li class="">
-    <a href="langage_exercices.html">Eléments du langage - exercices</a>
+  <li class="active">
+    <a href="">Eléments du langage - exercices</a>
   </li>
   <li class="">
     <a href="Fonctions.html">Les fonctions</a>
@@ -128,7 +128,7 @@
                 <!-- ipynb file if we had a myst markdown file -->
                 
                 <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../_sources/src/Architecture_partie_1_exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <a class="dropdown-buttons" href="../_sources/src/langage_exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
                 <!-- Download PDF via print -->
                 <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
             </div>
@@ -147,7 +147,7 @@
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
             <div class="dropdown-buttons">
                 
-                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Architecture_partie_1_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/langage_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
                 
                 
                 
@@ -164,11 +164,27 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#et-aujourd-hui" class="nav-link">Et aujourd’hui ?</a>
+            <a href="#que-doit-on-emmener" class="nav-link">Que doit-on emmener?</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#qcm" class="nav-link">QCM</a>
+            <a href="#annee-bissextile" class="nav-link">année bissextile</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#affichage-de-l-heure" class="nav-link">Affichage de l’heure</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#affichage" class="nav-link">Affichage</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#boucle-for" class="nav-link">Boucle for</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#probleme-a-resoudre-etape-la-plus-longue" class="nav-link">Problème à résoudre: Étape la plus longue</a>
         </li>
     
     </ul>
@@ -182,65 +198,58 @@
         
               <div>
                 
-  <div class="section" id="architecture-1-exercices">
-<h1>ARCHITECTURE 1 - EXERCICES<a class="headerlink" href="#architecture-1-exercices" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="et-aujourd-hui">
-<h2>Et aujourd’hui ?<a class="headerlink" href="#et-aujourd-hui" title="Permalink to this headline">¶</a></h2>
-<p>Un ordinateur personnel aujourd’hui, c’est un mélange de multiples composants.</p>
-<p><img alt="image ordi" src="../_images/img-004.jpg" /></p>
-<ol class="simple">
-<li><p>Par rapport au modèle de Von Neumann, situer ces différents composants.</p></li>
-<li><p>Après avoir rappeler les éléments essentiels d’une architecture de type Von Neumann, repérer sur la photo le composant suceptible d’abriter une telle structure.</p></li>
-</ol>
+  <div class="section" id="elements-du-langage-exercices">
+<h1>Eléments du langage - exercices<a class="headerlink" href="#elements-du-langage-exercices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="que-doit-on-emmener">
+<h2>Que doit-on emmener?<a class="headerlink" href="#que-doit-on-emmener" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire un programme capable de conseiller deux objets utiles à emporter en voyage, en fonction de la température de l’air. On demande à l’utilisateur la température prévue.
+Si celle-ci est supérieure à 20°, il conseille “maillot” et “crème bronzante”. Sinon, il conseille “parapluie” et “pull”.</p>
 </div>
-<div class="section" id="qcm">
-<h2>QCM<a class="headerlink" href="#qcm" title="Permalink to this headline">¶</a></h2>
-<p>A traiter de préférence après avoir consulté le document intitulé <em>Une brève Histoire de l’informatique</em> à cette adresse: <a class="reference external" href="https://www.math93.com/lycee/146-pedagogie/lycee/nsi/975-nsi-numerique-et-sciences-informatiques-une-histoire-de-l-informatique.html">https://www.math93.com/lycee/146-pedagogie/lycee/nsi/975-nsi-numerique-et-sciences-informatiques-une-histoire-de-l-informatique.html</a></p>
-<ol class="simple">
-<li><p>Quel est le rôle de l’Unité Arithmétique et Logique dans un processeur?</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] La gestion interne du processeur;</p></li>
-<li><p>[ ] Gérer la communication entre les différents périphériques;</p></li>
-<li><p>[ ] Gérer les entrées / sorties</p></li>
-<li><p>[ ] Effectuer les calculs</p></li>
-</ul>
-<ol class="simple">
-<li><p>Parmi les éléments suivants, lequel n’est pas un périphérique d’entrée sortie ?</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] La souris</p></li>
-<li><p>[ ] L’imprimante</p></li>
-<li><p>[ ] Le clavier</p></li>
-<li><p>[ ] La barette de mémoire</p></li>
-</ul>
-<ol class="simple">
-<li><p>Parmi les affirmations suivantes, laquelle est vraie ?</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] La RAM est une mémoire accessible en lecture seulement</p></li>
-<li><p>[ ] La RAM est une mémoire accessible en écriture seulement</p></li>
-<li><p>[ ] La RAM est une mémoire accessible en lecture et en écriture</p></li>
-<li><p>[ ] La RAM permet de stocker des données après extinction de la machine</p></li>
-</ul>
-<ol class="simple">
-<li><p>Dans le modèle d’architecture de Von Neumann, les trois éléments essentiels sont</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] Le processeur, la mémoire et les dispositifs d’entrées/sortie</p></li>
-<li><p>[ ] Le processeur, la carte graphique et l’écran</p></li>
-<li><p>[ ] La RAM, les registres et la mémoire cache</p></li>
-<li><p>[ ] Le clavier, l’écran et la souris</p></li>
-</ul>
-<ol class="simple">
-<li><p>Alan Turing</p></li>
-</ol>
-<ul class="simple">
-<li><p>[ ] est un ingénieur qui construit des ordinateurs sous la direction de J. Von Neumann</p></li>
-<li><p>[ ] est le co-auteur, avec J. Von Neumann, du rapport conduisant à la construction du premier ordinateur</p></li>
-<li><p>[ ] est le mathématicien à l’origine d’un modèle abstrait de machine permettant d’exécuter un algorithme</p></li>
-<li><p>[ ] est le mathématicien qui utilisa l’ordinateur de Von Neumann pour résoudre ses problèmes de calcul</p></li>
-</ul>
+<div class="section" id="annee-bissextile">
+<h2>année bissextile<a class="headerlink" href="#annee-bissextile" title="Permalink to this headline">¶</a></h2>
+<p>Une année est bissextile si son millésime est multiple de 4; cependant, les années dont le millésime est multiple de 100 ne sont bissextiles que si c’est aussi un multiple de 400 (<em>1900 n’était pas bissextile, 2000 l’a été</em>).
+Ecrire un programme qui détermine si une année <span class="math notranslate nohighlight">\(N\)</span> est bissextile ou non.<br />
+<a class="reference external" href="https://brdarid.nohost.me/nextcloud/s/AaCAX7X3wfrxtfB">Coup de pouce ?</a></p>
+</div>
+<div class="section" id="affichage-de-l-heure">
+<h2>Affichage de l’heure<a class="headerlink" href="#affichage-de-l-heure" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire un programme qui récupère l’heure d’un utilisateur sous la forme HH mm ss. Le programme doit afficher cette heure augmentée d’une seconde.</p>
+</div>
+<div class="section" id="affichage">
+<h2>Affichage<a class="headerlink" href="#affichage" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire un programme qui produit l’affichage ci-dessous, en utilisant une boucle conditionnelle:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>
+<span class="o">**</span>
+<span class="o">***</span>
+<span class="o">****</span>
+<span class="o">*****</span>
+<span class="o">******</span>
+<span class="o">*******</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="boucle-for">
+<h2>Boucle for<a class="headerlink" href="#boucle-for" title="Permalink to this headline">¶</a></h2>
+<p>Résoudre l’exercice précédent en utilisant une boucle inconditionnelle (<em>for</em>).</p>
+</div>
+<div class="section" id="probleme-a-resoudre-etape-la-plus-longue">
+<h2>Problème à résoudre: Étape la plus longue<a class="headerlink" href="#probleme-a-resoudre-etape-la-plus-longue" title="Permalink to this headline">¶</a></h2>
+<p><em>(Origine: <a class="reference external" href="http://www.france-ioi.org">France-IOI</a>)</em><br />
+Dans votre petit carnet de voyage, vous avez noté la distance que vous avez parcourue chaque jour. Aujourd’hui, vous êtes particulièrement en forme et vous décidez donc de marcher plus que les jours précédents. Vous souhaitez utiliser un programme pour déterminer quel est votre record pour l’instant.<br />
+<em>Ce que doit faire votre programme :</em><br />
+Votre programme doit d’abord lire un entier strictement positif, le nombre de jours de marche effectués jusqu’à présent. Il doit ensuite lire, pour chaque jour, la distance parcourue ce jour-là. Il doit alors afficher la distance maximale parcourue en une journée.<br />
+<em>Exemple d’entrée</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<span class="mi">8</span>
+<span class="mi">3</span>
+<span class="mi">12</span>
+<span class="mi">2</span>
+</pre></div>
+</div>
+<p><em>Sortie</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -253,8 +262,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Architecture_partie_1.html" title="previous page">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
-    <a class='right-next' id="next-link" href="systeme_exploitation.html" title="next page">SYSTEME D’EXPLOITATION</a>
+    <a class='left-prev' id="prev-link" href="Langage.html" title="previous page">Langage - Constructions élémentaires</a>
+    <a class='right-next' id="next-link" href="Fonctions.html" title="next page">Les fonctions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>TRAVAILLER EN BASE 2, 10 ET 16 &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Représentation de l’information - Exercices" href="repr_information_Exercices.html" />
+    <link rel="prev" title="S’approprier les fonctions - exercices" href="../Fonctions_exercices.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="active">
+    <a href="">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD1_Repr-bin-hexa/Representation_information.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD1_Repr-bin-hexa/Representation_information.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#comment-representer-des-informations-sur-une-machine-numerique" class="nav-link">Comment représenter des informations sur une machine numérique ?</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#unite-d-information" class="nav-link">Unité d’information</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#representation-binaire-des-entiers-naturels" class="nav-link">Représentation binaire des entiers naturels</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#representation-positionnelle" class="nav-link">Représentation positionnelle</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#conversion-binaire-decimal" class="nav-link">Conversion binaire - décimal</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#conversion-decimal-binaire" class="nav-link">Conversion décimal - binaire</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#representation-hexadecimale" class="nav-link">Représentation hexadécimale</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#conversions-decimal-hexadecimal" class="nav-link">Conversions décimal - hexadécimal</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#conversions-binaire-hexadecimal" class="nav-link">Conversions binaire - hexadécimal</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#a-retenir" class="nav-link">À retenir</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#resume-des-fonctions-python-rencontrees" class="nav-link">Résumé des fonctions python rencontrées</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="travailler-en-base-2-10-et-16">
+<h1>TRAVAILLER EN BASE 2, 10 ET 16<a class="headerlink" href="#travailler-en-base-2-10-et-16" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reperes-historiques">
+<h2>Repères historiques<a class="headerlink" href="#reperes-historiques" title="Permalink to this headline">¶</a></h2>
+<p>L’invention du système binaire est souvent attribué à tort au savant allemand <a class="reference external" href="https://fr.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz#Syst%C3%A8me_binaire">Wilhelm Gottfried Leibniz</a> (1646-1716). En effet, le mathématicien et astronome anglais <a class="reference external" href="https://fr.wikipedia.org/wiki/Thomas_Harriot#Le_math%C3%A9maticien">Thomas Harriot</a> (1560-1621) avait déjà travaillé sur les systèmes non décimaux.<br />
+Leibniz s’inspire des figures de le l’empereur chinois Fuxi (-3000) que l’on peut considérer comme la première expression d’un codage binaire.<br />
+<img alt="Trigramme" src="../../_images/trigramme_200px.png" /></p>
+</div>
+<div class="section" id="comment-representer-des-informations-sur-une-machine-numerique">
+<h2>Comment représenter des informations sur une machine numérique ?<a class="headerlink" href="#comment-representer-des-informations-sur-une-machine-numerique" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="unite-d-information">
+<h3>Unité d’information<a class="headerlink" href="#unite-d-information" title="Permalink to this headline">¶</a></h3>
+<p>Les machines numériques sont composées d’éléments manipulant l’information sous forme de <strong>deux états distincts</strong>. C’est la raison pour laquelle on les appelle machine <strong>binaire</strong>. Par convention, ces états sont notés <span class="math notranslate nohighlight">\(0\)</span> ou <span class="math notranslate nohighlight">\(1\)</span>. En anglais, ces informations élémentaires sont appelées <em>binary digit</em> ou <strong>bit</strong>.<br />
+Un bit permet de représenter <span class="math notranslate nohighlight">\(2^1=2\)</span> informations.</p>
+<ul class="simple">
+<li><p>Citer un système qui nécessite <strong>un</strong> bit pour coder son information.</p></li>
+<li><p>Combien de bits sont nécessaires pour distinguer les 4 familles d’un jeu de cartes?</p></li>
+</ul>
+<p>En généralisant on a la propriété importante: <span class="math notranslate nohighlight">\(n\)</span> bits permettent de représenter <span class="math notranslate nohighlight">\(2^n\)</span> informations.</p>
+<p><em>Autres exemples</em></p>
+<ul class="simple">
+<li><p>Combien de bits sont nécessaires pour distinguer les 26 lettres de l’alphabet ?</p></li>
+<li><p>Justifier le fait qu’à l’origine 7 bits étaient suffisants pour coder du texte (<em>en anglais!</em>)</p></li>
+</ul>
+<p>Les machines numériques manipulent habituellement des groupes de bits. Ainsi, un groupe de 8 bits forment un <strong>octet</strong> (!!!! ATTENTION !!!!! en anglais un <strong>octet</strong> est traduit par <strong>BYTE</strong>). Au delà de 8 bits on utilise le terme <strong>mot</strong>. On parle par exemple de mot de 16 bits, de mot de 32 bits (on trouve aussi le terme <em>double mot</em>) ou de mot de 64 bits (ou <em>quadruple mot</em>).</p>
+<p>Les quantités d’informations stockées ou manipulées s’expriment avec les préfixes habituels reliés aux puissances de 10 (1 kilooctet (ko) <span class="math notranslate nohighlight">\(= 1\times10^3\)</span> octets, 1 mégaoctet (Mo) <span class="math notranslate nohighlight">\(= 1\times10^6\)</span> octets, 1 gigaoctet (Go) <span class="math notranslate nohighlight">\(= 1\times10^9\)</span> octets etc).<br />
+<em>Remarque</em>: certains informaticiens/électroniciens utilisent encore des définitions de ces quantités exprimées en puissances de 2 (<span class="math notranslate nohighlight">\(2^{10}\)</span>, <span class="math notranslate nohighlight">\(2^{20}\)</span>, <span class="math notranslate nohighlight">\(2^{30}\)</span>, etc). Pour éviter les confusions, l’International Electrotechnical Commission (IEC) a normalisé ces appellations en décembre 1998. Voir <a class="reference external" href="https://physics.nist.gov/cuu/Units/binary.html">lien</a>.</p>
+</div>
+</div>
+<div class="section" id="representation-binaire-des-entiers-naturels">
+<h2>Représentation binaire des entiers naturels<a class="headerlink" href="#representation-binaire-des-entiers-naturels" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="representation-positionnelle">
+<h3>Représentation positionnelle<a class="headerlink" href="#representation-positionnelle" title="Permalink to this headline">¶</a></h3>
+<p>On présente les nombres entiers de manière classique en <em>représentation positionnelle</em>. Par exemple en base 10, la suite 123 signifie <span class="math notranslate nohighlight">\(1\times 10^2+2\times 10^1+3\times 10^0\)</span>. En base 2, la suite 10011 signifie <span class="math notranslate nohighlight">\(1\times 2^4+0\times 2^3+0\times 2^2+1\times 2^1+1\times 2^0\)</span>.<br />
+Dans un motif binaire, le bit le plus à droite est le <strong>bit de poids faible</strong> ou <strong>LSB</strong> (<em>Least Significant Bit</em>). A l’opposé, le bit le plus à gauche est le <strong>bit de poids fort</strong> ou <strong>MSB</strong> (<em>Most Significant Bit</em>). Le bit de poids faible peut être utilisé pour trouver la parité du nombre: <span class="math notranslate nohighlight">\(0\)</span> indique un nombre pair et <span class="math notranslate nohighlight">\(1\)</span> un nombre impair.</p>
+</div>
+<div class="section" id="conversion-binaire-decimal">
+<h3>Conversion binaire - décimal<a class="headerlink" href="#conversion-binaire-decimal" title="Permalink to this headline">¶</a></h3>
+<p>La conversion binaire - décimale d’un entier naturel découle simplement du mode de représentation positionnelle: on additionne les puissances de 2 présentes dans le motif binaire. Ainsi, pour l’exemple précédent on a:<br />
+<span class="math notranslate nohighlight">\(10011_2=(1\times 2^4+0\times 2^3+0\times 2^2+1\times 2^1+1\times 2^0)_{10}=19_{10}\)</span><br />
+<em>Remarque</em><br />
+La base a été indiquée ici en indice, on peut l’omettre lorsqu’il n’y a pas d’ambiguité.</p>
+</div>
+<div class="section" id="conversion-decimal-binaire">
+<h3>Conversion décimal - binaire<a class="headerlink" href="#conversion-decimal-binaire" title="Permalink to this headline">¶</a></h3>
+<p>On décompose le nombre entier en une somme de puissance de 2 par divisions entières successives tant que le quotient est supérieur ou égal à 2.<br />
+Exemple: soit <span class="math notranslate nohighlight">\(N=23\)</span> à convertir en binaire</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">latex</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span> 
+<span class="mi">23</span> <span class="o">&amp;=</span>  <span class="mi">2</span>\<span class="n">times</span> <span class="mi">11</span><span class="o">+</span><span class="mi">1</span> \\ 
+ <span class="o">&amp;=</span>  <span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times5</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>\\
+ <span class="o">&amp;=</span> <span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times2</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>\\
+ <span class="o">&amp;=</span> <span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times1</span><span class="o">+</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\begin{align*} 
+23 &amp;=  2\times 11+1 \\ 
+ &amp;=  2\times(2\times5 +1)+1\\
+ &amp;= 2\times(2\times(2\times2 +1)+1)+1\\
+ &amp;= 2\times(2\times(2\times(2\times1+0)+1)+1)+1
+\end{align*}\end{split}\]</div>
+</div>
+</div>
+<p>Le résultat est donc <span class="math notranslate nohighlight">\(N=10111_2\)</span>. On peut le retrouver en juxtaposant les restes des divisions “potences” (voir exemple au tableau).<br />
+Applications</p>
+<ol class="simple">
+<li><p>Trouver la représentation binaire de <span class="math notranslate nohighlight">\(77_{10}\)</span> et <span class="math notranslate nohighlight">\(123_{10}\)</span>.</p></li>
+<li><p>Trouver la représentation décimale de <span class="math notranslate nohighlight">\(1101\ 1011_2\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="representation-hexadecimale">
+<h2>Représentation hexadécimale<a class="headerlink" href="#representation-hexadecimale" title="Permalink to this headline">¶</a></h2>
+<p>La représentation binaire devient rapidement encombrante. On lui préfère souvent la représentation <em>hexadécimale</em> (base 16). L’utilisation de cette base nécessite 16 caractères. Le tableau ci-dessous présente ces caractères ainsi que leur équivalence en base 10 et 2.<br />
+<img alt="Caractères hexadécimaux" src="../../_images/caracteres_hexa.png" /></p>
+<div class="section" id="conversions-decimal-hexadecimal">
+<h3>Conversions décimal - hexadécimal<a class="headerlink" href="#conversions-decimal-hexadecimal" title="Permalink to this headline">¶</a></h3>
+<p>Les principes de conversion décimal-hexdécimal et vice-versa sont identiques aux principes de conversion vus pour le binaire.<br />
+Applications</p>
+<ol class="simple">
+<li><p>Trouver la représentation hexdécimale de <span class="math notranslate nohighlight">\(77_{10}\)</span> et <span class="math notranslate nohighlight">\(123_{10}\)</span>.</p></li>
+<li><p>Trouver la représentation décimale de <span class="math notranslate nohighlight">\(6A0_{16}\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="conversions-binaire-hexadecimal">
+<h3>Conversions binaire - hexadécimal<a class="headerlink" href="#conversions-binaire-hexadecimal" title="Permalink to this headline">¶</a></h3>
+<p>Pour passer du binaire à l’hexadécimal il suffit de grouper les bits par 4 et de les remplacer par leur équivalent hexdécimal (<em>voir tableau ci-dessus</em>).<br />
+Exemple<br />
+<span class="math notranslate nohighlight">\(1101\ 1011_2 = DB_{16}\)</span><br />
+Pour convertir de l’hexadécimal en binaire, on remplace chaque chiffre hexadécimal par son équivalent binaire sur 4 bits.<br />
+Exemple
+<span class="math notranslate nohighlight">\(7A5_{16}= 0111\ 1010\ 0101_2\)</span></p>
+</div>
+</div>
+<div class="section" id="a-retenir">
+<h2>À retenir<a class="headerlink" href="#a-retenir" title="Permalink to this headline">¶</a></h2>
+<p>L’information numérique est manipulée sous forme de <em>bits</em>. Les machines numériques travaillent avec des groupes de bits: des octets (8 bits) ou des mots (16, 32 ou 64 bits).<br />
+Les nombres entiers sont représentés en machine par des motifs binaires, c’est-à-dire une décomposition suivant les puissances de 2, par divisions successives par exemple.<br />
+Afin de limiter l’encombrement des motifs binaires on peut utiliser la représentation hexadécimale où chaque groupe de 4 bits du nombre binaire est remplacé par un chiffre hexadécimal compris entre 0 et <span class="math notranslate nohighlight">\(F\)</span>. Le passage du décimal à l’hexadécimal se fait par divisions successives par 16.</p>
+</div>
+<div class="section" id="resume-des-fonctions-python-rencontrees">
+<h2>Résumé des fonctions python rencontrées<a class="headerlink" href="#resume-des-fonctions-python-rencontrees" title="Permalink to this headline">¶</a></h2>
+<p>Le type d’un objet python <code class="docutils literal notranslate"><span class="pre">obj</span></code> s’obtient par <code class="docutils literal notranslate"><span class="pre">type(obj)</span></code>.
+Les changements de base se font avec les fonctions <code class="docutils literal notranslate"><span class="pre">int(),</span> <span class="pre">bin(),</span> <span class="pre">hex()</span></code>. La conversion en chaine de caractères est réalisée par la fonction <code class="docutils literal notranslate"><span class="pre">str()</span></code>. Les chaines de caractères possèdent de nombreuses méthodes. Dans ce chapitre, la méthode <code class="docutils literal notranslate"><span class="pre">strip()</span></code> a été utilisée; elle permet d’éliminer des caractères en début et fin de chaine.<br />
+La division euclidienne d’un entier <span class="math notranslate nohighlight">\(a\)</span> par un entier <span class="math notranslate nohighlight">\(b\)</span> a également été abordée: <span class="math notranslate nohighlight">\(a=b\times q + r\)</span>. En python, le quotient s’obtient par <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">//</span> <span class="pre">b</span></code> et le reste par <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="dislay: block; margin-left:auto; margin-right: auto; border-width:0;" src="img/Cc-by-nc_icon.svg.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Fonctions_exercices.html" title="previous page">S’approprier les fonctions - exercices</a>
+    <a class='right-next' id="next-link" href="repr_information_Exercices.html" title="next page">Représentation de l’information - Exercices</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

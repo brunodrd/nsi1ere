@@ -179,6 +179,13 @@
    "source": [
     "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img alt=\"Licence Creative Commons\" style=\"dislay: block; margin-left:auto; margin-right: auto; border-width:0;\" src=\"img/Cc-by-nc_icon.svg.png\" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>. "
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {

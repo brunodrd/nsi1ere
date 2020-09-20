@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Expressions booléennes &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Représentation de l’information - Exercices" href="../RD1_Repr-bin-hexa/repr_information_Exercices.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="active">
+    <a href="">Expressions booléennes</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD_3_Expressions_booleennes/Expressions_booleennes.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_3_Expressions_booleennes/Expressions_booleennes.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#quelques-definitions" class="nav-link">Quelques définitions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-operations-logiques-elementaires" class="nav-link">Les opérations logiques élémentaires</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#les-symboles" class="nav-link">Les symboles</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#simulations" class="nav-link">Simulations</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#operateurs-and-or-et-not" class="nav-link">Opérateurs and, or et not</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#lois-de-de-morgan" class="nav-link">Lois de De Morgan</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#une-operation-logique-tres-utilisee" class="nav-link">Une opération logique très utilisée</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#problemes" class="nav-link">Problèmes</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#addition-binaire" class="nav-link">Addition binaire</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#demi-additionneur" class="nav-link">Demi additionneur</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#additionneur-complet" class="nav-link">Additionneur complet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#additionneur-complet-en-python" class="nav-link">Additionneur complet en python</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#un-circuit-important-le-multiplexeur-pour-les-plus-rapides-et-curieux" class="nav-link">Un circuit important: le multiplexeur (pour les plus rapides ET curieux)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#principe" class="nav-link">Principe</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#simulation" class="nav-link">Simulation</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#a-retenir" class="nav-link">À retenir</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="expressions-booleennes">
+<h1>Expressions booléennes<a class="headerlink" href="#expressions-booleennes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reperes-historiques">
+<h2>Repères historiques<a class="headerlink" href="#reperes-historiques" title="Permalink to this headline">¶</a></h2>
+<p><img alt="George Boole" src="../../_images/Boole.jpg" /></p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/George_Boole">George Boole</a> (<em>1815-1864</em>): mathématicien, logicien britannique, auteur d’une algèbre <strong>binaire</strong> dite <strong>booléenne</strong> n’acceptant que deux valeurs 0 et 1.<br />
+<a class="reference external" href="https://www.dailymotion.com/video/x71hxwp">Lien</a> vers la présentation de Marie Duflot-Kremer, chercheuse en informatique l’Université de Lorraine.<br />
+Aujourd’hui, l’algèbre de Boole trouve de nombreuses applications en informatique et dans la conception des circuits électroniques</p>
+</div>
+<div class="section" id="quelques-definitions">
+<h2>Quelques définitions<a class="headerlink" href="#quelques-definitions" title="Permalink to this headline">¶</a></h2>
+<p>On appelle <strong>valeur logique</strong> ou <strong>valeur booléenne</strong> toute valeur notée par deux symboles. On peut utiliser par exemple un des couples de valeurs suivants : {0,1}, {vrai, faux}, {true, false} ou {ouvert, fermé}.<br />
+<em>Exemple</em>: l’état d’un interrupteur a une valeur booléenne, il peut être <em>ouvert</em> ou <em>fermé</em>.</p>
+<p>Une <strong>variable booléenne</strong> (ou variable logique) est une grandeur représentée par un nom et pouvant prendre des valeurs booléennes.</p>
+<p>L’algèbre de Boole est caractérisée par la donnée:</p>
+<ul class="simple">
+<li><p>de deux opérations binaires <strong>or</strong> et <strong>and</strong> (<em>ou et et en français, correspondant respectivement, à la somme “+” et au produit “.”</em>)</p></li>
+<li><p>d’une opération unaire <strong>not</strong> (<em>en français non, correspondant au complémentaire <span class="math notranslate nohighlight">\(\bar{}\)</span></em>).</p></li>
+</ul>
+<p>Ces opérations doivent vérifier certaines conditions qui ne seront pas exposées ici.
+En mathématique on trouve aussi les notations <span class="math notranslate nohighlight">\(\lor\)</span> (<em>disjonction</em>), <span class="math notranslate nohighlight">\(\wedge\)</span> (<em>conjonction</em>) et <span class="math notranslate nohighlight">\(\lnot\)</span> (<em>négation</em>).</p>
+<p>L’association de variables booléennes et d’opérateur(s) booléen(s) produit une <strong>expression booléenne</strong>.<br />
+<em>Exemple</em>: si <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> et <span class="math notranslate nohighlight">\(c\)</span> sont trois variables booléennes, <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">and</span> <span class="pre">b</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">c)</span> <span class="pre">or</span> <span class="pre">(a</span> <span class="pre">and</span>&#160; <span class="pre">not</span> <span class="pre">b</span> <span class="pre">and</span> <span class="pre">c)</span></code> est une expression booléenne. Remarque: l’usage de parenthèses améliore la lisibilité.</p>
+<p>Dresser la <strong>table de vérité</strong> d’une expression booléenne signifie construire une table ayant autant de colonnes que de variables d’entrée plus une colonne donnant le résultat (<em>vrai</em> ou <em>faux</em>, 0 ou 1) pour chaque combinaison possible des variables d’entrée.</p>
+</div>
+<div class="section" id="les-operations-logiques-elementaires">
+<h2>Les opérations logiques élémentaires<a class="headerlink" href="#les-operations-logiques-elementaires" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="les-symboles">
+<h3>Les symboles<a class="headerlink" href="#les-symboles" title="Permalink to this headline">¶</a></h3>
+<p>Les opérations logiques sont réalisées simplement avec des circuits électroniques (à base de transistors) appelés <strong>portes logiques</strong>. Voici les symboles des portes logiques utilisées pour les opérations and, or et not.</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align:left; font-weight: bold;">&nbsp;Type</td>
+<td style="text-align:left; font-weight: bold;">Symbole US</td>
+<td style="text-align:left; font-weight: bold;">Symbole EU</td>
+</tr>
+<tr>
+<td>&nbsp;and</td>
+<td>&nbsp;<img src="img/192px-And.svg.png" alt="ET-US"></td>
+<td>&nbsp;<img src="img/192px-IEC_AND.svg.png" alt="ET-EU"></td>
+</tr>
+<tr>
+<td>&nbsp;or</td>
+<td>&nbsp;<img src="img/192px-Or-gate-en.svg.png" alt="OR-US"></td>
+<td>&nbsp;<img src="img/192px-IEC_OR.svg.png" alt="OR-EU"></td>
+</tr>
+<tr>
+<td>&nbsp;not</td>
+<td>&nbsp;<img src="img/192px-Not-gate-en.svg.png" alt="NOT-US"></td>
+<td>&nbsp;<img src="img/192px-IEC_Not-gate.png" alt="NOT-EU"></td>
+</tr>
+</tbody>
+</table><p><em>Note</em>: les symboles sont très peu utilisés (même en France!).</p>
+</div>
+<div class="section" id="simulations">
+<h3>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="operateurs-and-or-et-not">
+<h4>Opérateurs and, or et not<a class="headerlink" href="#operateurs-and-or-et-not" title="Permalink to this headline">¶</a></h4>
+<p>Simuler avec le logiciel <em>Digital</em> du <a class="reference external" href="https://github.com/hneemann/Digital">professeur Helmut Neemann</a> les opérations logiques and, or et not. Établir leur table de vérité.</p>
+</div>
+<div class="section" id="lois-de-de-morgan">
+<h4>Lois de De Morgan<a class="headerlink" href="#lois-de-de-morgan" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Dresser la table de vérité de l’expression <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">(A</span> <span class="pre">or</span> <span class="pre">B)</span></code>;</p></li>
+<li><p>Vérifier les résultats par simulation;</p></li>
+<li><p>Proposer une expression équivalente;</p></li>
+<li><p>Reprendre les questions 1, 2 et 3 avec l’expression <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">(A</span> <span class="pre">and</span> <span class="pre">B)</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="une-operation-logique-tres-utilisee">
+<h4>Une opération logique très utilisée<a class="headerlink" href="#une-operation-logique-tres-utilisee" title="Permalink to this headline">¶</a></h4>
+<p>Ouvrir le circuit “Dilemme.dig”.<br />
+<img alt="dilemme" src="../../_images/Dilemme.png" /></p>
+<p>Réaliser la simulation. Établir et commenter sa table de vérité.<br />
+Cette opération très utilisée a pour symbole (<em>US</em>):</p>
+<p><img alt="ouex" src="../../_images/ouex.png" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="problemes">
+<h2>Problèmes<a class="headerlink" href="#problemes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="addition-binaire">
+<h3>Addition binaire<a class="headerlink" href="#addition-binaire" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="demi-additionneur">
+<h4>Demi additionneur<a class="headerlink" href="#demi-additionneur" title="Permalink to this headline">¶</a></h4>
+<p>Le demi additionneur est un circuit combinatoire qui permet de réaliser la somme arithmétique de deux nombres A et B chacun sur un bit.</p>
+<p><img alt="halfadder" src="../../_images/halfAdder.png" /></p>
+<p>A la sortie on va avoir la somme S et une éventuelle retenue R.</p>
+<ol class="simple">
+<li><p>Ouvrir le fichier “halfAdder.dig” et passer en mode simulation. Dresser alors la table de vérité de ce circuit.</p></li>
+<li><p>En déduire la table d’addition binaire.</p></li>
+<li><p>En utilisant la fonction d’analyse du logiciel, donner l’expression booléenne de la sortie S et de la retenue R.</p></li>
+</ol>
+</div>
+<div class="section" id="additionneur-complet">
+<h4>Additionneur complet<a class="headerlink" href="#additionneur-complet" title="Permalink to this headline">¶</a></h4>
+<p>Lorsqu’on souhaite effectuer l’addition binaire sur un bit de deux nombres <span class="math notranslate nohighlight">\(A_i\)</span> et <span class="math notranslate nohighlight">\(B_i\)</span>, il faut tenir compte d’une éventuelle retenue <span class="math notranslate nohighlight">\(R_{i-1}\)</span> provenant du calcul du rang précédent. On a alors un additionneur complet, qui est réalisé avec deux demi-additionneurs.</p>
+<p><img alt="fullAdder" src="../../_images/fullAdder.png" /></p>
+<p>A la sortie on va avoir la somme <span class="math notranslate nohighlight">\(S_i\)</span> et une éventuelle retenue <span class="math notranslate nohighlight">\(R_i\)</span>.<br />
+Ouvrir le fichier “fullAdder.dig” et passer en mode simulation. Dresser la table de vérité de l’additionneur complet.</p>
+</div>
+<div class="section" id="additionneur-complet-en-python">
+<h4>Additionneur complet en python<a class="headerlink" href="#additionneur-complet-en-python" title="Permalink to this headline">¶</a></h4>
+<p>Python possède un type booléen nommé <code class="docutils literal notranslate"><span class="pre">bool</span></code>. Cependant, les valeurs booléenne <code class="docutils literal notranslate"><span class="pre">True</span></code> et <code class="docutils literal notranslate"><span class="pre">False</span></code>peuvent être associés aux entiers 1 et 0. On peut le vérifier sur l’exemple suivant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">B</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A == 1 ? : &quot;</span><span class="p">,</span> <span class="n">A</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B == 1 ? : &quot;</span><span class="p">,</span> <span class="n">B</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B == 0 ? : &quot;</span><span class="p">,</span> <span class="n">B</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>A == 1 ? :  True
+B == 1 ? :  False
+B == 0 ? :  True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les opérateurs binaires <code class="docutils literal notranslate"><span class="pre">and</span></code> et <code class="docutils literal notranslate"><span class="pre">or</span></code> sont parfois notés <code class="docutils literal notranslate"><span class="pre">.</span></code> et <code class="docutils literal notranslate"><span class="pre">+</span></code>. Quant à l’opératuer unaire <code class="docutils literal notranslate"><span class="pre">not</span></code> il est parfois représenté par une barre au dessus de la variable ou de l’expression boolélenne.<br />
+Ainsi, l’expression booléenne de la sortie <span class="math notranslate nohighlight">\(S_i\)</span> de l’additionneur complet est
+<span class="math notranslate nohighlight">\(S_i=(\overline{A_i} \cdot \overline{Bi} \cdot R_{i-1}) + (\overline{A_i} \cdot B_i \cdot \overline{R_{i-1}}) + (A_i \cdot \overline{B_i} \cdot \overline{R_{i-1}}) + (A_i \cdot B_i \cdot R_{i-1})\)</span>.<br />
+Celle de la retenue est:
+<span class="math notranslate nohighlight">\(R_i=(A_i \cdot R_{i-1}) + (A_i \cdot B_i) + (B_i \cdot R_{i-1})\)</span>.</p>
+<p>Enfin, en python, les opérateurs booléens sont aussi nommés <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> et <code class="docutils literal notranslate"><span class="pre">not</span></code>. Ainsi l’expression booléenne <span class="math notranslate nohighlight">\(\overline{A}\cdot(B+\overline{C})\)</span> se traduit par:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="n">A</span> <span class="ow">and</span> <span class="p">(</span><span class="n">B</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">C</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On définit une fonction en python ayant le code suivant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addb</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retourne ....</span>
+<span class="sd">    On suppose que a et b sont des chaines constitués des caractères </span>
+<span class="sd">    appartenant à {&#39;0&#39;,&#39;1&#39;}; n est un entier naturel supérieur à zéro.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ri_1</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">ai</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">bi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">si</span> <span class="o">=</span> <span class="p">(</span><span class="ow">not</span> <span class="n">ai</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">bi</span> <span class="ow">and</span> <span class="n">ri_1</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="n">ai</span> <span class="ow">and</span> <span class="n">bi</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ri_1</span><span class="p">)</span> <span class="ow">or</span> \
+        <span class="p">(</span><span class="n">ai</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">bi</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">ri_1</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">ai</span> <span class="ow">and</span> <span class="n">bi</span> <span class="ow">and</span> <span class="n">ri_1</span><span class="p">)</span>
+        <span class="n">ri_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">ai</span> <span class="ow">and</span> <span class="n">ri_1</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">ai</span> <span class="ow">and</span> <span class="n">bi</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">bi</span> <span class="ow">and</span> <span class="n">ri_1</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">si</span><span class="p">))</span> <span class="o">+</span> <span class="n">res</span>
+    <span class="k">if</span> <span class="n">ri_1</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="o">+</span> <span class="n">res</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">addb</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;11111111&#39;</span><span class="p">,</span><span class="s1">&#39;00000001&#39;</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[20, 18, 16, 14, 12, 10, 8, 6]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Consulter la <a class="reference external" href="https://docs.python.org/fr/3/library/stdtypes.html?highlight=range#range">documentation officielle</a> de python sur la fonction range afin de comprendre la construction qui apparait à la ligne 9.</p></li>
+<li><p>Les spécifications étant incomplètes, expliquer ce que réalise cette fonction.</p></li>
+<li><p>Vérifier vos hypothèses avec quelques tests; par exemple:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addb(4,'0001','0001')</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addb(8,'11111111','00000001')</span></code></p></li>
+<li><p>Quelle est l’utilité du test ligne 16 ?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="un-circuit-important-le-multiplexeur-pour-les-plus-rapides-et-curieux">
+<h3>Un circuit important: le multiplexeur (<em>pour les plus rapides ET curieux</em>)<a class="headerlink" href="#un-circuit-important-le-multiplexeur-pour-les-plus-rapides-et-curieux" title="Permalink to this headline">¶</a></h3>
+<p>Le <a class="reference external" href="https://fr.wikipedia.org/wiki/Multiplexeur">multiplexeur</a> est un circuit logique très important en architecture machine. Il permet de sélectionner une entrée parmi <span class="math notranslate nohighlight">\(N\)</span> et de transférer sa valeur sur la sortie. La sélection se fait à l’aide d’une entrée <em>Select</em>.</p>
+<div class="section" id="principe">
+<h4>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">¶</a></h4>
+<p>La figure ci-dessous présente le schéma de principe d’un multiplexeur à 4 entrées <span class="math notranslate nohighlight">\(A_0 ... A_3\)</span> ainsi que sa réalisation avec les portes logiques élémentaires.</p>
+<p><img alt="mux1" src="../../_images/mux1.png" /> <img alt="mux2" src="../../_images/mux2.png" /></p>
+</div>
+<div class="section" id="simulation">
+<h4>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Ouvrir le fichier <code class="docutils literal notranslate"><span class="pre">mux2.dig</span></code> et passer en mode simulation.</p></li>
+<li><p>On souhaite sélectionner la deuxième entrée, quelle valeur logique doit-on affecter à <span class="math notranslate nohighlight">\(Select_0\)</span> et <span class="math notranslate nohighlight">\(Select_1\)</span>?</p></li>
+<li><p>Réaliser la sélection précédente. Entrer la combinaison <span class="math notranslate nohighlight">\((1,1,0,0)\)</span> pour <span class="math notranslate nohighlight">\((A_0,A_1,A_2,A_3)\)</span>. Que vaut <span class="math notranslate nohighlight">\(S\)</span> ? Expliquer.</p></li>
+<li><p>Garder la même sélection. Donner une combinaison qui conduit à <span class="math notranslate nohighlight">\(S=1\)</span>. Expliquer.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="a-retenir">
+<h2>À retenir<a class="headerlink" href="#a-retenir" title="Permalink to this headline">¶</a></h2>
+<p>L’algèbre de Boole est caractérisée par les trois opérations or, and et not. Avec ces opérateurs et des variables booléennes on peut construire des expressions logiques.<br />
+Dresser la table de vérité d’une expression signifie construire un tableau qui donne la valeur logique de l’expression pour chaque combinaison des variables d’entrées.<br />
+Quelques résultats importants:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+<th class="head"><p>A and B</p></th>
+<th class="head"><p>not A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licence Creative Commons" style="dislay: block; margin-left:auto; margin-right: auto; border-width:0;" src="img/Cc-by-nc_icon.svg.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../RD1_Repr-bin-hexa/repr_information_Exercices.html" title="previous page">Représentation de l’information - Exercices</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

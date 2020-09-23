@@ -64,30 +64,7 @@
    "source": [
     "Les opérations logiques sont réalisées simplement avec des circuits électroniques (à base de transistors) appelés **portes logiques**. Voici les symboles des portes logiques utilisées pour les opérations and, or et not.  \n",
     "\n",
-    "<table>\n",
-    "<tbody>\n",
-    "<tr>\n",
-    "<td style=\"text-align:left; font-weight: bold;\">&nbsp;Type</td>\n",
-    "<td style=\"text-align:left; font-weight: bold;\">Symbole US</td>\n",
-    "<td style=\"text-align:left; font-weight: bold;\">Symbole EU</td>\n",
-    "</tr>\n",
-    "<tr>\n",
-    "<td>&nbsp;and</td>\n",
-    "<td>&nbsp;<img src=\"img/192px-And.svg.png\" alt=\"ET-US\"></td>\n",
-    "<td>&nbsp;<img src=\"img/192px-IEC_AND.svg.png\" alt=\"ET-EU\"></td>\n",
-    "</tr>\n",
-    "<tr>\n",
-    "<td>&nbsp;or</td>\n",
-    "<td>&nbsp;<img src=\"img/192px-Or-gate-en.svg.png\" alt=\"OR-US\"></td>\n",
-    "<td>&nbsp;<img src=\"img/192px-IEC_OR.svg.png\" alt=\"OR-EU\"></td>\n",
-    "</tr>\n",
-    "<tr>\n",
-    "<td>&nbsp;not</td>\n",
-    "<td>&nbsp;<img src=\"img/192px-Not-gate-en.svg.png\" alt=\"NOT-US\"></td>\n",
-    "<td>&nbsp;<img src=\"img/192px-IEC_Not-gate.png\" alt=\"NOT-EU\"></td>\n",
-    "</tr>\n",
-    "</tbody>\n",
-    "</table>"
+    "![symboles](img/symboles.png)\n"
    ]
   },
   {
@@ -357,8 +334,17 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img alt=\"Licence Creative Commons\" style=\"dislay: block; margin-left:auto; margin-right: auto; border-width:0;\" src=\"img/Cc-by-nc_icon.svg.png\" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>. "
+    "![licence](img/licence.png)  \n",
+    "\n",
+    "Ce(tte) œuvre est mise à disposition selon les termes de la <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale 4.0 International</a>. "
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {

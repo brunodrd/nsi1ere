@@ -13,10 +13,11 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -24,12 +25,17 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="#" />
@@ -68,45 +74,71 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
   <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
-  </li>
-  <li class="">
-    <a href="src/Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
-  </li>
-  <li class="">
-    <a href="src/Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
-  </li>
-  <li class="">
-    <a href="src/systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
-  </li>
-  <li class="">
-    <a href="src/Langage.html">Langage - Constructions élémentaires</a>
-  </li>
-  <li class="">
-    <a href="src/langage_exercices_1309.html">Eléments du langage - exercices</a>
-  </li>
-  <li class="">
-    <a href="src/Fonctions.html">Les fonctions</a>
-  </li>
-  <li class="">
-    <a href="src/Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
-  </li>
-  <li class="">
-    <a href="src/RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
-  </li>
-  <li class="">
-    <a href="src/RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
-  </li>
-  <li class="">
-    <a href="src/RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
-  </li>
-  <li class="">
-    <a href="src/RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
-  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE
+  </a>
+ </li>
 </ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/Architecture_partie_1.html">
+   ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/Architecture_partie_1_exercices.html">
+   ARCHITECTURE 1 - EXERCICES
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/systeme_exploitation.html">
+   SYSTEME D’EXPLOITATION
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/Langage.html">
+   Langage - Constructions élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/langage_exercices_1309.html">
+   Eléments du langage - exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/Fonctions.html">
+   Les fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/Fonctions_exercices.html">
+   S’approprier les fonctions - exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/RD1_Repr-bin-hexa/Representation_information.html">
+   TRAVAILLER EN BASE 2, 10 ET 16
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/RD1_Repr-bin-hexa/repr_information_Exercices.html">
+   Représentation de l’information - Exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/RD_3_Expressions_booleennes/Expressions_booleennes.html">
+   Expressions booléennes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="src/RD_3_Expressions_booleennes/Exercices_logiques.html">
+   Exercices de logique booléenne
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -129,36 +161,38 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-        </div>
+    
+</div>
+        <!-- Source interaction buttons -->
 
-        <!-- Edit this page -->
-        
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-        
+
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-    </ul>
-</nav>
-
-
+        <nav id="bd-toc-nav">
+            
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">

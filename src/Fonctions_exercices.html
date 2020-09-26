@@ -13,9 +13,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -23,12 +24,17 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="TRAVAILLER EN BASE 2, 10 ET 16" href="RD1_Repr-bin-hexa/Representation_information.html" />
@@ -65,45 +71,71 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
   <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
-  </li>
-  <li class="">
-    <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
-  </li>
-  <li class="">
-    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
-  </li>
-  <li class="">
-    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
-  </li>
-  <li class="">
-    <a href="Langage.html">Langage - Constructions élémentaires</a>
-  </li>
-  <li class="">
-    <a href="langage_exercices_1309.html">Eléments du langage - exercices</a>
-  </li>
-  <li class="">
-    <a href="Fonctions.html">Les fonctions</a>
-  </li>
-  <li class="active">
-    <a href="">S’approprier les fonctions - exercices</a>
-  </li>
-  <li class="">
-    <a href="RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
-  </li>
-  <li class="">
-    <a href="RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
-  </li>
-  <li class="">
-    <a href="RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
-  </li>
-  <li class="">
-    <a href="RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
-  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE
+  </a>
+ </li>
 </ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Architecture_partie_1.html">
+   ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Architecture_partie_1_exercices.html">
+   ARCHITECTURE 1 - EXERCICES
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="systeme_exploitation.html">
+   SYSTEME D’EXPLOITATION
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Langage.html">
+   Langage - Constructions élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="langage_exercices_1309.html">
+   Eléments du langage - exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Fonctions.html">
+   Les fonctions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   S’approprier les fonctions - exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="RD1_Repr-bin-hexa/Representation_information.html">
+   TRAVAILLER EN BASE 2, 10 ET 16
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="RD1_Repr-bin-hexa/repr_information_Exercices.html">
+   Représentation de l’information - Exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="RD_3_Expressions_booleennes/Expressions_booleennes.html">
+   Expressions booléennes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="RD_3_Expressions_booleennes/Exercices_logiques.html">
+   Exercices de logique booléenne
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -126,75 +158,97 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-            <div class="dropdown-buttons">
-                <!-- ipynb file if we had a myst markdown file -->
-                
-                <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../_sources/src/Fonctions_exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
-                <!-- Download PDF via print -->
-                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-            </div>
-            
-        </div>
-
-        <!-- Edit this page -->
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/src/Fonctions_exercices.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
         
-        <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-            <div class="dropdown-buttons">
-                
-                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
-                
-                
-                
-            </div>
-        </div>
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions_exercices.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/src/Fonctions_exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
         
     </div>
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
 </div>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#maximum" class="nav-link">Maximum</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#volume-d-un-ballon" class="nav-link">Volume d’un ballon</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#longueur-d-un-tweet" class="nav-link">Longueur d’un tweet</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#distance-euclidienne-france-ioi" class="nav-link">Distance euclidienne (France IOI)</a>
-        </li>
-    
-    </ul>
-</nav>
+    </div>
 
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maximum">
+   Maximum
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#volume-d-un-ballon">
+   Volume d’un ballon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longueur-d-un-tweet">
+   Longueur d’un tweet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distance-euclidienne-france-ioi">
+   Distance euclidienne (France IOI)
+  </a>
+ </li>
+</ul>
 
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -210,7 +264,7 @@
 n_3\)</span> fournis en paramètres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">):</span>
     <span class="c1"># Supprimer l&#39;instruction pass et compléter avec votre code</span>
     <span class="k">pass</span>
 </pre></div>
@@ -219,7 +273,7 @@ n_3\)</span> fournis en paramètres.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter la ligne suivante et exécuter cette cellule</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter la ligne suivante et exécuter cette cellule</span>
 <span class="c1">#assert maximum(2, 3, 5) == 5, &quot;Erreur: valeur renvoyée incorrecte&quot;</span>
 </pre></div>
 </div>
@@ -246,13 +300,32 @@ Rappel: <span class="math notranslate nohighlight">\(V=\dfrac{4}{3}\times\pi r^{
 <p>Sur les feuilles à motifs que vous leur avez imprimées tout à l’heure, les jeunes gens souhaiteraient calculer la distance entre deux motifs, ce qui ce fait facilement si l’on perçoit la feuille comme un repère orthonormé.
 Ce que doit faire votre programme :</p>
 <p>Écrivez une fonction qui prend en paramètre les coordonnées <span class="math notranslate nohighlight">\((x_A,y_A)\)</span> et <span class="math notranslate nohighlight">\((x_B,y_B)\)</span> de deux points et retourne la distance euclidienne entre ces deux points. On rappelle que la distance euclidienne entre deux points est égale à :
-<span class="math notranslate nohighlight">\($\sqrt{(x_B−x_A)^2+(y_B−y_A)^2}\)</span>$</p>
+$<span class="math notranslate nohighlight">\(\sqrt{(x_B−x_A)^2+(y_B−y_A)^2}\)</span>$</p>
 <p>Utilisez ensuite cette fonction dans un programme qui lit quatre nombres décimaux <span class="math notranslate nohighlight">\(x_A, y_A, x_B\)</span> et <span class="math notranslate nohighlight">\(y_B\)</span>
 tapés au clavier, puis affiche la distance entre les deux points correspondants.</p>
 <p>On pourra utiliser la fonction <span class="math notranslate nohighlight">\(sqrt(x)\)</span> du module <code class="docutils literal notranslate"><span class="pre">math</span></code>, qui retourne la racine carrée du paramètre <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

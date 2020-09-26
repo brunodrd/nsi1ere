@@ -13,9 +13,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -23,12 +24,17 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Représentation de l’information - Exercices" href="repr_information_Exercices.html" />
@@ -65,45 +71,71 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
   <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
-  </li>
-  <li class="">
-    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
-  </li>
-  <li class="">
-    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
-  </li>
-  <li class="">
-    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
-  </li>
-  <li class="">
-    <a href="../Langage.html">Langage - Constructions élémentaires</a>
-  </li>
-  <li class="">
-    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
-  </li>
-  <li class="">
-    <a href="../Fonctions.html">Les fonctions</a>
-  </li>
-  <li class="">
-    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
-  </li>
-  <li class="active">
-    <a href="">TRAVAILLER EN BASE 2, 10 ET 16</a>
-  </li>
-  <li class="">
-    <a href="repr_information_Exercices.html">Représentation de l’information - Exercices</a>
-  </li>
-  <li class="">
-    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
-  </li>
-  <li class="">
-    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
-  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE
+  </a>
+ </li>
 </ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Architecture_partie_1.html">
+   ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Architecture_partie_1_exercices.html">
+   ARCHITECTURE 1 - EXERCICES
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systeme_exploitation.html">
+   SYSTEME D’EXPLOITATION
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Langage.html">
+   Langage - Constructions élémentaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../langage_exercices_1309.html">
+   Eléments du langage - exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Fonctions.html">
+   Les fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Fonctions_exercices.html">
+   S’approprier les fonctions - exercices
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   TRAVAILLER EN BASE 2, 10 ET 16
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="repr_information_Exercices.html">
+   Représentation de l’information - Exercices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">
+   Expressions booléennes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../RD_3_Expressions_booleennes/Exercices_logiques.html">
+   Exercices de logique booléenne
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -126,113 +158,143 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-            <div class="dropdown-buttons">
-                <!-- ipynb file if we had a myst markdown file -->
-                
-                <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../../_sources/src/RD1_Repr-bin-hexa/Representation_information.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
-                <!-- Download PDF via print -->
-                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-            </div>
-            
-        </div>
-
-        <!-- Edit this page -->
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/src/RD1_Repr-bin-hexa/Representation_information.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
         
-        <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-            <div class="dropdown-buttons">
-                
-                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD1_Repr-bin-hexa/Representation_information.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
-                
-                
-                
-            </div>
-        </div>
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD1_Repr-bin-hexa/Representation_information.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/src/RD1_Repr-bin-hexa/Representation_information.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
         
     </div>
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
 </div>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#comment-representer-des-informations-sur-une-machine-numerique" class="nav-link">Comment représenter des informations sur une machine numérique ?</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#unite-d-information" class="nav-link">Unité d’information</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#representation-binaire-des-entiers-naturels" class="nav-link">Représentation binaire des entiers naturels</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#representation-positionnelle" class="nav-link">Représentation positionnelle</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#conversion-binaire-decimal" class="nav-link">Conversion binaire - décimal</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#conversion-decimal-binaire" class="nav-link">Conversion décimal - binaire</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#representation-hexadecimale" class="nav-link">Représentation hexadécimale</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#conversions-decimal-hexadecimal" class="nav-link">Conversions décimal - hexadécimal</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#conversions-binaire-hexadecimal" class="nav-link">Conversions binaire - hexadécimal</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#a-retenir" class="nav-link">À retenir</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#resume-des-fonctions-python-rencontrees" class="nav-link">Résumé des fonctions python rencontrées</a>
-        </li>
-    
-    </ul>
-</nav>
+    </div>
 
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reperes-historiques">
+   Repères historiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comment-representer-des-informations-sur-une-machine-numerique">
+   Comment représenter des informations sur une machine numérique ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unite-d-information">
+     Unité d’information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation-binaire-des-entiers-naturels">
+   Représentation binaire des entiers naturels
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representation-positionnelle">
+     Représentation positionnelle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-binaire-decimal">
+     Conversion binaire - décimal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-decimal-binaire">
+     Conversion décimal - binaire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation-hexadecimale">
+   Représentation hexadécimale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversions-decimal-hexadecimal">
+     Conversions décimal - hexadécimal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversions-binaire-hexadecimal">
+     Conversions binaire - hexadécimal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-retenir">
+   À retenir
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resume-des-fonctions-python-rencontrees">
+   Résumé des fonctions python rencontrées
+  </a>
+ </li>
+</ul>
 
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -289,13 +351,13 @@ La base a été indiquée ici en indice, on peut l’omettre lorsqu’il n’y a
 Exemple: soit <span class="math notranslate nohighlight">\(N=23\)</span> à convertir en binaire</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">latex</span>
-\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span> 
-<span class="mi">23</span> <span class="o">&amp;=</span>  <span class="mi">2</span>\<span class="n">times</span> <span class="mi">11</span><span class="o">+</span><span class="mi">1</span> \\ 
- <span class="o">&amp;=</span>  <span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times5</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>\\
- <span class="o">&amp;=</span> <span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times2</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>\\
- <span class="o">&amp;=</span> <span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times</span><span class="p">(</span><span class="mi">2</span>\<span class="n">times1</span><span class="o">+</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
-\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%latex</span>
+<span class="k">\begin</span><span class="nb">{</span>align*<span class="nb">}</span> 
+23 <span class="nb">&amp;</span>=  2<span class="k">\times</span> 11+1 <span class="k">\\</span> 
+ <span class="nb">&amp;</span>=  2<span class="k">\times</span>(2<span class="k">\times</span>5 +1)+1<span class="k">\\</span>
+ <span class="nb">&amp;</span>= 2<span class="k">\times</span>(2<span class="k">\times</span>(2<span class="k">\times</span>2 +1)+1)+1<span class="k">\\</span>
+ <span class="nb">&amp;</span>= 2<span class="k">\times</span>(2<span class="k">\times</span>(2<span class="k">\times</span>(2<span class="k">\times</span>1+0)+1)+1)+1
+<span class="k">\end</span><span class="nb">{</span>align*<span class="nb">}</span>
 </pre></div>
 </div>
 </div>
@@ -355,6 +417,25 @@ La division euclidienne d’un entier <span class="math notranslate nohighlight"
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src/RD1_Repr-bin-hexa"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

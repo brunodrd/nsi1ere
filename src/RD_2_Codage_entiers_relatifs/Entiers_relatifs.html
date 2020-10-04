@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Encodage des entiers relatifs &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Exercices de logique booléenne" href="../RD_3_Expressions_booleennes/Exercices_logiques.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="active">
+    <a href="">Encodage des entiers relatifs</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD_2_Codage_entiers_relatifs/Entiers_relatifs.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_2_Codage_entiers_relatifs/Entiers_relatifs.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#comment-coder-un-entier-signe-sur-une-machine-numerique" class="nav-link">Comment coder un entier signé sur une machine numérique?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#proprietes-a-verifier-et-premiere-solution" class="nav-link">Propriétés à vérifier et première solution</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#une-solution-plus-satisfaisante" class="nav-link">Une solution plus satisfaisante</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#valeur-maximale-et-depassement-de-capacite" class="nav-link">Valeur maximale et dépassement de capacité</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#le-complement-a-deux" class="nav-link">Le complément à deux</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#comment-utiliser-le-complement-a-deux" class="nav-link">Comment utiliser le complément à deux ?</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#domaine-couvert-pour-une-capacite-de-n-bits" class="nav-link">Domaine couvert pour une capacité de n bits</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#entiers-positifs" class="nav-link">Entiers positifs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#entiers-negatifs" class="nav-link">Entiers négatifs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#conclusion" class="nav-link">Conclusion</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#a-retenir" class="nav-link">A retenir</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#liens" class="nav-link">Liens</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="encodage-des-entiers-relatifs">
+<h1>Encodage des entiers relatifs<a class="headerlink" href="#encodage-des-entiers-relatifs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="comment-coder-un-entier-signe-sur-une-machine-numerique">
+<h2>Comment coder un entier signé sur une machine numérique?<a class="headerlink" href="#comment-coder-un-entier-signe-sur-une-machine-numerique" title="Permalink to this headline">¶</a></h2>
+<p>Le signe d’un entier relatif peut prendre deux valeurs possibles: + ou -. Par conséquent, un seul bit suffit!<br />
+Ainsi, avec <span class="math notranslate nohighlight">\(n\)</span> bits, on réservera <span class="math notranslate nohighlight">\(n-1\)</span> bits pour la valeur et 1 bit pour le signe, pour coder les <span class="math notranslate nohighlight">\(2^n-1\)</span> valeurs différentes.</p>
+</div>
+<div class="section" id="proprietes-a-verifier-et-premiere-solution">
+<h2>Propriétés à vérifier et première solution<a class="headerlink" href="#proprietes-a-verifier-et-premiere-solution" title="Permalink to this headline">¶</a></h2>
+<p>Quelque soit l’encodage choisi, on doit respecter deux propriétés essentielles:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a + (-a) = 0\)</span> (propriété 1)</p></li>
+<li><p><span class="math notranslate nohighlight">\(-(-a) = a\)</span> (propriété 2)</p></li>
+</ul>
+<p>La première idée est d’utiliser un bit, généralement <strong>le bit de poids fort</strong>, pour représenter le signe et les autres bits pour représenter la valeur absolue du nombre. Par convention: le signe + est codé par 0 et le signe - par 1.</p>
+<p><strong>Exemple</strong></p>
+<p>Soit à coder <span class="math notranslate nohighlight">\(-5\)</span> sur 4 bits.<br />
+Avec 4 bits, la valeur absolue sera codée sur 3 bits et le signe sur 1 bit.
+On a <span class="math notranslate nohighlight">\(|-5| = 5\)</span>, ce qui correspond à <span class="math notranslate nohighlight">\(101_{2}\)</span>, le bit de signe valant 1 car <span class="math notranslate nohighlight">\(-5&lt;0\)</span>. On aura donc le codage suivant: <span class="math notranslate nohighlight">\(-5\rightarrow 1\ 1\ 0\ 1\)</span></p>
+<p>La propriété (1) ci-dessus est-elle vérifiée ?<br />
+Ajoutons les représentations de <span class="math notranslate nohighlight">\(5\)</span> et <span class="math notranslate nohighlight">\(-5\)</span>, avec un résultat sur 4 bits:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>La valeur obtenue sur 4 bits est différente de zéro: cette solution n’est pas satisfaisante</strong>.<br />
+<em>Remarque</em>: un problème supplémentaire peut être mis en évidence: l’existence de <strong>deux</strong> représentations pour zéro.</p>
+</div>
+<div class="section" id="une-solution-plus-satisfaisante">
+<h2>Une solution plus satisfaisante<a class="headerlink" href="#une-solution-plus-satisfaisante" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="valeur-maximale-et-depassement-de-capacite">
+<h3>Valeur maximale et dépassement de capacité<a class="headerlink" href="#valeur-maximale-et-depassement-de-capacite" title="Permalink to this headline">¶</a></h3>
+<p>On suppose dans cette leçon que l’on travaille avec une capacité fixe de <span class="math notranslate nohighlight">\(n\)</span> bits. On sait qu’avec <span class="math notranslate nohighlight">\(n\)</span> bits on peut représenter <span class="math notranslate nohighlight">\(2^n\)</span> valeurs différentes, comprises dans l’intervalle <span class="math notranslate nohighlight">\([0;2^n-1]\)</span>.<br />
+Que se passe-t-il si on ajoute une unité à la valeur maximale <span class="math notranslate nohighlight">\(2^n-1\)</span>, dont la représentation est composée de <span class="math notranslate nohighlight">\(n\)</span> bits égaux à 1?<br />
+Pour faciliter la représentation de la situation, raisonnons sur <span class="math notranslate nohighlight">\(n=4\)</span> bits.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>La valeur obtenue <span class="math notranslate nohighlight">\(2^n-1+1=2^n\)</span> n’est pas représentable sur <span class="math notranslate nohighlight">\(n\)</span> bits (<em>on ignore la retenue</em>). Sur <span class="math notranslate nohighlight">\(n\)</span> bits on obtient que des zéros! Ce phénomène traduit un <strong>dépassement de capacité</strong>.</p>
+</div>
+<div class="section" id="le-complement-a-deux">
+<h3>Le complément à deux<a class="headerlink" href="#le-complement-a-deux" title="Permalink to this headline">¶</a></h3>
+<p>Cette solution exploite le dépassement de capacité. Sur <span class="math notranslate nohighlight">\(n\)</span> bits, le plus grand nombre représentable est <span class="math notranslate nohighlight">\(2^n-1\)</span>. Ce qui implique que <span class="math notranslate nohighlight">\(2^n-1 + 1=2^n\)</span> sera représenté par <span class="math notranslate nohighlight">\(0\ 0\ ...\ 0\)</span> (<em>dépassement de capacité</em>).<br />
+La quantité <span class="math notranslate nohighlight">\(2^n-1\)</span> peut être considérée comme <strong>une représentation</strong> de <span class="math notranslate nohighlight">\(-1\)</span>.</p>
+<p>Le résultat précédent peut être généralisé: <strong>pour une capacité de</strong> <span class="math notranslate nohighlight">\(n\)</span> <strong>bits et pour un entier</strong> <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(2^n-x\)</span> <strong>est une représentation possible de</strong> <span class="math notranslate nohighlight">\(-x\)</span>.</p>
+<p>Les propriétés (1) et (2) de la section 2 sont-elles vérifiées?</p>
+<div class="math notranslate nohighlight">
+\[
+x + (2^n-x) = 2^n
+\]</div>
+<p>Or, <span class="math notranslate nohighlight">\(2^n\)</span> est représenté par <span class="math notranslate nohighlight">\(0\ 0\ ...\ 0\)</span>, donc <strong>la propriété (1) est vérifiée</strong>.</p>
+<p>Vérifions la propriété (2):</p>
+<p>$
+\begin{align*}
+-(-x) &amp;= -(2^n-x)\
+&amp;=2^n-(2^n-x)\
+&amp;=x
+\end{align*}
+$</p>
+<p><strong>Conclusion</strong>:<br />
+pour une capacité de <span class="math notranslate nohighlight">\(n\)</span> bits et pour un entier naturel <span class="math notranslate nohighlight">\(x\)</span>, la quantité <span class="math notranslate nohighlight">\(2^n-x\)</span> appelée <strong>complément à deux</strong> de <span class="math notranslate nohighlight">\(x\)</span> est une bonne représentation de <span class="math notranslate nohighlight">\(-x\)</span>.</p>
+</div>
+<div class="section" id="comment-utiliser-le-complement-a-deux">
+<h3>Comment utiliser le complément à deux ?<a class="headerlink" href="#comment-utiliser-le-complement-a-deux" title="Permalink to this headline">¶</a></h3>
+<p>La quantité <span class="math notranslate nohighlight">\(2^n-x\)</span> est une bonne représentation de l’opposé de <span class="math notranslate nohighlight">\(x\)</span> sur <span class="math notranslate nohighlight">\(n\)</span> bits. Cependant, elle n’est pas facile à exploitée sous cette forme. Transformons la!<br />
+$
+\begin{align*}
+2^n-x &amp;= 2^n-1+1-x\
+&amp;=(2^n-1)-x+1
+\end{align*}
+$</p>
+<p>Or, réaliser l’opération <span class="math notranslate nohighlight">\((2^n-1)-x\)</span> (<em>quantité encore appelée aussi complément à un de</em> <span class="math notranslate nohighlight">\(x\)</span>) consiste à <strong>inverser tous les bits</strong> de <span class="math notranslate nohighlight">\(x\)</span> (sauriez-vous le montrer?). Il ne reste plus alors qu’à ajouter 1.</p>
+<p>D’où la méthode pour représenter l’opposé d’un entier relatif:</p>
+<ul class="simple">
+<li><p>Ecrire la valeur absolue du nombre en binaire naturel avec le nombre de bits spécifié (compléter si besoin avec des zéros);</p></li>
+<li><p>Inverser tous les bits (complément à un);</p></li>
+<li><p>Ajouter 1 au résultat précédent</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="domaine-couvert-pour-une-capacite-de-n-bits">
+<h2>Domaine couvert pour une capacité de n bits<a class="headerlink" href="#domaine-couvert-pour-une-capacite-de-n-bits" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entiers-positifs">
+<h3>Entiers positifs<a class="headerlink" href="#entiers-positifs" title="Permalink to this headline">¶</a></h3>
+<p>On a des représentations binaires allant de <span class="math notranslate nohighlight">\(0\ 0\ ...\ 0\)</span> à <span class="math notranslate nohighlight">\(0\ 1\ ...\ 1\)</span> soit l’intervalle <span class="math notranslate nohighlight">\([0;2^{n-1}-1]\)</span></p>
+</div>
+<div class="section" id="entiers-negatifs">
+<h3>Entiers négatifs<a class="headerlink" href="#entiers-negatifs" title="Permalink to this headline">¶</a></h3>
+<p>Ajoutons 1 au nombre positif maximal.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>…</p></th>
+<th class="head"><p>1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>On obtient: <span class="math notranslate nohighlight">\(1\ 0\ 0\ ...\ 0\)</span>, soit un nombre négatif ! Ce phénomène est appelé <a class="reference external" href="https://fr.wikipedia.org/wiki/D%C3%A9passement_d%27entier">overflow</a> et est à l’origine de bug célèbre comme celui ayant entrainé la destruction <a class="reference external" href="https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5">d’Ariane5</a> pour son vol inaugural.<br />
+Ce nombre <span class="math notranslate nohighlight">\(1\ 0\ 0\ ...\ 0\)</span> est très particulier (<em>son complément à deux est égal à lui même</em>), il représente le plus petit nombre négatif représentable sur <span class="math notranslate nohighlight">\(n\)</span> bits, il correspond à <span class="math notranslate nohighlight">\(-2^{n-1}\)</span>.</p>
+<p>Le plus grand entier négatif est représenté par <span class="math notranslate nohighlight">\(1\ 1\ ...\ 1\)</span> soit <span class="math notranslate nohighlight">\(-1\)</span> (montrez le !).</p>
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>Avec <span class="math notranslate nohighlight">\(n\)</span> bits, en arithmétique signée, on peut coder les entiers appartenant à l’intervalle:</p>
+<div class="math notranslate nohighlight">
+\[[-2^{n-1}, ...,-1,0,...,2^{n-1}-1]\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>Valeur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>…</p></td>
+<td><p>1</p></td>
+<td><p>2^(n-1) - 1</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>1</p></td>
+<td><p>2^(n-1) - 2</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>0</p></td>
+<td><p>-2^(n-1)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>…</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="a-retenir">
+<h2>A retenir<a class="headerlink" href="#a-retenir" title="Permalink to this headline">¶</a></h2>
+<p>Pour coder un entier relatif, on utilise la méthode du complément à deux. Pour cela, si la capcité est fixée à <span class="math notranslate nohighlight">\(n\)</span> bits:</p>
+<ul class="simple">
+<li><p>Ecrire la valeur absolue du nombre en binaire naturel avec le nombre de bits spécifié (compléter si besoin avec des zéros);</p></li>
+<li><p>Inverser tous les bits (complément à un);</p></li>
+<li><p>Ajouter 1 au résultat précédent</p></li>
+</ul>
+<p>Avec <span class="math notranslate nohighlight">\(n\)</span> bits, on peut coder les entiers appartenant à l’intervalle <span class="math notranslate nohighlight">\([-2^{n-1}, ...,-1,0,...,2^{n-1}-1]\)</span>. Si une opération conduit à un nombre se situant en dehors de cet intervalle, on a un phénomène d’overflow se traduisant par un résultat aberrant.</p>
+</div>
+<div class="section" id="liens">
+<h2>Liens<a class="headerlink" href="#liens" title="Permalink to this headline">¶</a></h2>
+<p>Vidéos de M Ronan Boulic</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=t2dcfWS-GE4&amp;list=PLie7a1OUTSajCf92jY8ZU3sWf7mA919xV&amp;index=16">representation des entiers relatifs</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=GYlrSBzQR68">domaine couvert</a></p>
+<p>Exercices</p>
+<p><a class="reference external" href="https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page29.xhtml">page 29 NSI Hatier</a></p>
+<p><a class="reference external" href="https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page30.xhtml">page 30 NSI Hatier</a></p>
+<p><img alt="licence" src="../../_images/licence.png" /></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../RD_3_Expressions_booleennes/Exercices_logiques.html" title="previous page">Exercices de logique booléenne</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

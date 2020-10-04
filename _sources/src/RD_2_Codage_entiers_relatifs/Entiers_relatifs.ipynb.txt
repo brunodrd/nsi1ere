@@ -1,0 +1,289 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "hideCode": true
+   },
+   "source": [
+    "Encodage des entiers relatifs\n",
+    "========================"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Comment coder un entier signé sur une machine numérique?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Le signe d'un entier relatif peut prendre deux valeurs possibles: + ou -. Par conséquent, un seul bit suffit!  \n",
+    "Ainsi, avec $n$ bits, on réservera $n-1$ bits pour la valeur et 1 bit pour le signe, pour coder les $2^n-1$ valeurs différentes.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Propriétés à vérifier et première solution\n",
+    "Quelque soit l'encodage choisi, on doit respecter deux propriétés essentielles:  \n",
+    "\n",
+    "*  $a + (-a) = 0$ (propriété 1)  \n",
+    "*  $-(-a) = a$ (propriété 2) \n",
+    "\n",
+    "La première idée est d'utiliser un bit, généralement **le bit de poids fort**, pour représenter le signe et les autres bits pour représenter la valeur absolue du nombre. Par convention: le signe + est codé par 0 et le signe - par 1.  \n",
+    "\n",
+    "**Exemple**  \n",
+    "\n",
+    "Soit à coder $-5$ sur 4 bits.  \n",
+    "Avec 4 bits, la valeur absolue sera codée sur 3 bits et le signe sur 1 bit.\n",
+    "On a $|-5| = 5$, ce qui correspond à $101_{2}$, le bit de signe valant 1 car $-5<0$. On aura donc le codage suivant: $-5\\rightarrow 1\\ 1\\ 0\\ 1$  \n",
+    "\n",
+    "La propriété (1) ci-dessus est-elle vérifiée ?  \n",
+    "Ajoutons les représentations de $5$ et $-5$, avec un résultat sur 4 bits:  \n",
+    "\n",
+    "|   \t| 0 \t| 1 \t| 0 \t| 1 \t|\n",
+    "|---\t|---\t|---\t|---\t|---\t|\n",
+    "| + \t| 1 \t| 1 \t| 0 \t| 1 \t|\n",
+    "|   \t| 0 \t| 0 \t| 1 \t| 0 \t|\n",
+    "\n",
+    "**La valeur obtenue sur 4 bits est différente de zéro: cette solution n'est pas satisfaisante**.  \n",
+    "*Remarque*: un problème supplémentaire peut être mis en évidence: l'existence de **deux** représentations pour zéro."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Une solution plus satisfaisante"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Valeur maximale et dépassement de capacité"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On suppose dans cette leçon que l'on travaille avec une capacité fixe de $n$ bits. On sait qu'avec $n$ bits on peut représenter $2^n$ valeurs différentes, comprises dans l'intervalle $[0;2^n-1]$.  \n",
+    "Que se passe-t-il si on ajoute une unité à la valeur maximale $2^n-1$, dont la représentation est composée de $n$ bits égaux à 1?  \n",
+    "Pour faciliter la représentation de la situation, raisonnons sur $n=4$ bits.  \n",
+    "\n",
+    "|   \t| 1 \t| 1 \t| 1 \t| 1 \t|\n",
+    "|---\t|---\t|---\t|---\t|---\t|\n",
+    "| + \t| 0 \t| 0 \t| 0 \t| 1 \t|\n",
+    "|   \t| 0 \t| 0 \t| 0 \t| 0 \t|\n",
+    "\n",
+    "La valeur obtenue $2^n-1+1=2^n$ n'est pas représentable sur $n$ bits (*on ignore la retenue*). Sur $n$ bits on obtient que des zéros! Ce phénomène traduit un **dépassement de capacité**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Le complément à deux"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Cette solution exploite le dépassement de capacité. Sur $n$ bits, le plus grand nombre représentable est $2^n-1$. Ce qui implique que $2^n-1 + 1=2^n$ sera représenté par $0\\ 0\\ ...\\ 0$ (*dépassement de capacité*).  \n",
+    "La quantité $2^n-1$ peut être considérée comme **une représentation** de $-1$.  \n",
+    "\n",
+    "Le résultat précédent peut être généralisé: **pour une capacité de** $n$ **bits et pour un entier** $x$, $2^n-x$ **est une représentation possible de** $-x$.  \n",
+    "\n",
+    "Les propriétés (1) et (2) de la section 2 sont-elles vérifiées?\n",
+    "\n",
+    "$$\n",
+    "x + (2^n-x) = 2^n\n",
+    "$$ \n",
+    "\n",
+    "Or, $2^n$ est représenté par $0\\ 0\\ ...\\ 0$, donc **la propriété (1) est vérifiée**.\n",
+    "\n",
+    "Vérifions la propriété (2):\n",
+    "\n",
+    "$\n",
+    "\\begin{align*}\n",
+    "-(-x) &= -(2^n-x)\\\\\n",
+    "&=2^n-(2^n-x)\\\\\n",
+    "&=x\n",
+    "\\end{align*}\n",
+    "$\n",
+    "\n",
+    "**Conclusion**:  \n",
+    "pour une capacité de $n$ bits et pour un entier naturel $x$, la quantité $2^n-x$ appelée **complément à deux** de $x$ est une bonne représentation de $-x$."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Comment utiliser le complément à deux ?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La quantité $2^n-x$ est une bonne représentation de l'opposé de $x$ sur $n$ bits. Cependant, elle n'est pas facile à exploitée sous cette forme. Transformons la!  \n",
+    "$\n",
+    "\\begin{align*}\n",
+    "2^n-x &= 2^n-1+1-x\\\\\n",
+    "&=(2^n-1)-x+1\n",
+    "\\end{align*}\n",
+    "$\n",
+    "\n",
+    "Or, réaliser l'opération $(2^n-1)-x$ (*quantité encore appelée aussi complément à un de* $x$) consiste à **inverser tous les bits** de $x$ (sauriez-vous le montrer?). Il ne reste plus alors qu'à ajouter 1.  \n",
+    "\n",
+    "D'où la méthode pour représenter l'opposé d'un entier relatif:  \n",
+    "\n",
+    "*  Ecrire la valeur absolue du nombre en binaire naturel avec le nombre de bits spécifié (compléter si besoin avec des zéros);  \n",
+    "*  Inverser tous les bits (complément à un);\n",
+    "*  Ajouter 1 au résultat précédent"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Domaine couvert pour une capacité de n bits"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Entiers positifs\n",
+    "On a des représentations binaires allant de $0\\ 0\\ ...\\ 0$ à $0\\ 1\\ ...\\ 1$ soit l'intervalle $[0;2^{n-1}-1]$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Entiers négatifs\n",
+    "Ajoutons 1 au nombre positif maximal.  \n",
+    "\n",
+    "|   \t| 0 \t| 1 \t| 1 \t| ... \t| 1 \t|\n",
+    "|---\t|---\t|---\t|---\t|-----\t|---\t|\n",
+    "| + \t| 0 \t| 0 \t| 0 \t| ... \t| 1 \t|\n",
+    "|   \t| 1 \t| 0 \t| 0 \t| ... \t| 0 \t|\n",
+    "\n",
+    "On obtient: $1\\ 0\\ 0\\ ...\\ 0$, soit un nombre négatif ! Ce phénomène est appelé [overflow](https://fr.wikipedia.org/wiki/D%C3%A9passement_d%27entier) et est à l'origine de bug célèbre comme celui ayant entrainé la destruction [d'Ariane5](https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5) pour son vol inaugural.  \n",
+    "Ce nombre $1\\ 0\\ 0\\ ...\\ 0$ est très particulier (*son complément à deux est égal à lui même*), il représente le plus petit nombre négatif représentable sur $n$ bits, il correspond à $-2^{n-1}$.\n",
+    "\n",
+    "Le plus grand entier négatif est représenté par $1\\ 1\\ ...\\ 1$ soit $-1$ (montrez le !)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Conclusion\n",
+    "Avec $n$ bits, en arithmétique signée, on peut coder les entiers appartenant à l'intervalle:  \n",
+    "\n",
+    "$$[-2^{n-1}, ...,-1,0,...,2^{n-1}-1]$$\n",
+    "\n",
+    "|   \t|   \t|     \t|     \t|     \t|     \t| Valeur      \t|\n",
+    "|---\t|---\t|-----\t|-----\t|-----\t|-----\t|-------------\t|\n",
+    "|   \t| 0 \t| 1   \t| 1   \t| ... \t| 1   \t| 2^(n-1) - 1 \t|\n",
+    "|   \t| 0 \t| 0   \t| 0   \t| ... \t| 1   \t| 2^(n-1) - 2 \t|\n",
+    "|   \t| 0 \t| ... \t| ... \t| ... \t| ... \t|             \t|\n",
+    "|   \t| 0 \t| 0   \t| 0   \t| ... \t| 0   \t| 0           \t|\n",
+    "|   \t| 1 \t| 0   \t| 0   \t| ... \t| 0   \t| -2^(n-1)    \t|\n",
+    "|   \t| 1 \t| 0   \t| 0   \t| ... \t| 1   \t|             \t|\n",
+    "|   \t| 1 \t| ... \t| ... \t| ... \t| ... \t|             \t|\n",
+    "|   \t| 1 \t| 1   \t| 1   \t| 1   \t| 1   \t| -1          \t|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## A retenir\n",
+    "Pour coder un entier relatif, on utilise la méthode du complément à deux. Pour cela, si la capcité est fixée à $n$ bits:  \n",
+    "\n",
+    "*  Ecrire la valeur absolue du nombre en binaire naturel avec le nombre de bits spécifié (compléter si besoin avec des zéros);  \n",
+    "*  Inverser tous les bits (complément à un);  \n",
+    "*  Ajouter 1 au résultat précédent  \n",
+    "\n",
+    "Avec $n$ bits, on peut coder les entiers appartenant à l'intervalle $[-2^{n-1}, ...,-1,0,...,2^{n-1}-1]$. Si une opération conduit à un nombre se situant en dehors de cet intervalle, on a un phénomène d'overflow se traduisant par un résultat aberrant.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Liens"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Vidéos de M Ronan Boulic  \n",
+    "\n",
+    "[representation des entiers relatifs](https://www.youtube.com/watch?v=t2dcfWS-GE4&list=PLie7a1OUTSajCf92jY8ZU3sWf7mA919xV&index=16)\n",
+    "\n",
+    "[domaine couvert](https://www.youtube.com/watch?v=GYlrSBzQR68)\n",
+    "\n",
+    "Exercices  \n",
+    "\n",
+    "[page 29 NSI Hatier](https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page29.xhtml)\n",
+    "\n",
+    "\n",
+    "[page 30 NSI Hatier](https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page30.xhtml)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![licence](img/licence.png)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

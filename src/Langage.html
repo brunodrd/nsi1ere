@@ -13,10 +13,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -24,17 +23,12 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Eléments du langage - exercices" href="langage_exercices_1309.html" />
@@ -71,71 +65,48 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
   <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE
-  </a>
- </li>
+  <li class="">
+    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="active">
+    <a href="">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="Architecture_partie_1.html">
-   ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Architecture_partie_1_exercices.html">
-   ARCHITECTURE 1 - EXERCICES
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="systeme_exploitation.html">
-   SYSTEME D’EXPLOITATION
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Langage - Constructions élémentaires
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="langage_exercices_1309.html">
-   Eléments du langage - exercices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Fonctions.html">
-   Les fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Fonctions_exercices.html">
-   S’approprier les fonctions - exercices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD1_Repr-bin-hexa/Representation_information.html">
-   TRAVAILLER EN BASE 2, 10 ET 16
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD1_Repr-bin-hexa/repr_information_Exercices.html">
-   Représentation de l’information - Exercices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD_3_Expressions_booleennes/Expressions_booleennes.html">
-   Expressions booléennes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD_3_Expressions_booleennes/Exercices_logiques.html">
-   Exercices de logique booléenne
-  </a>
- </li>
-</ul>
-
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -158,173 +129,133 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
 
-    
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/src/Langage.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/src/Langage.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-    
-</div>
-        <!-- Source interaction buttons -->
-
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Langage.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/src/Langage.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Langage.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
         
     </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reperes-historiques">
-   Repères historiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-langage-python">
-   Le langage Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-entrees-sorties">
-     Les entrées/sorties
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#l-instruction-simple-declaration-affectation">
-   L’instruction simple déclaration-affectation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-instructions-composees">
-   Les instructions composées
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sequence-et-bloc-d-instructions">
-     Séquence  et bloc d’instructions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-test">
-   Le test
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#le-test-simple">
-     Le test simple
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#le-test-avec-alternative">
-     Le test avec alternative
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#la-boucle">
-   La boucle
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-boucle-conditionnelle-non-bornee">
-     La boucle conditionnelle,
-     <em>
-      non bornée
-     </em>
-    </a>
+<nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#necessite">
-       Nécessité
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#syntaxe">
-       Syntaxe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#danger-lie-a-l-utilisation-des-boucles-conditionnelles">
-       Danger lié à l’utilisation des boucles conditionnelles
-      </a>
-     </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#le-langage-python" class="nav-link">Le langage Python</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#introduction" class="nav-link">Introduction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#les-entrees-sorties" class="nav-link">Les entrées/sorties</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#l-instruction-simple-declaration-affectation" class="nav-link">L’instruction simple déclaration-affectation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-instructions-composees" class="nav-link">Les instructions composées</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sequence-et-bloc-d-instructions" class="nav-link">Séquence  et bloc d’instructions</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#le-test" class="nav-link">Le test</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#le-test-simple" class="nav-link">Le test simple</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#le-test-avec-alternative" class="nav-link">Le test avec alternative</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#la-boucle" class="nav-link">La boucle</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#la-boucle-conditionnelle-non-bornee" class="nav-link">La boucle conditionnelle, non bornée</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#necessite" class="nav-link">Nécessité</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#syntaxe" class="nav-link">Syntaxe</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#danger-lie-a-l-utilisation-des-boucles-conditionnelles" class="nav-link">Danger lié à l’utilisation des boucles conditionnelles</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#la-boucle-inconditionnelle-ou-bornee" class="nav-link">La boucle inconditionnelle ou bornée</a>
+        </li>
+    
+            </ul>
+        </li>
+    
     </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-boucle-inconditionnelle-ou-bornee">
-     La boucle inconditionnelle ou
-     <em>
-      bornée
-     </em>
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+</nav>
 
-        </nav>
+
     </div>
 </div>
     <div id="main-content" class="row">
@@ -356,7 +287,7 @@ L’utilisation de python peut se faire de deux façons:</p>
 En python, un effet (<em>de bord</em>) de la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> est d’afficher à l’écran les expressions passées en arguments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Décommenter les lignes ci-dessous et exécuter la cellule</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Décommenter les lignes ci-dessous et exécuter la cellule</span>
 <span class="c1">#print(&quot;Hello World!&quot;)</span>
 <span class="c1">#print(&quot;Python version 3.&quot;, &quot;Environnement&quot;, &quot;Jupyter Notebook 5.7&quot;)</span>
 <span class="c1">#print(&quot;Python version 3.&quot;, &quot;Environnement&quot;, &quot;Jupyter Notebook 5.7&quot;, sep=&quot;//&quot;, end=&quot; &quot;)</span>
@@ -369,7 +300,7 @@ En python, un effet (<em>de bord</em>) de la fonction <code class="docutils lite
 <p>Un effet de la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> est d’interrompre le déroulement du programme et d’attendre que l’utilisateur tape quelque chose au clavier. Les caractères entrés sont généralement récupérés dans une <strong>variable</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter les lignes ci-dessous et exécuter la cellule</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter les lignes ci-dessous et exécuter la cellule</span>
 <span class="c1">#niveau = input(&quot;Quel est votre niveau en programmation (novice/intermédiaire/avancé)?&quot;)</span>
 <span class="c1">#moyenne = input(&quot;Quelle était votre moyenne annuelle en math ?&quot;)</span>
 <span class="c1">#print(&quot;Vous avez répondu:&quot;,niveau,&quot;avec &quot;, moyenne, &quot;en math!&quot;)</span>
@@ -412,7 +343,7 @@ En python, un bloc d’instructions est repéré par son <strong>indentation</st
 <p>Soit un disque de centre O et de rayon <span class="math notranslate nohighlight">\(r\)</span>. Ecrire un programme (<em>séquence d’instructions</em>) qui permet de calculer et d’afficher l’aire <span class="math notranslate nohighlight">\(S\)</span> de ce disque à partir de la valeur du rayon qui sera demandée à l’utilisateur. <em>Rappel</em>: <span class="math notranslate nohighlight">\(S=\pi*r^{2}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14</span>
 
 <span class="c1">#Code à rajouter au dessous.</span>
 <span class="c1">#</span>
@@ -440,7 +371,7 @@ Eléments du langage nécessaires:</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter puis exécuter cette cellule</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter puis exécuter cette cellule</span>
 
 <span class="c1">#entree = input(&quot;Entrer un nombre: &quot;)</span>
 <span class="c1">#x = int(entree) # rappel: input renvoie un chaine de caractère, d&#39;où la conversion en entier</span>
@@ -465,7 +396,7 @@ Ecrire un programme python qui affiche le message “N est pair et divisible par
 <em>Coup de pouce</em>: imbriquer des conditions</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Votre code dans cette cellule</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Votre code dans cette cellule</span>
 </pre></div>
 </div>
 </div>
@@ -483,7 +414,7 @@ Ecrire un programme python qui affiche le message “N est pair et divisible par
 <p>L’exemple traité au paragraphe précédent peut être complété en utilisant une structure de test avec alternative:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter puis exécuter cette cellule</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Décommenter puis exécuter cette cellule</span>
 
 <span class="c1">#entree = input(&quot;Entrer un nombre: &quot;)</span>
 <span class="c1">#x = int(entree) # rappel: input renvoie un chaine de caractère, d&#39;où la conversion en entier</span>
@@ -519,7 +450,7 @@ Ecrire un programme python qui affiche le message “N est pair et divisible par
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">N</span>
 <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
@@ -540,7 +471,7 @@ Ecrire un programme python qui affiche le message “N est pair et divisible par
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>16
 </pre></div>
 </div>
 </div>
@@ -567,7 +498,7 @@ Ecrire un programme python qui affiche le message “N est pair et divisible par
 <p>Le programme précédent peut ainsi s’écrire (le vérifier en l’exécutant):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">N</span>
 <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
@@ -579,7 +510,7 @@ Ecrire un programme python qui affiche le message “N est pair et divisible par
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>16
 </pre></div>
 </div>
 </div>
@@ -609,7 +540,7 @@ En python, la syntaxe de la boucle <code class="docutils literal notranslate"><s
 <p>Le programme utilisé pour exposer la boucle conditionnelle peut s’écrire de la manière suivante:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -619,7 +550,7 @@ En python, la syntaxe de la boucle <code class="docutils literal notranslate"><s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>16
 </pre></div>
 </div>
 </div>
@@ -630,25 +561,6 @@ En python, la syntaxe de la boucle <code class="docutils literal notranslate"><s
 </div>
 </div>
 
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./src"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
 
               </div>
               

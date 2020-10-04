@@ -13,10 +13,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -24,17 +23,12 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="S’approprier les fonctions - exercices" href="Fonctions_exercices.html" />
@@ -71,71 +65,48 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
   <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   NUMERIQUE &amp; SCIENCE INFORMATIQUE - 1ERE
-  </a>
- </li>
+  <li class="">
+    <a href="../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="active">
+    <a href="">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="Architecture_partie_1.html">
-   ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Architecture_partie_1_exercices.html">
-   ARCHITECTURE 1 - EXERCICES
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="systeme_exploitation.html">
-   SYSTEME D’EXPLOITATION
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Langage.html">
-   Langage - Constructions élémentaires
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="langage_exercices_1309.html">
-   Eléments du langage - exercices
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Les fonctions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Fonctions_exercices.html">
-   S’approprier les fonctions - exercices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD1_Repr-bin-hexa/Representation_information.html">
-   TRAVAILLER EN BASE 2, 10 ET 16
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD1_Repr-bin-hexa/repr_information_Exercices.html">
-   Représentation de l’information - Exercices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD_3_Expressions_booleennes/Expressions_booleennes.html">
-   Expressions booléennes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RD_3_Expressions_booleennes/Exercices_logiques.html">
-   Exercices de logique booléenne
-  </a>
- </li>
-</ul>
-
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -158,107 +129,83 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
 
-    
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/src/Fonctions.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/src/Fonctions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-    
-</div>
-        <!-- Source interaction buttons -->
-
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/src/Fonctions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/Fonctions.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
         
     </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
 </div>
 
-    </div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reperes-historiques" class="nav-link">Repères historiques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#notion-de-fonction-premiere-approche" class="nav-link">Notion de fonction: première approche</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#definir-une-fonction" class="nav-link">Définir une fonction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#specifier-une-fonction" class="nav-link">Spécifier une fonction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#fonctions-de-la-bibliotheque-standard" class="nav-link">Fonctions de la bibliothèque standard</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#a-retenir" class="nav-link">A retenir</a>
+        </li>
+    
+    </ul>
+</nav>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reperes-historiques">
-   Repères historiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notion-de-fonction-premiere-approche">
-   Notion de fonction: première approche
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definir-une-fonction">
-   Définir une fonction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#specifier-une-fonction">
-   Spécifier une fonction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fonctions-de-la-bibliotheque-standard">
-   Fonctions de la bibliothèque standard
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-retenir">
-   A retenir
-  </a>
- </li>
-</ul>
 
-        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -278,7 +225,7 @@
 <p>Supposons que l’on doive afficher les valeurs des puissances de 2 les plus utilisées en architecture machine (8, 16, 32 et 64). On peut utiliser le programme du chapitre précédent:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">8</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
@@ -305,7 +252,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>256
 65536
 4294967296
 18446744073709551616
@@ -337,7 +284,7 @@
 <p>Créons une première version d’une fonction destinée à afficher les puissances de 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
@@ -349,19 +296,19 @@
 <p>Lorsqu’on exécute ce code, il ne se passe <strong>rien</strong>. A ce stade on a définit la fonction, il faut maintenant l’appeler pour que tout son code soit exécuté. L’appel d’une fonction consiste à écrire <strong>son nom suivi de parenthèses ouvrantes-fermantes</strong> à l’intérieur desquelles on place d’éventuels <strong>arguments</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>32
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">puissance</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">puissance</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
 <span class="n">puissance</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
@@ -369,7 +316,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>256
 65536
 4294967296
 18446744073709551616
@@ -382,7 +329,7 @@ Si on veut forcer python à renvoyer <strong>explicitement</strong> une valeur, 
 Lorsqu’une fonction ne possède pas d’instruction <code class="docutils literal notranslate"><span class="pre">return</span></code>, python renvoie <em>implicitement</em> une valeur particulière <code class="docutils literal notranslate"><span class="pre">None</span></code> qui signifie ‘rien’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span>
@@ -396,7 +343,7 @@ Lorsqu’une fonction ne possède pas d’instruction <code class="docutils lite
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>256
 65536
 4294967296
 18446744073709551616
@@ -421,7 +368,7 @@ Lorsqu’une fonction ne possède pas d’instruction <code class="docutils lite
 <p>Exemple d’une fonction correctement documentée et son utilisation</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    renvoie la puissance n-ième de x;</span>
 <span class="sd">    x: flottant</span>
@@ -439,29 +386,30 @@ Lorsqu’une fonction ne possède pas d’instruction <code class="docutils lite
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">puissance</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">puissance</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function puissance in module __main__:
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on function puissance in module __main__:
 
 puissance(x, n)
     renvoie la puissance n-ième de x;
     x: flottant
     n: entier naturel
+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1024
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1024
 </pre></div>
 </div>
 </div>
@@ -470,7 +418,7 @@ puissance(x, n)
 Comment analyser le résultat obtenu ?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#puissance(2, 2.5)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#puissance(2, 2.5)</span>
 </pre></div>
 </div>
 </div>
@@ -482,7 +430,7 @@ Comment analyser le résultat obtenu ?</p>
 Exemple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
 </div>
 </div>
@@ -490,15 +438,16 @@ Exemple</p>
 <p>Pour obtenir la documentation d’une fonction de la bibliothèque, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">help()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function radians in module math:
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on built-in function radians in module math:
 
 radians(x, /)
     Convert angle x from degrees to radians.
+
 </pre></div>
 </div>
 </div>
@@ -506,12 +455,12 @@ radians(x, /)
 <p>Pour connaître les fonctions disponibles dans un module, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">dir()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;,
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;,
  &#39;__file__&#39;,
  &#39;__loader__&#39;,
  &#39;__name__&#39;,
@@ -525,10 +474,12 @@ radians(x, /)
  &#39;atan2&#39;,
  &#39;atanh&#39;,
  &#39;ceil&#39;,
+ &#39;comb&#39;,
  &#39;copysign&#39;,
  &#39;cos&#39;,
  &#39;cosh&#39;,
  &#39;degrees&#39;,
+ &#39;dist&#39;,
  &#39;e&#39;,
  &#39;erf&#39;,
  &#39;erfc&#39;,
@@ -548,6 +499,7 @@ radians(x, /)
  &#39;isfinite&#39;,
  &#39;isinf&#39;,
  &#39;isnan&#39;,
+ &#39;isqrt&#39;,
  &#39;ldexp&#39;,
  &#39;lgamma&#39;,
  &#39;log&#39;,
@@ -556,8 +508,10 @@ radians(x, /)
  &#39;log2&#39;,
  &#39;modf&#39;,
  &#39;nan&#39;,
+ &#39;perm&#39;,
  &#39;pi&#39;,
  &#39;pow&#39;,
+ &#39;prod&#39;,
  &#39;radians&#39;,
  &#39;remainder&#39;,
  &#39;sin&#39;,
@@ -574,7 +528,7 @@ radians(x, /)
 <p>Pour appeler une fonction d’un module ou une constante, on doit préfixer son nom du nom du module suivi d’un point.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 
 <span class="c1"># Utilisation de la fonction sinus et de la constante pi</span>
@@ -583,7 +537,7 @@ radians(x, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sinus de pi/4:  0.7071067811865475
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Sinus de pi/4:  0.7071067811865475
 </pre></div>
 </div>
 </div>
@@ -591,7 +545,7 @@ radians(x, /)
 <p>On peut être tenté de raccourcir l’écriture précédente, avec la construction ci-dessous où <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> signifie que l’on importe <em>tous les noms présents dans le module</em>. Dans la mesure du possible, on évitera cette pratique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sinus de pi/4:&quot;</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
@@ -599,7 +553,7 @@ radians(x, /)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sinus de pi/4: 0.7071067811865475
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Sinus de pi/4: 0.7071067811865475
 </pre></div>
 </div>
 </div>
@@ -619,25 +573,6 @@ La bibliothèque standard est constituée de modules contenant des fonctions pr�
 </div>
 </div>
 
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./src"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
 
               </div>
               

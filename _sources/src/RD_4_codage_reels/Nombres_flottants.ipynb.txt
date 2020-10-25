@@ -1,0 +1,153 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercices: Codage des nombres décimaux\n",
+    "==================================="
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Donner la représentation flottante en simple précision de 128 et -32,75"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Donner la valeur décimale des nombres flottants suivants codés en simple précision:  \n",
+    "\n",
+    "* $1\\ \\ 01111110\\ \\ 11110000000000000000000$\n",
+    "* $0\\ \\ 10000011\\ \\ 11100000000000000000000$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On tape en python l'expression arithmétique suivante:  \n",
+    "\n",
+    "```python\n",
+    "(1e25 + 16) - 1e25\n",
+    "```\n",
+    "\n",
+    "1. Quel est le résultat attendu?\n",
+    "2. Quel est le résultat obtebu? Pourquoi?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 4"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Ecrire une fonction $f$ qui prend en paramètre un nombre $n$. Cette fonction divise vingt fois de suite $n$ par 3 puis multiplie vingt fois de suite $n$ par 3. Renvoyer le résultat obtenu.  \n",
+    "\n",
+    "Appeler $f(1.0)$ et expliquer le résultat obtenu."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Représenter des nombres en virgule: le microcontrôleur du système antimissile *Patriot*.  \n",
+    "Exercice 15 page 29 Hatier - Voir liens ci-dessous:  \n",
+    "\n",
+    "[https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page29.xhtml](https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page29.xhtml)  \n",
+    "\n",
+    "[https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page30.xhtml](https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page30.xhtml)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Comprendre la norme IEEE754: exercice page 33 Hatier - Voir lien ci-dessous:  \n",
+    "[https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page33.xhtml](https://educadhoc.prod.hachette-livre.fr/extract/complet/9782401056626/show-page/page33.xhtml)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {
+    "height": "calc(100% - 180px)",
+    "left": "10px",
+    "top": "150px",
+    "width": "295.675px"
+   },
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

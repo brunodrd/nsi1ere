@@ -99,7 +99,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Exercice 5"
+    "## Problème"
    ]
   },
   {

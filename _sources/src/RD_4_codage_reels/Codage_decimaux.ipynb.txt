@@ -238,8 +238,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Soit à convertir:\n",
-    "$$1\\ 10000110\\ 10101101100000000000000$$\n",
+    "Soit à convertir $1\\ 10000110\\ 10101101100000000000000$.  \n",
+    "\n",
     "Signe: $s=(-1)^1=-1$;  \n",
     "\n",
     "Exposant: $n=e-127$, or on peut lire $e=10000110_2 = 134_{10}$; on a donc $n=134-127=7$.  \n",

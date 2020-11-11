@@ -1,0 +1,388 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "TYPES CONSTRUITS - TABLEAUX \n",
+    "============================"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Introduction: les structures de données\n",
+    "Une des problématiques importantes de l'informatique est le stockage de données. Pour traiter efficacement ces dernières, il faut les ranger **de manière adéquate en mémoire**.  \n",
+    "L'objet informatique qui stocke ces données en mémoire s'appelle une **structure de données**. Une structure de donnée est caractérisée par les opérations qu'elle permet ainsi que leur coût (notion développée dans le cours d'algorithmique).  \n",
+    "La première structure de donnée étudiée en spécialité NSI est le **tableau**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Qu'est-ce qu'un tableau ?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Définition**  \n",
+    "\n",
+    "Un tableau est une suite de valeurs stockées dans des cases mémoires contigües.  \n",
+    "\n",
+    "Un tableau permet de stocker plusieurs valeurs dans une seule variable et d'y accéder ensuite facilement. Python ne possède pas de type *tableau*, du moins pas sans utilisation de module spécialisé. On se servira du type *list* de python pour construire les tableaux.  \n",
+    "En pratique, il s'agira d'énumérer  les valeurs entre **crochets et séparées par une virgule**.  \n",
+    "Ainsi, on déclare et affecte un tableau à la variable `t` en utilisant la syntaxe suivante:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "t = [2, 3, 5]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Les valeurs 2, 3 et 5 sont indexées c'est-à-dire qu'on peut les repérer par leur position. Les index (*indices*) commencent **partir de zéro**.  \n",
+    "![liste1](img/tableau001.png)  \n",
+    "Seules les valeurs sont stockées, les indices ne le sont pas. On accède à une valeur à l'aide de la notation `t[indice]`. Exemple:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "t[2]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Si on tente un accès en dehors des cases valides du tableau on obtient une erreur de type `IndexError`:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```python\n",
+    "t[4]\n",
+    "---------------------------------------------------------------------------\n",
+    "IndexError                                Traceback (most recent call last)\n",
+    "<ipython-input-4-5977d405d0f2> in <module>\n",
+    "----> 1 t[4]\n",
+    "\n",
+    "IndexError: list index out of range\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On obtient la taille d'un tableau avec la fonction native `len`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(t)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Le contenu d'un tableau peut être modifié: c'est une structure **mutable**. Pour cela, on utilise une affectation, exactement comme on l'a fait avec les variables jusqu'à maintenant:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 15, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "t[1] = 15\n",
+    "print(t)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Remarques**  \n",
+    "\n",
+    "*  le terme de `list` bien que couramment utilisé en python est un choix malheureux de vocabulaire; en effet la confusion est souvent faite avec une structure de donnée qui sera vue en terminale;\n",
+    "*  conformément au programme, on n'utilisera que des tableaux **homogènes** (c-à-d contenant qu'un seul type de donnée), bien que les `list` de python permettraient de construire des tableaux hétérogènes."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Comment accéder aux éléments d'un tableau ?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Une possibilité pour parcourir les éléments d'un tableau est d'utiliser une boucle `for` sur les indices. Parcourir un tableau `t` en **itérant** sur les indices se fait de la manière suivante:  \n",
+    "\n",
+    "```python \n",
+    "for i in range(len(t)):\n",
+    "    traitement()\n",
+    "```\n",
+    "\n",
+    "Le générateur d'entier `range` permet d'obtenir une **séquence** allant de `0` à `len(t)-1`. Par exemple, le code suivant permet d'afficher tous les éléments du tableau:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n",
+      "15\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(len(t)): # parcours tout le tableau\n",
+    "    print(t[i]) # affiche le ième élément"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Comment construire de grands tableaux ?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Lorsque le tableau à construire est très grand, il est difficile d'énumérer tous ses éléments. On utilise alors la construction typique de Python:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "500\n"
+     ]
+    }
+   ],
+   "source": [
+    "DIM = 500 # taille du tableau\n",
+    "t = [0] * DIM\n",
+    "print(len(t))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Supposons que l'on veuille remplir ce tableau avec le carré des 500 premiers entiers:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "625\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(DIM):\n",
+    "    t[i] = i * i\n",
+    "\n",
+    "### Que vaut t[25] ?\n",
+    "print(t[25])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On peut également **concaténer** c'est-à-dire mettre bout à bout, deux tableaux:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[7, 10, 13, 16, 19]\n"
+     ]
+    }
+   ],
+   "source": [
+    "t2 = [7, 10, 13] + [16, 19]\n",
+    "print(t2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Quelques subtilités"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Contrairement aux variables dont le type est un type de base comme `int`, `float` ou `string`, une variable de type tableau ne contient pas les valeurs. Elle contient une **référence vers l'objet qui contient les valeurs**.  \n",
+    "\n",
+    "```python\n",
+    "x = 10\n",
+    "y = 15.5\n",
+    "ch = \"chaine\"\n",
+    "t = [1, 1, 2, 3, 5]\n",
+    "u = [2, 8, 16, 32, 64]\n",
+    "```\n",
+    "\n",
+    "![types](img/representation_type.PNG)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Une conséquence importante de ce mode de représentation est que l'affectation du tableau à une autre variable ne crée pas un nouveau tableau, elle ne fait que recopier la référence vers l'objet `list` qui contient les valeurs.  \n",
+    "Ainsi, si à la suite du code précédent, on ajoute:  \n",
+    "\n",
+    "```python\n",
+    "v = u\n",
+    "```\n",
+    "\n",
+    "cela signifiera que `v` fait référence au même objet `list` que `u`.\n",
+    "\n",
+    "![egalitetableau](img/representation_tableau1.PNG)\n",
+    "Cela implique que **toute modification de v entraine une modification de u**. Par exemple,  \n",
+    "\n",
+    "```python\n",
+    "v[0] = 0\n",
+    "```\n",
+    "\n",
+    "entraine:  \n",
+    "![egalitetableau2](img/representation_tableau2.PNG)  \n",
+    "D'où la recommandation: **dans la mesure du possible on évitera d'avoir deux variables qui référencent le même tableau**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "![licence](img/licence.png)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {
+    "height": "calc(100% - 180px)",
+    "left": "10px",
+    "top": "150px",
+    "width": "295.675px"
+   },
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

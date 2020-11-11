@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>TYPES CONSTRUITS - TABLEAUX &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Encodage de texte" href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Encodage de texte</a>
+  </li>
+  <li class="active">
+    <a href="">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD_TC1_tableau/Types_construits_1.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_TC1_tableau/Types_construits_1.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction-les-structures-de-donnees" class="nav-link">Introduction: les structures de données</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#qu-est-ce-qu-un-tableau" class="nav-link">Qu’est-ce qu’un tableau ?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#comment-acceder-aux-elements-d-un-tableau" class="nav-link">Comment accéder aux éléments d’un tableau ?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#comment-construire-de-grands-tableaux" class="nav-link">Comment construire de grands tableaux ?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#quelques-subtilites" class="nav-link">Quelques subtilités</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="types-construits-tableaux">
+<h1>TYPES CONSTRUITS - TABLEAUX<a class="headerlink" href="#types-construits-tableaux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction-les-structures-de-donnees">
+<h2>Introduction: les structures de données<a class="headerlink" href="#introduction-les-structures-de-donnees" title="Permalink to this headline">¶</a></h2>
+<p>Une des problématiques importantes de l’informatique est le stockage de données. Pour traiter efficacement ces dernières, il faut les ranger <strong>de manière adéquate en mémoire</strong>.<br />
+L’objet informatique qui stocke ces données en mémoire s’appelle une <strong>structure de données</strong>. Une structure de donnée est caractérisée par les opérations qu’elle permet ainsi que leur coût (notion développée dans le cours d’algorithmique).<br />
+La première structure de donnée étudiée en spécialité NSI est le <strong>tableau</strong>.</p>
+</div>
+<div class="section" id="qu-est-ce-qu-un-tableau">
+<h2>Qu’est-ce qu’un tableau ?<a class="headerlink" href="#qu-est-ce-qu-un-tableau" title="Permalink to this headline">¶</a></h2>
+<p><strong>Définition</strong></p>
+<p>Un tableau est une suite de valeurs stockées dans des cases mémoires contigües.</p>
+<p>Un tableau permet de stocker plusieurs valeurs dans une seule variable et d’y accéder ensuite facilement. Python ne possède pas de type <em>tableau</em>, du moins pas sans utilisation de module spécialisé. On se servira du type <em>list</em> de python pour construire les tableaux.<br />
+En pratique, il s’agira d’énumérer  les valeurs entre <strong>crochets et séparées par une virgule</strong>.<br />
+Ainsi, on déclare et affecte un tableau à la variable <code class="docutils literal notranslate"><span class="pre">t</span></code> en utilisant la syntaxe suivante:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les valeurs 2, 3 et 5 sont indexées c’est-à-dire qu’on peut les repérer par leur position. Les index (<em>indices</em>) commencent <strong>partir de zéro</strong>.<br />
+<img alt="liste1" src="../../_images/tableau001.png" /><br />
+Seules les valeurs sont stockées, les indices ne le sont pas. On accède à une valeur à l’aide de la notation <code class="docutils literal notranslate"><span class="pre">t[indice]</span></code>. Exemple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si on tente un accès en dehors des cases valides du tableau on obtient une erreur de type <code class="docutils literal notranslate"><span class="pre">IndexError</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span>                                <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5977</span><span class="n">d405d0f2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</pre></div>
+</div>
+<p>On obtient la taille d’un tableau avec la fonction native <code class="docutils literal notranslate"><span class="pre">len</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le contenu d’un tableau peut être modifié: c’est une structure <strong>mutable</strong>. Pour cela, on utilise une affectation, exactement comme on l’a fait avec les variables jusqu’à maintenant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[2, 15, 5]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarques</strong></p>
+<ul class="simple">
+<li><p>le terme de <code class="docutils literal notranslate"><span class="pre">list</span></code> bien que couramment utilisé en python est un choix malheureux de vocabulaire; en effet la confusion est souvent faite avec une structure de donnée qui sera vue en terminale;</p></li>
+<li><p>conformément au programme, on n’utilisera que des tableaux <strong>homogènes</strong> (c-à-d contenant qu’un seul type de donnée), bien que les <code class="docutils literal notranslate"><span class="pre">list</span></code> de python permettraient de construire des tableaux hétérogènes.</p></li>
+</ul>
+</div>
+<div class="section" id="comment-acceder-aux-elements-d-un-tableau">
+<h2>Comment accéder aux éléments d’un tableau ?<a class="headerlink" href="#comment-acceder-aux-elements-d-un-tableau" title="Permalink to this headline">¶</a></h2>
+<p>Une possibilité pour parcourir les éléments d’un tableau est d’utiliser une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> sur les indices. Parcourir un tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> en <strong>itérant</strong> sur les indices se fait de la manière suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
+    <span class="n">traitement</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Le générateur d’entier <code class="docutils literal notranslate"><span class="pre">range</span></code> permet d’obtenir une <strong>séquence</strong> allant de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">len(t)-1</span></code>. Par exemple, le code suivant permet d’afficher tous les éléments du tableau:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span> <span class="c1"># parcours tout le tableau</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1"># affiche le ième élément</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>2
+15
+5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="comment-construire-de-grands-tableaux">
+<h2>Comment construire de grands tableaux ?<a class="headerlink" href="#comment-construire-de-grands-tableaux" title="Permalink to this headline">¶</a></h2>
+<p>Lorsque le tableau à construire est très grand, il est difficile d’énumérer tous ses éléments. On utilise alors la construction typique de Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DIM</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1"># taille du tableau</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">DIM</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>500
+</pre></div>
+</div>
+</div>
+</div>
+<p>Supposons que l’on veuille remplir ce tableau avec le carré des 500 premiers entiers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">DIM</span><span class="p">):</span>
+    <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
+
+<span class="c1">### Que vaut t[25] ?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">25</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>625
+</pre></div>
+</div>
+</div>
+</div>
+<p>On peut également <strong>concaténer</strong> c’est-à-dire mettre bout à bout, deux tableaux:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[7, 10, 13, 16, 19]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="quelques-subtilites">
+<h2>Quelques subtilités<a class="headerlink" href="#quelques-subtilites" title="Permalink to this headline">¶</a></h2>
+<p>Contrairement aux variables dont le type est un type de base comme <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> ou <code class="docutils literal notranslate"><span class="pre">string</span></code>, une variable de type tableau ne contient pas les valeurs. Elle contient une <strong>référence vers l’objet qui contient les valeurs</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">15.5</span>
+<span class="n">ch</span> <span class="o">=</span> <span class="s2">&quot;chaine&quot;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">u</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="types" src="../../_images/representation_type.PNG" /></p>
+<p>Une conséquence importante de ce mode de représentation est que l’affectation du tableau à une autre variable ne crée pas un nouveau tableau, elle ne fait que recopier la référence vers l’objet <code class="docutils literal notranslate"><span class="pre">list</span></code> qui contient les valeurs.<br />
+Ainsi, si à la suite du code précédent, on ajoute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">u</span>
+</pre></div>
+</div>
+<p>cela signifiera que <code class="docutils literal notranslate"><span class="pre">v</span></code> fait référence au même objet <code class="docutils literal notranslate"><span class="pre">list</span></code> que <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
+<p><img alt="egalitetableau" src="../../_images/representation_tableau1.PNG" />
+Cela implique que <strong>toute modification de v entraine une modification de u</strong>. Par exemple,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>entraine:<br />
+<img alt="egalitetableau2" src="../../_images/representation_tableau2.PNG" /><br />
+D’où la recommandation: <strong>dans la mesure du possible on évitera d’avoir deux variables qui référencent le même tableau</strong>.</p>
+<hr class="docutils" />
+<p><img alt="licence" src="../../_images/licence4.png" /></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html" title="previous page">Encodage de texte</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

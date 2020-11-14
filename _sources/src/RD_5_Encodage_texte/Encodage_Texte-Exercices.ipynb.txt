@@ -4,22 +4,62 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Encodage de texte\n",
-    "==============="
+    "Exercices - Encodage de texte\n",
+    "========================="
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![page1](img/utf8_001.png)"
+    "*Extrait et adapté des exercices du livre cité en fin de page*"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![page2](img/utf8_002.png)"
+    "**Exercice 223**  \n",
+    "Donner le codage ASCII des deux chaînes de caractères Python ci-dessous.  \n",
+    "\n",
+    "```python\n",
+    "'bonjour tout le monde!'\n",
+    "```\n",
+    "```python\n",
+    "\"\"\"programmer en \n",
+    "Python\"\"\"\n",
+    "```\n",
+    "\n",
+    "**Exercice 224**  \n",
+    "Écrire une fonction `printASCII(s)` qui renvoie les codes ASCII au format hexadécimal d'une chaîne de caractères. Utiliser cette fonction pour vérifier les réponses à l'**exercice 223**. \n",
+    " \n",
+    "**Exercice 225**`**`  \n",
+    "L'algorithme *rot 13* est un algorithme très simple de chiffrement qui consiste à décaler de 13 caractères chaque lettre d'un texte. Par exemple, le mot *python* est transformé en *clguba*. Écrire en Python une fonction `rot13(s)` en supposant que la chaîne passée en argument ne contient que des caractères entre a et z (en minuscule) et éventuellement des espaces (uniquement le caractère `' '`). Votre fonction ne doit décaler que les lettres de l'alphabet (*elle ne touche donc pas aux espaces*). Elle renvoie en sortie une chaîne de caractères.  \n",
+    "\n",
+    "**Exercice 226**`*`  \n",
+    "Coder une fonction `printUTF8(s)` qui prend une chaîne `s` en paramètre et qui renvoie le point de code de chaque caractère de `s` en décimal et les octets en binaire de l'encodage de `s` en UTF-8. Tester votre fonction sur le mot `élégance`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Exercice 228**`*`  \n",
+    "Coder une fonction `octets_utf8(c)` qui prend un caractère `c` en paramètre. Cette fonction va **encoder** `c` **en UTF-8** et renvoyer les octets du résultat en décimal et en hexadécimal. Tester votre fonction sur les trois caractères ci-dessous:  \n",
+    "\n",
+    "* caractère `A` (point de code 65);\n",
+    "* caractère `è` (point de code 232);\n",
+    "* caractère `⋆` (*STAR OPERATOR*, point de code 8902); \n",
+    "\n",
+    "**Exercice 229**`*`  \n",
+    "Pour chacune des séquences d'octets suivantes, représentées en base 10, dire si elle représente une séquence UTF-8 valide et si oui combien de caractères sont représentés.  \n",
+    "\n",
+    "* 126 64 100\n",
+    "* 198 129 129\n",
+    "* 227 180 140  \n",
+    "\n",
+    "**Exercice 230**`***`  \n",
+    "Écrire une fonction Python `longueur(ch)` qui parcours la chaîne d'octets `ch`, supposée représenter une chaîne encodée en UTF-8 et qui compte le nombre de caractères (*il est interdit de convertir* `ch` *en chaîne puis de calculer la longueur de cette dernière*).\n"
    ]
   },
   {
@@ -31,13 +71,6 @@
     "Spécialité NSI 1re - Balabonski et al. ellipses  \n",
     "[lien vers la description](https://www.editions-ellipses.fr/accueil/118-10382-specialite-numerique-et-sciences-informatiques-30-lecons-avec-exercices-corriges-premiere-nouveaux-programmes-9782340033641.html#/1-format_disponible-broche)"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
@@ -56,20 +89,20 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.4"
+   "version": "3.8.3"
   },
   "toc": {
    "base_numbering": 1,
    "nav_menu": {},
    "number_sections": true,
    "sideBar": true,
-   "skip_h1_title": false,
+   "skip_h1_title": true,
    "title_cell": "Table of Contents",
    "title_sidebar": "Contents",
    "toc_cell": false,
    "toc_position": {},
    "toc_section_display": true,
-   "toc_window_display": false
+   "toc_window_display": true
   }
  },
  "nbformat": 4,

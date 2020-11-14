@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Encodage de texte &#8212; Spécialité NSI 1ère</title>
+    <title>Exercices - Encodage de texte &#8212; Spécialité NSI 1ère</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -116,7 +116,7 @@
     <a href="EncodageTexte.html">REPRESENTATION DE TEXTE</a>
   </li>
   <li class="active">
-    <a href="">Encodage de texte</a>
+    <a href="">Exercices - Encodage de texte</a>
   </li>
   <li class="">
     <a href="../RD_TC1_tableau/Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
@@ -201,10 +201,40 @@
         
               <div>
                 
-  <div class="section" id="encodage-de-texte">
-<h1>Encodage de texte<a class="headerlink" href="#encodage-de-texte" title="Permalink to this headline">¶</a></h1>
-<p><img alt="page1" src="../../_images/utf8_001.png" /></p>
-<p><img alt="page2" src="../../_images/utf8_002.png" /></p>
+  <div class="section" id="exercices-encodage-de-texte">
+<h1>Exercices - Encodage de texte<a class="headerlink" href="#exercices-encodage-de-texte" title="Permalink to this headline">¶</a></h1>
+<p><em>Extrait et adapté des exercices du livre cité en fin de page</em></p>
+<p><strong>Exercice 223</strong><br />
+Donner le codage ASCII des deux chaînes de caractères Python ci-dessous.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;bonjour tout le monde!&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;programmer en </span>
+<span class="sd">Python&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p><strong>Exercice 224</strong><br />
+Écrire une fonction <code class="docutils literal notranslate"><span class="pre">printASCII(s)</span></code> qui renvoie les codes ASCII au format hexadécimal d’une chaîne de caractères. Utiliser cette fonction pour vérifier les réponses à l’<strong>exercice 223</strong>.</p>
+<p><strong>Exercice 225</strong><code class="docutils literal notranslate"><span class="pre">**</span></code><br />
+L’algorithme <em>rot 13</em> est un algorithme très simple de chiffrement qui consiste à décaler de 13 caractères chaque lettre d’un texte. Par exemple, le mot <em>python</em> est transformé en <em>clguba</em>. Écrire en Python une fonction <code class="docutils literal notranslate"><span class="pre">rot13(s)</span></code> en supposant que la chaîne passée en argument ne contient que des caractères entre a et z (en minuscule) et éventuellement des espaces (uniquement le caractère <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>). Votre fonction ne doit décaler que les lettres de l’alphabet (<em>elle ne touche donc pas aux espaces</em>). Elle renvoie en sortie une chaîne de caractères.</p>
+<p><strong>Exercice 226</strong><code class="docutils literal notranslate"><span class="pre">*</span></code><br />
+Coder une fonction <code class="docutils literal notranslate"><span class="pre">printUTF8(s)</span></code> qui prend une chaîne <code class="docutils literal notranslate"><span class="pre">s</span></code> en paramètre et qui renvoie le point de code de chaque caractère de <code class="docutils literal notranslate"><span class="pre">s</span></code> en décimal et les octets en binaire de l’encodage de <code class="docutils literal notranslate"><span class="pre">s</span></code> en UTF-8. Tester votre fonction sur le mot <code class="docutils literal notranslate"><span class="pre">élégance</span></code></p>
+<p><strong>Exercice 228</strong><code class="docutils literal notranslate"><span class="pre">*</span></code><br />
+Coder une fonction <code class="docutils literal notranslate"><span class="pre">octets_utf8(c)</span></code> qui prend un caractère <code class="docutils literal notranslate"><span class="pre">c</span></code> en paramètre. Cette fonction va <strong>encoder</strong> <code class="docutils literal notranslate"><span class="pre">c</span></code> <strong>en UTF-8</strong> et renvoyer les octets du résultat en décimal et en hexadécimal. Tester votre fonction sur les trois caractères ci-dessous:</p>
+<ul class="simple">
+<li><p>caractère <code class="docutils literal notranslate"><span class="pre">A</span></code> (point de code 65);</p></li>
+<li><p>caractère <code class="docutils literal notranslate"><span class="pre">è</span></code> (point de code 232);</p></li>
+<li><p>caractère <code class="docutils literal notranslate"><span class="pre">⋆</span></code> (<em>STAR OPERATOR</em>, point de code 8902);</p></li>
+</ul>
+<p><strong>Exercice 229</strong><code class="docutils literal notranslate"><span class="pre">*</span></code><br />
+Pour chacune des séquences d’octets suivantes, représentées en base 10, dire si elle représente une séquence UTF-8 valide et si oui combien de caractères sont représentés.</p>
+<ul class="simple">
+<li><p>126 64 100</p></li>
+<li><p>198 129 129</p></li>
+<li><p>227 180 140</p></li>
+</ul>
+<p><strong>Exercice 230</strong><code class="docutils literal notranslate"><span class="pre">***</span></code><br />
+Écrire une fonction Python <code class="docutils literal notranslate"><span class="pre">longueur(ch)</span></code> qui parcours la chaîne d’octets <code class="docutils literal notranslate"><span class="pre">ch</span></code>, supposée représenter une chaîne encodée en UTF-8 et qui compte le nombre de caractères (<em>il est interdit de convertir</em> <code class="docutils literal notranslate"><span class="pre">ch</span></code> <em>en chaîne puis de calculer la longueur de cette dernière</em>).</p>
 <hr class="docutils" />
 <p><strong>Références</strong><br />
 Spécialité NSI 1re - Balabonski et al. ellipses<br />

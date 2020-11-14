@@ -203,7 +203,74 @@
                 
   <div class="section" id="exercices-encodage-de-texte">
 <h1>Exercices - Encodage de texte<a class="headerlink" href="#exercices-encodage-de-texte" title="Permalink to this headline">¶</a></h1>
-<p><em>Extrait et adapté des exercices du livre cité en fin de page</em></p>
+<p><em>Extrait et adapté des exercices du livre cité en fin de page. Le niveau de difficulté est indiqué éventuellement par des étoiles</em>.</p>
+<p><em>Prendre connaissance du complément (non exigible à l’examen) ci-dessous</em>.</p>
+<hr class="docutils" />
+<p><strong>Complément: formattage des chaînes en python</strong> (<em>hors programme, mais très utile</em>)</p>
+<p>Python permet de <em>formatter</em> de façon fine et simple les chaînes de caractères. On utilise pour cela les <code class="docutils literal notranslate"><span class="pre">f-strings</span></code>.<br />
+<em>La syntaxe</em>:<br />
+La chaîne de caratères est comprise entre les caractères <code class="docutils literal notranslate"><span class="pre">f&quot;</span></code> et <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Si une variable doit être insérée dans cette chaîne de caratère, on l’entoure d’accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">reponse</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;J&#39;ai </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> ans&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reponse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>J&#39;ai 16 ans
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Le formattage</em><br />
+On peut forcer le format d’écriture d’une variable intervenant dans une chaîne de caractères. Par exemple, on peut souhaiter une écriture en binaire d’une variable de type entier. On rajoute alors <strong>après le nom de la variable, entre accolades</strong> la suite <code class="docutils literal notranslate"><span class="pre">:b</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">code_ascii_A</span> <span class="o">=</span> <span class="mi">65</span>
+<span class="n">A_bin</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;code ascii de A: </span><span class="si">{</span><span class="n">code_ascii_A</span><span class="si">:</span><span class="s2">b</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_bin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>code ascii de A: 1000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>On peut aussi fixer le nombre de caractères utilisés pour écrire le nombre. Par exemple, pour écrire le nombre binaire précédent sur 8 caractères (<em>1 octet</em>), en complétant éventuellement avec des zéros à gauche, on rajoute <code class="docutils literal notranslate"><span class="pre">:08b</span></code> après le nom de la variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ecriture de code_ascii_A sur 8 bits ou 1 octet</span>
+<span class="n">A_bin</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;code ascii de A: </span><span class="si">{</span><span class="n">code_ascii_A</span><span class="si">:</span><span class="s2">08b</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_bin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>code ascii de A: 01000001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Le même nombre, en binaire sur 16 bits ou 2 octets</span>
+<span class="n">A_bin</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;code ascii de A: </span><span class="si">{</span><span class="n">code_ascii_A</span><span class="si">:</span><span class="s2">016b</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_bin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>code ascii de A: 0000000001000001
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
 <p><strong>Exercice 223</strong><br />
 Donner le codage ASCII des deux chaînes de caractères Python ci-dessous.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;bonjour tout le monde!&#39;</span>
@@ -227,7 +294,8 @@ Coder une fonction <code class="docutils literal notranslate"><span class="pre">
 <li><p>caractère <code class="docutils literal notranslate"><span class="pre">⋆</span></code> (<em>STAR OPERATOR</em>, point de code 8902);</p></li>
 </ul>
 <p><strong>Exercice 229</strong><code class="docutils literal notranslate"><span class="pre">*</span></code><br />
-Pour chacune des séquences d’octets suivantes, représentées en base 10, dire si elle représente une séquence UTF-8 valide et si oui combien de caractères sont représentés.</p>
+Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">est_utf8_valide(n1,</span> <span class="pre">n2,</span> <span class="pre">n3)</span></code> qui renvoie <code class="docutils literal notranslate"><span class="pre">True</span></code> si la suite d’octets (<em>représentée en base 10</em>) <code class="docutils literal notranslate"><span class="pre">n1</span></code>, <code class="docutils literal notranslate"><span class="pre">n2</span></code>, <code class="docutils literal notranslate"><span class="pre">n3</span></code> représente une séquence valide UTF-8. Elle renvoie <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.<br />
+Tester votre fonction sur les séquences ci-dessous.</p>
 <ul class="simple">
 <li><p>126 64 100</p></li>
 <li><p>198 129 129</p></li>

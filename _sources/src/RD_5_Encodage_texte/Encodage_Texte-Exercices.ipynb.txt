@@ -12,7 +12,120 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "*Extrait et adapté des exercices du livre cité en fin de page*"
+    "*Extrait et adapté des exercices du livre cité en fin de page. Le niveau de difficulté est indiqué éventuellement par des étoiles*.  \n",
+    "\n",
+    "*Prendre connaissance du complément (non exigible à l'examen) ci-dessous*."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "**Complément: formattage des chaînes en python** (*hors programme, mais très utile*)    \n",
+    "\n",
+    "Python permet de *formatter* de façon fine et simple les chaînes de caractères. On utilise pour cela les `f-strings`.  \n",
+    "*La syntaxe*:  \n",
+    "La chaîne de caratères est comprise entre les caractères `f\"` et `\"`. Si une variable doit être insérée dans cette chaîne de caratère, on l'entoure d'accolades `{}`. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "J'ai 16 ans\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exemple\n",
+    "age = 16\n",
+    "reponse = f\"J'ai {age} ans\"\n",
+    "print(reponse)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*Le formattage*  \n",
+    "On peut forcer le format d'écriture d'une variable intervenant dans une chaîne de caractères. Par exemple, on peut souhaiter une écriture en binaire d'une variable de type entier. On rajoute alors **après le nom de la variable, entre accolades** la suite `:b`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "code ascii de A: 1000001\n"
+     ]
+    }
+   ],
+   "source": [
+    "code_ascii_A = 65\n",
+    "A_bin = f\"code ascii de A: {code_ascii_A:b}\"\n",
+    "print(A_bin)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On peut aussi fixer le nombre de caractères utilisés pour écrire le nombre. Par exemple, pour écrire le nombre binaire précédent sur 8 caractères (*1 octet*), en complétant éventuellement avec des zéros à gauche, on rajoute `:08b` après le nom de la variable."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "code ascii de A: 01000001\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ecriture de code_ascii_A sur 8 bits ou 1 octet\n",
+    "A_bin = f\"code ascii de A: {code_ascii_A:08b}\"\n",
+    "print(A_bin)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "code ascii de A: 0000000001000001\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Le même nombre, en binaire sur 16 bits ou 2 octets\n",
+    "A_bin = f\"code ascii de A: {code_ascii_A:016b}\"\n",
+    "print(A_bin)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---"
    ]
   },
   {
@@ -52,7 +165,8 @@
     "* caractère `⋆` (*STAR OPERATOR*, point de code 8902); \n",
     "\n",
     "**Exercice 229**`*`  \n",
-    "Pour chacune des séquences d'octets suivantes, représentées en base 10, dire si elle représente une séquence UTF-8 valide et si oui combien de caractères sont représentés.  \n",
+    "Ecrire une fonction `est_utf8_valide(n1, n2, n3)` qui renvoie `True` si la suite d'octets (*représentée en base 10*) `n1`, `n2`, `n3` représente une séquence valide UTF-8. Elle renvoie `False` sinon.  \n",
+    "Tester votre fonction sur les séquences ci-dessous.    \n",
     "\n",
     "* 126 64 100\n",
     "* 198 129 129\n",

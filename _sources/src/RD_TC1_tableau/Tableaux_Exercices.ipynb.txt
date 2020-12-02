@@ -1,0 +1,547 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercices - Les tableaux\n",
+    "===================="
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 69"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On souhaite coder un programme python permettant de travailler sur la pyramide des âges des français. Il fait intervenir un tableau `PDA = [691165, 710534, 728579, ...]` dans lequel la case $i$ contient **le nombre de français ayant l'âge** $i$.  \n",
+    "\n",
+    "```python\n",
+    "PDA = [691165, 710534, 728579, ..., 2160] # 106 valeurs\n",
+    "\n",
+    "def examen_pda(tab_pda, age_min, age_max):\n",
+    "    \"\"\"\n",
+    "    renvoie ...\n",
+    "    \"\"\"\n",
+    "    n = 0\n",
+    "    for age in range(age_min, age_max + 1):\n",
+    "        n = n + tab_pda[age]\n",
+    "    return n\n",
+    "```\n",
+    "1. Que fait la fonction `examen_pda` ?\n",
+    "2. Cette fonction n'est pas très robuste. En effet, si l'utilisateur l'appelle avec une valeur de `age_max` supérieure ou égale à 106 (*la taille du tableau* `PDA`), alors le programme va échouer suite à un accès en dehors des limites du tableau.  \n",
+    "Améliorer ce programme pour que l'utilisateur puisse spécifier une valeur de age_max arbitrairement grande, sans pour autant que le programme n'échoue."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 70"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `occurrences(v, t)` qui renvoie le nombre d'occurrences de la valeur `v` dans le tableau `t` non vide. Justifier la présence de la ligne 5."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def occurences(v, t):\n",
+    "    \"\"\"\n",
+    "    A compléter ...\n",
+    "    \"\"\"\n",
+    "    assert len(t) > 0, \"Erreur: ...\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#assert occurences(-1, [2,3,4,5,-1,6,7,-1]) == 2\n",
+    "#print(\"Validé\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 72"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Ecrire une fonction `max_tab(t)` qui prend un tableau `t` non vide en paramètre et qui renvoie l'élément maximum de ce tableau. **Interdiction d'utiliser la fonction native** `max` de python."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def max_tab(t):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    assert len(t) > 0, \"Erreur: tableau vide\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#from random import randint\n",
+    "#test = [randint(-10, 10) for i in range(20)]\n",
+    "#assert max_tab(test) == max(test)\n",
+    "#print(\"Validé\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 73"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `hasard` qui tire au hasard mille entiers entre 1 et 10 et renvoie ensuite le nombre de fois que chaque nombre a été tiré. Appeler la fonction plusieurs fois. Conseil: penser à renvoyer un tableau."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from random import randint\n",
+    "\n",
+    "\n",
+    "def hasard():\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#assert sum(hasard()) == 1000\n",
+    "#print(\"Validé !\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 74"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "En mathématiques, la très célèbre *suite de Fibonacci* est une séquence infinie d'entiers définie de la façon suivante : on part des deux entiers 0 et 1 puis on construit à chaque fois l'entier suivant comme **la somme des deux entiers précédents**. \n",
+    "0, 1, 1, 2, 3, 5, ...  \n",
+    "\n",
+    "Écrire une fonction `fibo(k)` qui construit puis renvoie un tableau contenant les $k$ premiers termes de la suite. Vérifier avec la cellule de test."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def fibo(k):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    assert k > 2\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#assert fibo(30)[-1] == 514229"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 75"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `copie(t)` qui prend en paramètre un tableau `t` et renvoie une copie de ce tableau. Quelle expérience peut-on faire pour s'assurer qu'on ne s'est pas trompé ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def copie(t):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#a = [1, 2, 3, 4, 5]\n",
+    "#b = copie(a)\n",
+    "#assert all(b[i] == a[i] for i in range(len(a))) and a is not b\n",
+    "#print(\"Validé !\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 76 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `ajout(v, t)` qui crée un nouveau tableau contenant d'abord tous les éléments de `t` puis `v` puis qui renvoie ce tableau."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def ajout(v, t):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#assert ajout(1, []) == [1]\n",
+    "#assert ajout(3, [1, 2]) == [1, 2, 3]\n",
+    "#print(\"validé\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 77 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `concatenation(t1, t2)` qui crée un nouveau tableau contenant, dans l'ordre, tous les éléments de `t1` puis tous les éléments de `t2`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def concatenation(t1, t2):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#assert concatenation([-1,3], [8,90]) == [-1, 3, 8, 90]\n",
+    "#assert concatenation([], []) == []\n",
+    "#print(\"Validé\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 78"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `tableau_aleatoire(n, a, b)` qui renvoie un tableau de taille `n` contenant des entiers tirés au hasard entre `a` et `b`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from random import randint\n",
+    "\n",
+    "\n",
+    "def tableau_aleatoire(n, a, b):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 79"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `tableau_croissant(n)` qui renvoie un tableau de taille `n` contenant des entiers tirés au hasard et ayant la propriété d'être trié par ordre croissant. Pour faire cela, on pourrait utiliser l'exercice précédent pour construire un tableau aléatoire, puis le trier avec un algorithme de tri (ce que nous verrons au cours de l'année en NSI).  \n",
+    "Il y a néanmoins une façon plus simple de procéder, consistant à **remplir le tableau de gauche à droite en ajoutant à chaque fois un entier positif ou nul à l'élément précédent**. Ainsi, le tableau est trié par construction. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def tableau_croissant(n):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#t = tableau_croissant(8)\n",
+    "#assert all(t[i] <= t[i+1] for i in range(len(t) - 1))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 80 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `echange(tab, i, j)` qui échange dans le tableau `tab` les éléments aux indices `i` et `j`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def echange_tab(tab, i, j):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#t = [1,2,3,4,5,6,10]\n",
+    "#echange_tab(t, 1, 6)\n",
+    "#print(t)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 81"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `somme(tab)` qui calcule et renvoie la somme des éléments d'un tableau d'entiers. En déduire une fonction `moyenne(tab)` qui calcule et renvoie la moyenne des éléments du tableau `tab`, supposé non vide. **Interdiction d'utiliser des fonctions natives de python**."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def somme(tab):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass\n",
+    "\n",
+    "def moyenne(tab):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercice 82"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Écrire une fonction `produit(tab)` qui calcule et renvoie le produit des éléments d'un tableau d'entiers. Si le tableau contient 0, la fonction devra renvoyer 0 sans terminer le calcul. **Interdiction d'utiliser des fonctions de bibliothèques python**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def produit(tab):\n",
+    "    \"\"\"\n",
+    "    A compléter\n",
+    "    \"\"\"\n",
+    "    # Supprimer la ligne suivante et compléter avec votre code\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
+    "#assert produit([1,2,3,4,5,6]) == 720"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercices - Les tableaux &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="TYPES CONSTRUITS - TABLEAUX" href="Types_construits_1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Exercices - Encodage de texte</a>
+  </li>
+  <li class="">
+    <a href="Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+  <li class="active">
+    <a href="">Exercices - Les tableaux</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD_TC1_tableau/Tableaux_Exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_TC1_tableau/Tableaux_Exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-69" class="nav-link">Exercice 69</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-70" class="nav-link">Exercice 70</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-72" class="nav-link">Exercice 72</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-73" class="nav-link">Exercice 73</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-74" class="nav-link">Exercice 74</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-75" class="nav-link">Exercice 75</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-76" class="nav-link">Exercice 76</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-77" class="nav-link">Exercice 77</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-78" class="nav-link">Exercice 78</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-79" class="nav-link">Exercice 79</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-80" class="nav-link">Exercice 80</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-81" class="nav-link">Exercice 81</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-82" class="nav-link">Exercice 82</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercices-les-tableaux">
+<h1>Exercices - Les tableaux<a class="headerlink" href="#exercices-les-tableaux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="exercice-69">
+<h2>Exercice 69<a class="headerlink" href="#exercice-69" title="Permalink to this headline">¶</a></h2>
+<p>On souhaite coder un programme python permettant de travailler sur la pyramide des âges des français. Il fait intervenir un tableau <code class="docutils literal notranslate"><span class="pre">PDA</span> <span class="pre">=</span> <span class="pre">[691165,</span> <span class="pre">710534,</span> <span class="pre">728579,</span> <span class="pre">...]</span></code> dans lequel la case <span class="math notranslate nohighlight">\(i\)</span> contient <strong>le nombre de français ayant l’âge</strong> <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PDA</span> <span class="o">=</span> <span class="p">[</span><span class="mi">691165</span><span class="p">,</span> <span class="mi">710534</span><span class="p">,</span> <span class="mi">728579</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">2160</span><span class="p">]</span> <span class="c1"># 106 valeurs</span>
+
+<span class="k">def</span> <span class="nf">examen_pda</span><span class="p">(</span><span class="n">tab_pda</span><span class="p">,</span> <span class="n">age_min</span><span class="p">,</span> <span class="n">age_max</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie ...</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">age_min</span><span class="p">,</span> <span class="n">age_max</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="n">tab_pda</span><span class="p">[</span><span class="n">age</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">n</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Que fait la fonction <code class="docutils literal notranslate"><span class="pre">examen_pda</span></code> ?</p></li>
+<li><p>Cette fonction n’est pas très robuste. En effet, si l’utilisateur l’appelle avec une valeur de <code class="docutils literal notranslate"><span class="pre">age_max</span></code> supérieure ou égale à 106 (<em>la taille du tableau</em> <code class="docutils literal notranslate"><span class="pre">PDA</span></code>), alors le programme va échouer suite à un accès en dehors des limites du tableau.<br />
+Améliorer ce programme pour que l’utilisateur puisse spécifier une valeur de age_max arbitrairement grande, sans pour autant que le programme n’échoue.</p></li>
+</ol>
+</div>
+<div class="section" id="exercice-70">
+<h2>Exercice 70<a class="headerlink" href="#exercice-70" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">occurrences(v,</span> <span class="pre">t)</span></code> qui renvoie le nombre d’occurrences de la valeur <code class="docutils literal notranslate"><span class="pre">v</span></code> dans le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> non vide. Justifier la présence de la ligne 5.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">occurences</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter ...</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Erreur: ...&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#assert occurences(-1, [2,3,4,5,-1,6,7,-1]) == 2</span>
+<span class="c1">#print(&quot;Validé&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-72">
+<h2>Exercice 72<a class="headerlink" href="#exercice-72" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">max_tab(t)</span></code> qui prend un tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> non vide en paramètre et qui renvoie l’élément maximum de ce tableau. <strong>Interdiction d’utiliser la fonction native</strong> <code class="docutils literal notranslate"><span class="pre">max</span></code> de python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_tab</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Erreur: tableau vide&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#from random import randint</span>
+<span class="c1">#test = [randint(-10, 10) for i in range(20)]</span>
+<span class="c1">#assert max_tab(test) == max(test)</span>
+<span class="c1">#print(&quot;Validé&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-73">
+<h2>Exercice 73<a class="headerlink" href="#exercice-73" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">hasard</span></code> qui tire au hasard mille entiers entre 1 et 10 et renvoie ensuite le nombre de fois que chaque nombre a été tiré. Appeler la fonction plusieurs fois. Conseil: penser à renvoyer un tableau.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+
+<span class="k">def</span> <span class="nf">hasard</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#assert sum(hasard()) == 1000</span>
+<span class="c1">#print(&quot;Validé !&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-74">
+<h2>Exercice 74<a class="headerlink" href="#exercice-74" title="Permalink to this headline">¶</a></h2>
+<p>En mathématiques, la très célèbre <em>suite de Fibonacci</em> est une séquence infinie d’entiers définie de la façon suivante : on part des deux entiers 0 et 1 puis on construit à chaque fois l’entier suivant comme <strong>la somme des deux entiers précédents</strong>.
+0, 1, 1, 2, 3, 5, …</p>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">fibo(k)</span></code> qui construit puis renvoie un tableau contenant les <span class="math notranslate nohighlight">\(k\)</span> premiers termes de la suite. Vérifier avec la cellule de test.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">2</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#assert fibo(30)[-1] == 514229</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-75">
+<h2>Exercice 75<a class="headerlink" href="#exercice-75" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">copie(t)</span></code> qui prend en paramètre un tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> et renvoie une copie de ce tableau. Quelle expérience peut-on faire pour s’assurer qu’on ne s’est pas trompé ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">copie</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#a = [1, 2, 3, 4, 5]</span>
+<span class="c1">#b = copie(a)</span>
+<span class="c1">#assert all(b[i] == a[i] for i in range(len(a))) and a is not b</span>
+<span class="c1">#print(&quot;Validé !&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-76">
+<h2>Exercice 76<a class="headerlink" href="#exercice-76" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">ajout(v,</span> <span class="pre">t)</span></code> qui crée un nouveau tableau contenant d’abord tous les éléments de <code class="docutils literal notranslate"><span class="pre">t</span></code> puis <code class="docutils literal notranslate"><span class="pre">v</span></code> puis qui renvoie ce tableau.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ajout</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#assert ajout(1, []) == [1]</span>
+<span class="c1">#assert ajout(3, [1, 2]) == [1, 2, 3]</span>
+<span class="c1">#print(&quot;validé&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-77">
+<h2>Exercice 77<a class="headerlink" href="#exercice-77" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">concatenation(t1,</span> <span class="pre">t2)</span></code> qui crée un nouveau tableau contenant, dans l’ordre, tous les éléments de <code class="docutils literal notranslate"><span class="pre">t1</span></code> puis tous les éléments de <code class="docutils literal notranslate"><span class="pre">t2</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">concatenation</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#assert concatenation([-1,3], [8,90]) == [-1, 3, 8, 90]</span>
+<span class="c1">#assert concatenation([], []) == []</span>
+<span class="c1">#print(&quot;Validé&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-78">
+<h2>Exercice 78<a class="headerlink" href="#exercice-78" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">tableau_aleatoire(n,</span> <span class="pre">a,</span> <span class="pre">b)</span></code> qui renvoie un tableau de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> contenant des entiers tirés au hasard entre <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+
+<span class="k">def</span> <span class="nf">tableau_aleatoire</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-79">
+<h2>Exercice 79<a class="headerlink" href="#exercice-79" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">tableau_croissant(n)</span></code> qui renvoie un tableau de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> contenant des entiers tirés au hasard et ayant la propriété d’être trié par ordre croissant. Pour faire cela, on pourrait utiliser l’exercice précédent pour construire un tableau aléatoire, puis le trier avec un algorithme de tri (ce que nous verrons au cours de l’année en NSI).<br />
+Il y a néanmoins une façon plus simple de procéder, consistant à <strong>remplir le tableau de gauche à droite en ajoutant à chaque fois un entier positif ou nul à l’élément précédent</strong>. Ainsi, le tableau est trié par construction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tableau_croissant</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#t = tableau_croissant(8)</span>
+<span class="c1">#assert all(t[i] &lt;= t[i+1] for i in range(len(t) - 1))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-80">
+<h2>Exercice 80<a class="headerlink" href="#exercice-80" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">echange(tab,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> qui échange dans le tableau <code class="docutils literal notranslate"><span class="pre">tab</span></code> les éléments aux indices <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">echange_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#t = [1,2,3,4,5,6,10]</span>
+<span class="c1">#echange_tab(t, 1, 6)</span>
+<span class="c1">#print(t)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-81">
+<h2>Exercice 81<a class="headerlink" href="#exercice-81" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">somme(tab)</span></code> qui calcule et renvoie la somme des éléments d’un tableau d’entiers. En déduire une fonction <code class="docutils literal notranslate"><span class="pre">moyenne(tab)</span></code> qui calcule et renvoie la moyenne des éléments du tableau <code class="docutils literal notranslate"><span class="pre">tab</span></code>, supposé non vide. <strong>Interdiction d’utiliser des fonctions natives de python</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-82">
+<h2>Exercice 82<a class="headerlink" href="#exercice-82" title="Permalink to this headline">¶</a></h2>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">produit(tab)</span></code> qui calcule et renvoie le produit des éléments d’un tableau d’entiers. Si le tableau contient 0, la fonction devra renvoyer 0 sans terminer le calcul. <strong>Interdiction d’utiliser des fonctions de bibliothèques python</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">produit</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A compléter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
+<span class="c1">#assert produit([1,2,3,4,5,6]) == 720</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Types_construits_1.html" title="previous page">TYPES CONSTRUITS - TABLEAUX</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

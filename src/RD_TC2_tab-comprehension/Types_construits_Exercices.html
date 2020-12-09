@@ -1,0 +1,733 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Types construits - Exercices &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="D’AUTRES TYPES CONSTRUITS" href="Types_construits_suite.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Exercices - Encodage de texte</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Tableaux_Exercices.html">Exercices & correction - Les tableaux</a>
+  </li>
+  <li class="">
+    <a href="Types_construits_suite.html">D’AUTRES TYPES CONSTRUITS</a>
+  </li>
+  <li class="active">
+    <a href="">Types construits - Exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD_TC2_tab-comprehension/Types_construits_Exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_TC2_tab-comprehension/Types_construits_Exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#extremum-dans-un-tableau" class="nav-link">Extrémum dans un tableau</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#tableau-defini-en-comprehension" class="nav-link">Tableau défini en compréhension</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#utilisation-des-tableaux-en-comprehension" class="nav-link">Utilisation des tableaux en compréhension</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#composantes-d-un-vecteur" class="nav-link">Composantes d’un vecteur</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#trouver-le-jour-correspondant-a-une-date" class="nav-link">Trouver le jour correspondant à une date</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#analyse-d-un-tableau-de-notes" class="nav-link">Analyse d’un tableau de notes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#iterer-sur-les-elements-d-un-dictionnaire" class="nav-link">Itérer sur les éléments d’un dictionnaire</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="types-construits-exercices">
+<h1>Types construits - Exercices<a class="headerlink" href="#types-construits-exercices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="extremum-dans-un-tableau">
+<h2>Extrémum dans un tableau<a class="headerlink" href="#extremum-dans-un-tableau" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">maximum(t)</span></code> qui renvoie la valeur maximale présente dans le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>. <strong>L’itération sur les indices est interdite</strong>.</p>
+</div>
+<div class="section" id="tableau-defini-en-comprehension">
+<h2>Tableau défini en compréhension<a class="headerlink" href="#tableau-defini-en-comprehension" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Que construit l’expression ci-dessous?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>On défini une fonction <span class="math notranslate nohighlight">\(f\)</span> telle que:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie ...?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">t</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Etant donné <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[-5,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">-7,</span> <span class="pre">42,</span> <span class="pre">7]</span></code>. Que vaut <code class="docutils literal notranslate"><span class="pre">f(x)</span></code>?</p>
+</div>
+<div class="section" id="utilisation-des-tableaux-en-comprehension">
+<h2>Utilisation des tableaux en compréhension<a class="headerlink" href="#utilisation-des-tableaux-en-comprehension" title="Permalink to this headline">¶</a></h2>
+<p>On souhaite écrire un programme donnant le graphe d’une fonction <span class="math notranslate nohighlight">\(f\)</span> sur un intervalle donné.</p>
+<p><img alt="graphe" src="../../_images/graphe_f.png" /></p>
+<p>On définit d’abord la fonction <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Que réalise l’instruction <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">=</span> <span class="pre">[0.1</span> <span class="pre">*</span> <span class="pre">n</span> <span class="pre">for</span> <span class="pre">n</span> <span class="pre">in</span> <span class="pre">range(-30,</span> <span class="pre">31)]</span></code>?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Construire un tableau <code class="docutils literal notranslate"><span class="pre">Y</span></code> par compréhension, qui correspond à l’image de <code class="docutils literal notranslate"><span class="pre">X</span></code> par <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">)]</span>
+<span class="c1"># ENTRER VOTRE CODE ICI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Executer la cellule ci-dessous. Le résultat obtenu est-il conforme à la demande ?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="k">def</span> <span class="nf">tracer</span><span class="p">(</span><span class="n">t_x</span><span class="p">,</span> <span class="n">t_y</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">t_x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t_y</span><span class="p">),</span> <span class="s2">&quot;Erreur: tableaux incohérents&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_x</span><span class="p">,</span> <span class="n">t_y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Décommenter la ligne ci-dessous</span>
+<span class="c1">#tracer(X, Y)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="composantes-d-un-vecteur">
+<h2>Composantes d’un vecteur<a class="headerlink" href="#composantes-d-un-vecteur" title="Permalink to this headline">¶</a></h2>
+<p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">vecteur</span></code> qui prend en paramètres deux p-uplets qui correspondent aux coordonnées dans le plan de deux points A et B. La fonction <code class="docutils literal notranslate"><span class="pre">vecteur</span></code> retourne un n-uplet correspondant aux coordonnées du vecteur <span class="math notranslate nohighlight">\(\vec{AB}\)</span> dans le plan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Votre code dans cette cellule</span>
+<span class="k">def</span> <span class="nf">vecteur</span><span class="p">(</span><span class="n">xy_A</span><span class="p">,</span> <span class="n">xy_B</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Renvoie un p-uplet ayant deux composantes correspondant aux coordonnées d&#39;un vecteur AB.</span>
+<span class="sd">    xy_A, xy_B: tuple à deux éléments, correspondant aux coordonnées (xA, yA) et (xB, yB) de</span>
+<span class="sd">    deux points A et B.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#A compléter</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TEST - DECOMMENTER et EXECUTER</span>
+<span class="c1">#assert vecteur((5,1), (3,4)) == (-2, 3), &quot;La fonction ne passe pas le test&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="trouver-le-jour-correspondant-a-une-date">
+<h2>Trouver le jour correspondant à une date<a class="headerlink" href="#trouver-le-jour-correspondant-a-une-date" title="Permalink to this headline">¶</a></h2>
+<p>Python possède un module permettant de gérer les dates. Il s’agit du module <code class="docutils literal notranslate"><span class="pre">datetime</span></code>. On y trouve, entre autres, une classe qui permet la création d’objet <code class="docutils literal notranslate"><span class="pre">date</span></code> à partir d’entiers naturels représentant l’année, le mois et le jour. On y trouve aussi une méthode <code class="docutils literal notranslate"><span class="pre">today()</span></code> dont on verra une utilisation plus loin.</p>
+<p>Par exemple, pour créer un objet <code class="docutils literal notranslate"><span class="pre">date</span></code> correspondant au 31 décembre 2019, on procèdera de la manière suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Les attributs year (<em>année</em>), month (<em>mois</em>) et day (<em>jour</em>) d’un objet date <code class="docutils literal notranslate"><span class="pre">d</span></code> peuvent être obtenus par <code class="docutils literal notranslate"><span class="pre">d.year</span></code>, <code class="docutils literal notranslate"><span class="pre">d.month</span></code> et <code class="docutils literal notranslate"><span class="pre">d.day</span></code>.</p>
+<ol class="simple">
+<li><p>Consulter la documentation relative aux objets de type <code class="docutils literal notranslate"><span class="pre">date</span></code> et notamment la méthode <code class="docutils literal notranslate"><span class="pre">today()</span></code> et <code class="docutils literal notranslate"><span class="pre">weekday()</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="c1">#help(date.weekday)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#help(date.today)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Décommenter et exécuter la cellule suivante qui utilise des objets <code class="docutils literal notranslate"><span class="pre">date</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="n">d1</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="c1"># date d&#39;aujourd&#39;hui</span>
+<span class="c1">#print(d1.day, &#39;/&#39;, d1.month, &#39;/&#39;, d1.year)</span>
+<span class="c1">#print(&quot;Aujourd&#39;hui, on est le &quot;, end=&#39;&#39;)</span>
+<span class="c1">#print(d2.day, &#39;/&#39;, d2.month, &#39;/&#39;, d2.year)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>A partir des exemples précédents, créer un objet <code class="docutils literal notranslate"><span class="pre">date_an</span></code> de type <code class="docutils literal notranslate"><span class="pre">date</span></code> et correspondant à votre date d’anniversaire.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Votre code ici</span>
+<span class="c1">#date_an = </span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Coder une fonction <code class="docutils literal notranslate"><span class="pre">trouver_jour</span></code> qui prend en paramètre un objet de type date et qui renvoie un p-uplet à 4 composantes, qui sont dans l’ordre:</p>
+<ul class="simple">
+<li><p>le jour, ici une chaine de caractères valant ‘lundi’, ‘mardi’, etc.</p></li>
+<li><p>le jour dans le mois, ici un entier valant 1, 2, .., 30 ou 31 selon le mois;</p></li>
+<li><p>le mois, une chaîne de caractère valant ‘janvier’, ‘février’, etc.</p></li>
+<li><p>l’année, un entier positif.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><em>Aide</em>: utilisation de la méthode <code class="docutils literal notranslate"><span class="pre">weekday()</span></code> qui permet d’obtenir le jour correspondant à une date.<br />
+Exemple: le premier jour de l’an 2000 correspondait à :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="n">d2000</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d2000</span><span class="o">.</span><span class="n">weekday</span><span class="p">())</span>
+<span class="mi">5</span>
+</pre></div>
+</div>
+<p>D’après la documentation, si lundi correspond à 0 alors 5 correspond à un samedi</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Votre code ici</span>
+<span class="k">def</span> <span class="nf">trouver_jour</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Renvoie le jour sous la forme d&#39;un p-uplet à 4 composantes: jour de la semaine (string), </span>
+<span class="sd">    jour dans le mois (int), mois (int) et année (int).</span>
+<span class="sd">    d: objet de type date</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constantes de type p-uplet à utiliser</span>
+    <span class="n">SEMAINE</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span> <span class="s1">&#39;mardi&#39;</span><span class="p">,</span> <span class="s1">&#39;mercredi&#39;</span><span class="p">,</span> <span class="s1">&#39;jeudi&#39;</span><span class="p">,</span> <span class="s1">&#39;vendredi&#39;</span><span class="p">,</span> <span class="s1">&#39;samedi&#39;</span><span class="p">,</span> <span class="s1">&#39;dimanche&#39;</span><span class="p">)</span>
+    <span class="n">MOIS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;janvier&#39;</span><span class="p">,</span> <span class="s1">&#39;février&#39;</span><span class="p">,</span> <span class="s1">&#39;mars&#39;</span><span class="p">,</span> <span class="s1">&#39;avril&#39;</span><span class="p">,</span> <span class="s1">&#39;mai&#39;</span><span class="p">,</span> <span class="s1">&#39;juin&#39;</span><span class="p">,</span> <span class="s1">&#39;juillet&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;août&#39;</span><span class="p">,</span> <span class="s1">&#39;septembre&#39;</span><span class="p">,</span> <span class="s1">&#39;octobre&#39;</span><span class="p">,</span> <span class="s1">&#39;novembre&#39;</span><span class="p">,</span> <span class="s1">&#39;décembre&#39;</span><span class="p">)</span>
+    <span class="c1">#A compléter</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TEST - DECOMMENTER et EXECUTER</span>
+<span class="c1">#assert trouver_jour(date(1989,1,29)) == (&quot;dimanche&quot;, 29, &quot;janvier&quot;, 1989), &quot;La fonction ne passe pas le test&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Trouver le jour de votre naissance.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Votre code ici</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analyse-d-un-tableau-de-notes">
+<h2>Analyse d’un tableau de notes<a class="headerlink" href="#analyse-d-un-tableau-de-notes" title="Permalink to this headline">¶</a></h2>
+<p>On souhaite analyser les notes obtenues par un groupe de spécialité NSI. Ces résultats sont modélisés sous la forme d’un tableau de nombres flottants compris entre 0 et 20. Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">analyse_note</span></code> qui prend comme paramètre un tableau de notes et qui renvoie un p-uplet composé de la médiane, la moyenne et l’écart type.<br />
+On utilisera des fonctions disponibles dans la librairie standard de python, plus précisemment dans le module <code class="docutils literal notranslate"><span class="pre">statistics</span></code>: <code class="docutils literal notranslate"><span class="pre">median</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code> et <code class="docutils literal notranslate"><span class="pre">variance</span></code>.</p>
+<ol class="simple">
+<li><p>Prendre connaissance de la documentation sur les fonctions <code class="docutils literal notranslate"><span class="pre">median</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code> et <code class="docutils literal notranslate"><span class="pre">variance</span></code> du module <code class="docutils literal notranslate"><span class="pre">statistics</span></code>.</p></li>
+<li><p>L’écart type est défini comme la racine carrée de la variance. La fonction racine carrée <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> peut être importée depuis le module <code class="docutils literal notranslate"><span class="pre">math</span></code>. Compléter la fonction <code class="docutils literal notranslate"><span class="pre">analyse_note</span></code> dans la cellule déjà préparée ci-dessous, puis tester votre code.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#1. Afficher l&#39;aide sur les fonctions median, mean et variance du module statistics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#2. Votre code dans cette cellule</span>
+<span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">median</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">variance</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+
+<span class="k">def</span> <span class="nf">analyse_note</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Renvoie un p-uplet composé de la médiane, la moyenne et l&#39;écart type d&#39;échantillon de notes.</span>
+<span class="sd">    t: tableau de nombres flottants compris entre 0.0 et 20.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#A compléter</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TEST - DECOMMENTER et EXECUTER</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">fabs</span>
+
+
+<span class="c1">#notes = [15, 10, 3, 9, 5, 13, 2]</span>
+<span class="c1">#epsilon = 1e-5</span>
+<span class="c1">#assert fabs(analyse_note(notes)[0] - 9.0) &lt; epsilon, &quot;La fonction ne passe pas le test&quot;</span>
+<span class="c1">#assert fabs(analyse_note(notes)[1] - 8.14285) &lt; epsilon, &quot;La fonction ne passe pas le test&quot;</span>
+<span class="c1">#assert fabs(analyse_note(notes)[2] - 4.98091) &lt; epsilon, &quot;La fonction ne passe pas le test&quot; </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterer-sur-les-elements-d-un-dictionnaire">
+<h2>Itérer sur les éléments d’un dictionnaire<a class="headerlink" href="#iterer-sur-les-elements-d-un-dictionnaire" title="Permalink to this headline">¶</a></h2>
+<p>Au zoo de Beauval, il y a 5 éléphants d’Asie, 17 écureuils d’Asie, 2 pandas d’Asie, etc. On modélise cet inventaire avec un dictionnaire, de la façon suivante:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zoo_Beauval</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;éléphant&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Asie&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="s2">&quot;écureuil&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Asie&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span>
+    <span class="s2">&quot;panda&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Asie&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;hippopotame&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Afrique&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="s2">&quot;girafe&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Afrique&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>De la même façon on représente le zoo de La Flèche:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zoo_LaFleche</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;ours&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Europe&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;tigre&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Asie&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="s2">&quot;hippopotame&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Afrique&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="s2">&quot;girafe&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Afrique&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>On souhaite écrire une fonction <code class="docutils literal notranslate"><span class="pre">plus_grand_nombre</span></code> qui prend un zoo en paramètre et qui retourne le nom de l’animal le plus représenté dans ce zoo.</p>
+<ol class="simple">
+<li><p>Quel type d’itération doit-on utiliser dans cette fonction?</p></li>
+</ol>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+ <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span><span class="p">,</span><span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Aucune itération</p></li>
+</ul>
+<ol class="simple">
+<li><p>Coder cette fonction</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Votre code dans cette cellule</span>
+<span class="k">def</span> <span class="nf">plus_grand_nombre</span><span class="p">(</span><span class="n">zoo</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retourne le nom de l&#39;animal (string) le plus représenté dans le zoo passé en paramètre.</span>
+<span class="sd">    zoo: dictionnaire</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#A compléter</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TEST - DECOMMENTER et EXECUTER</span>
+<span class="c1">#assert plus_grand_nombre(zoo_LaFleche) == &quot;girafe&quot;, &quot;La fonction ne passe pas le test&quot;</span>
+<span class="c1">#assert plus_grand_nombre(zoo_Beauval) == &quot;écureuil&quot;, &quot;La fonction ne passe pas le test&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>On souhaite écrire une fonction <code class="docutils literal notranslate"><span class="pre">nombre_total</span></code> qui prend en paramètres un zoo et un nom de continent. Cette fonction doit retourner le nombre total d’animaux originaires de ce continent. Quel type d’itération doit-on utiliser dans cette fonction?</p></li>
+</ol>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+ <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span><span class="p">,</span><span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Aucune itération</p></li>
+</ul>
+<ol class="simple">
+<li><p>Coder cette fonction</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Votre code dans cette cellule</span>
+<span class="k">def</span> <span class="nf">nombre_total</span><span class="p">(</span><span class="n">zoo</span><span class="p">,</span> <span class="n">continent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retourne le nombre total d&#39;animaux (entier naturel) présents dans le zoo </span>
+<span class="sd">    et originaire du continent.</span>
+<span class="sd">    zoo: dictionnaire</span>
+<span class="sd">    continent: string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#A compléter</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TEST - DECOMMENTER et EXECUTER</span>
+<span class="c1">#assert nombre_total(zoo_LaFleche, &quot;Afrique&quot;) == 14, &quot;La fonction ne passe pas le test&quot;</span>
+<span class="c1">#assert nombre_total(zoo_Beauval, &quot;Asie&quot;) == 24, &quot;La fonction ne passe pas le test&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>On souhaite écrire une fonction <code class="docutils literal notranslate"><span class="pre">nombre</span></code> qui prend en paramètres un zoo et un nom d’animal. La fonction doit retourner le nombre de représentant de cet animal (entier naturel) dans le zoo. Quel type d’itération doit-on utiliser dans cette fonction?</p></li>
+</ol>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+ <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span><span class="p">,</span><span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Aucune itération</p></li>
+</ul>
+<ol class="simple">
+<li><p>Coder cette fonction</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Votre code dans cette cellule</span>
+<span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="n">zoo</span><span class="p">,</span> <span class="n">animal</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retourne le nombre total d&#39;animaux (entier naturel) présents dans le zoo </span>
+<span class="sd">    et originaire du continent.</span>
+<span class="sd">    zoo: dictionnaire</span>
+<span class="sd">    continent: string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#A compléter</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TEST - DECOMMENTER et EXECUTER</span>
+<span class="c1">#assert nombre_total(zoo_LaFleche, &quot;Afrique&quot;) == 14, &quot;La fonction ne passe pas le test&quot;</span>
+<span class="c1">#assert nombre_total(zoo_Beauval, &quot;Asie&quot;) == 24, &quot;La fonction ne passe pas le test&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Types_construits_suite.html" title="previous page">D’AUTRES TYPES CONSTRUITS</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>D’AUTRES TYPES CONSTRUITS &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Types construits - Exercices" href="Types_construits_Exercices.html" />
+    <link rel="prev" title="Exercices &amp; correction - Les tableaux" href="../RD_TC1_tableau/Tableaux_Exercices.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Exercices - Encodage de texte</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Tableaux_Exercices.html">Exercices & correction - Les tableaux</a>
+  </li>
+  <li class="active">
+    <a href="">D’AUTRES TYPES CONSTRUITS</a>
+  </li>
+  <li class="">
+    <a href="Types_construits_Exercices.html">Types construits - Exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/RD_TC2_tab-comprehension/Types_construits_suite.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_TC2_tab-comprehension/Types_construits_suite.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-tableaux-part-2" class="nav-link">Les tableaux - part. 2</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#iterer-sur-les-elements-d-un-tableau" class="nav-link">Itérer sur les éléments d’un tableau</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#construction-de-tableaux-en-comprehension" class="nav-link">Construction de tableaux en compréhension</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#complement-agrandir-un-tableau" class="nav-link">Complément: agrandir un tableau</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-p-uplets" class="nav-link">Les p-uplets</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#construction-et-proprietes-d-un-p-uplet" class="nav-link">Construction et propriétés d’un p-uplet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#parcourir-un-p-uplet" class="nav-link">Parcourir un p-uplet</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-dictionnaires" class="nav-link">Les dictionnaires</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#construction-et-proprietes-des-dictionnaires" class="nav-link">Construction et propriétés des dictionnaires</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#parcours-d-un-dictionnaire" class="nav-link">Parcours d’un dictionnaire</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#les-p-uplets-nommes" class="nav-link">Les p-uplets nommés</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#insuffisance-des-p-uplets" class="nav-link">Insuffisance des p-uplets</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#une-solution-possible" class="nav-link">Une solution possible</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#resume" class="nav-link">Résumé</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#tableau" class="nav-link">Tableau</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#p-uplet" class="nav-link">p-uplet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#dictionnaires" class="nav-link">Dictionnaires</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#p-uplets-nommes" class="nav-link">p-uplets nommés</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="d-autres-types-construits">
+<h1>D’AUTRES TYPES CONSTRUITS<a class="headerlink" href="#d-autres-types-construits" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="les-tableaux-part-2">
+<h2>Les tableaux - part. 2<a class="headerlink" href="#les-tableaux-part-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="iterer-sur-les-elements-d-un-tableau">
+<h3>Itérer sur les éléments d’un tableau<a class="headerlink" href="#iterer-sur-les-elements-d-un-tableau" title="Permalink to this headline">¶</a></h3>
+<p>Dans la partie 1 on a vu qu’on pouvait accéder aux éléments d’un tableau en itérant sur les index de celui-ci avec une syntaxe du type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">element</span> <span class="pre">in</span> <span class="pre">range(len(tableau)):</span></code>.</p>
+<p>Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>On peut obtenir le même résultat en itérant sur les éléments. La syntaxe est la suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">notes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>Remarque</em><br />
+Il est d’usage (<em>mais non obligatoire</em>) d’utiliser un nom au pluriel pour le tableau et le même nom au singulier pour la variable de boucle.</p>
+</div>
+<div class="section" id="construction-de-tableaux-en-comprehension">
+<h3>Construction de tableaux en compréhension<a class="headerlink" href="#construction-de-tableaux-en-comprehension" title="Permalink to this headline">¶</a></h3>
+<p>Supposons le problème suivant: <em>Construire un tableau des 10 premiers entiers naturels multiples de 9</em>.<br />
+On peut construire ce tableau comme dans la partie 1 (on dit aussi en <strong>extension</strong>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>C’est potentiellement long et pas très élégant! Une deuxième solution serait d’utiliser une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">i</span>
+</pre></div>
+</div>
+<p>Python propose une syntaxe plus compacte pour réaliser cette opération. Il s’agit de la <strong>construction par compréhension</strong> (on dit aussi en <em>intension</em>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Plus généralement, au lieu de déclarer un tableau puis de le remplir avec une boucle, on préfèrera une construction plus concise appelée construction par compréhension, qui prend la forme suivante:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tableau</span> <span class="o">=</span> <span class="p">[</span><span class="n">expr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">expr(i)</span></code> est une <em>expression</em> de la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> qui parcourt tous les éléments de <code class="docutils literal notranslate"><span class="pre">sequence</span></code> (qui peut être un objet <code class="docutils literal notranslate"><span class="pre">range</span></code>, un tableau, une chaine de caractère ou un des types qui seront vus dans les paragraphes ci-après).</p>
+<hr class="docutils" />
+<p>Modifions notre consigne de départ: <em>parmi les 10 premiers entiers naturels multiples de 9, construire un tableau des entiers pairs uniquement</em>.<br />
+La construction par compréhension permet là encore, une écriture compacte:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>La construction par compréhension permet d’ajouter une condition booléenne</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tableau</span> <span class="o">=</span> <span class="p">[</span><span class="n">expr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sequence</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">condition</span></code> est exprimée avec les opérateurs de comparaisons habituels.</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[0, 18, 36, 54, 72, 90, 108, 126, 144, 162]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="complement-agrandir-un-tableau">
+<h3>Complément: agrandir un tableau<a class="headerlink" href="#complement-agrandir-un-tableau" title="Permalink to this headline">¶</a></h3>
+<p>Le langage python autorise un traitement particulier sur un tableau: pouvoir <strong>l’agrandir sur sa droite</strong>, même si sa taille a déjà été fixée. La syntaxe fait intervenir une fonction disponible avec les objets de type <em>list</em> (on dit aussi une <em>méthode</em>): <code class="docutils literal notranslate"><span class="pre">append</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">tab</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Dans le cadre du programme de 1re NSI, on privilégiera autant que possible la compréhension de tableau par rapport à l’utilisation de la méthode append</strong>.</p>
+</div>
+</div>
+<div class="section" id="les-p-uplets">
+<h2>Les p-uplets<a class="headerlink" href="#les-p-uplets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="construction-et-proprietes-d-un-p-uplet">
+<h3>Construction et propriétés d’un p-uplet<a class="headerlink" href="#construction-et-proprietes-d-un-p-uplet" title="Permalink to this headline">¶</a></h3>
+<p>En mathématique, un <strong>p-uplet</strong> est une collection ordonnée d’objets. Python fournit un type adapté à la représentation des p-uplets: le type <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.  On créé un tuple en écrivant les composantes du p-uplet séparées par une virgule et de préférence entre parenthèses:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Maxime&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>Comme avec les tableaux, on peut obtenir la taille d’un tuple avec la fonction native <code class="docutils literal notranslate"><span class="pre">len</span></code> et accéder au <span class="math notranslate nohighlight">\(i^{ème}\)</span> élément avec la notation habituelle des crochets:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Maxime&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Taille du p-uplet: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur du 3ème élément (index 2): &quot;</span><span class="p">,</span> <span class="n">notes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Taille du p-uplet:  5
+Valeur du 3ème élément (index 2):  15
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Contrairement aux tableaux les composantes d’un tuple ne sont pas modifiables</strong>. On dit que les tuples sont des objets immutables (ou non mutables).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">16.5</span>
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mf">06e2</span><span class="n">d03882e0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">notes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">16.5</span>
+
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parcourir-un-p-uplet">
+<h3>Parcourir un p-uplet<a class="headerlink" href="#parcourir-un-p-uplet" title="Permalink to this headline">¶</a></h3>
+<p>Les méthodes de parcours rencontrées lors de la découverte des tableaux sont toujours valables. On peut itérer sur les index ou sur les éléments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;****Relevé de notes****&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">notes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;****Moyenne****&quot;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">s</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>****Relevé de notes****
+Maxime
+17
+15
+16
+10
+****Moyenne****
+14.5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="les-dictionnaires">
+<h2>Les dictionnaires<a class="headerlink" href="#les-dictionnaires" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="construction-et-proprietes-des-dictionnaires">
+<h3>Construction et propriétés des dictionnaires<a class="headerlink" href="#construction-et-proprietes-des-dictionnaires" title="Permalink to this headline">¶</a></h3>
+<p>Python possède une autre structure de données très importante: <strong>le dictionnaire</strong>. Contrairement aux tableaux ou aux tuples, les <strong>valeurs</strong> ne sont plus associées à des index forcément numériques mais à des <strong>clés</strong> qui peuvent être des nombres, des chaines de caractères, des tuples.  On déclare un dictionnaire en plaçant ses paires clé-valeur entre accolades et séparées par une virgule. La clé et la valeur étant séparées par le caractère <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<p>Exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cyclones_reunion</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;fakir&quot;</span><span class="p">:(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2018</span><span class="p">),</span> <span class="s2">&quot;berguitta&quot;</span><span class="p">:(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2018</span><span class="p">)}</span>
+</pre></div>
+</div>
+<p>On peut également construire un dictionnaire à partir d’un dictionnaire vide. La syntaxe est la suivante:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cyclones_reunion</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;bejisa&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2014</span><span class="p">)</span>
+<span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;dumile&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
+<span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;dina&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2002</span><span class="p">)</span>
+<span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;gamede&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2007</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cyclones_reunion</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;bejisa&#39;: (2, 1, 2014), &#39;dumile&#39;: (3, 1, 2013), &#39;dina&#39;: (22, 1, 2002), &#39;gamede&#39;: (25, 2, 2007)}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le nombre d’entrées du dictionnaire est obtenu avec la fonction <code class="docutils literal notranslate"><span class="pre">len</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">cyclones_reunion</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>On accède à la <strong>valeur</strong> associée à une <strong>clé</strong> d’un dictionnaire <code class="docutils literal notranslate"><span class="pre">d</span></code> avec une construction du type <code class="docutils literal notranslate"><span class="pre">d[clé]</span></code>. Si la clé n’existe pas, python lèvera une exception <strong>KeyError</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;dina&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>(22, 1, 2002)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si la clé n’existe pas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;carlos&quot;</span><span class="p">])</span>
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span>                                  <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">0306</span><span class="n">c0a2304c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">cyclones_reunion</span><span class="p">[</span><span class="s2">&quot;carlos&quot;</span><span class="p">])</span>
+
+<span class="ne">KeyError</span><span class="p">:</span> <span class="s1">&#39;carlos&#39;</span>
+</pre></div>
+</div>
+<p>Enfin, <strong>un dictionnaire n’est pas ordonné</strong>. Les éléments ne sont pas forcément afichés dans l’ordre de leur création.</p>
+</div>
+<div class="section" id="parcours-d-un-dictionnaire">
+<h3>Parcours d’un dictionnaire<a class="headerlink" href="#parcours-d-un-dictionnaire" title="Permalink to this headline">¶</a></h3>
+<p>L’appartenance à un dictionnaire se fait avec le mot clé <code class="docutils literal notranslate"><span class="pre">in</span></code>. Ainsi:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;dina&#39;</span> <span class="ow">in</span> <span class="n">cyclones_reunion</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;carlos&#39;</span> <span class="ow">in</span> <span class="n">cyclones_reunion</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le parcours d’un dictionnaire <code class="docutils literal notranslate"><span class="pre">d</span></code> peut se faire en itérant avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> sur:</p>
+<ul class="simple">
+<li><p>les clés</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span><span class="c1">#équivalent à for cle in d.keys()</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>les valeurs</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>les couples (clé,valeur)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cle</span><span class="p">,</span><span class="n">val</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="les-p-uplets-nommes">
+<h2>Les p-uplets nommés<a class="headerlink" href="#les-p-uplets-nommes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="insuffisance-des-p-uplets">
+<h3>Insuffisance des p-uplets<a class="headerlink" href="#insuffisance-des-p-uplets" title="Permalink to this headline">¶</a></h3>
+<p>Etant donné le problème suivant:</p>
+<p><em>On souhaite stocker les informations concernant des fichers image dans un p-uplet. Ce dernier aura pour composante le nom du fichier, sa largeur en pixel, sa hauteur en pixel et sa taille en kilo-octet.</em></p>
+<p>Par exemple, soit le fichier “dog.jpg” qui a une largeur de 6720 pixels, une hauteur de 4480 pixels et dont la taille est de 3319 ko. On peut le modéliser par un simple tuple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;dog.jpg&quot;</span><span class="p">,</span> <span class="mi">6720</span><span class="p">,</span> <span class="mi">4480</span><span class="p">,</span> <span class="mi">3319</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cependant cette solution n’est pas idéale. En effet, il faut se souvenir de l’ordre dans lequel les entiers ont été rentrés !<br />
+<strong>On évitera d’utiliser des p-uplets lorsque des ambiguités ou confusions sont possibles</strong>.</p>
+</div>
+<div class="section" id="une-solution-possible">
+<h3>Une solution possible<a class="headerlink" href="#une-solution-possible" title="Permalink to this headline">¶</a></h3>
+<p>Pour contourner le problème soulevé précédemment, Python a une solution: les <strong>p-uplets nommés</strong>. Chaque composante du p-uplet se voit donner un nom!</p>
+<p>Python possède un type permettant de manipuler les p-uplets nommés: les <code class="docutils literal notranslate"><span class="pre">namedtuple</span></code> du module <code class="docutils literal notranslate"><span class="pre">collections</span></code>.  Cependant, et conformément au programme, en classe de 1re NSI, <strong>on utilisera des dictionnaires pour implémenter des p-uplets nommés</strong>.</p>
+<p>Le problème précédent peut être modélisé par:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;dog.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;larg&#39;</span><span class="p">:</span><span class="mi">6720</span><span class="p">,</span> <span class="s1">&#39;haut&#39;</span><span class="p">:</span><span class="mi">4480</span><span class="p">,</span> <span class="s1">&#39;taille&#39;</span><span class="p">:</span><span class="mi">3319</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Taille de l&#39;image: &quot;</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hauteur: &quot;</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;haut&#39;</span><span class="p">],</span> <span class="s2">&quot; pixels&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Taille de l&#39;image:  dog.jpg
+Hauteur:  4480  pixels
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="resume">
+<h2>Résumé<a class="headerlink" href="#resume" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tableau">
+<h3>Tableau<a class="headerlink" href="#tableau" title="Permalink to this headline">¶</a></h3>
+<p>On peut itérer directement sur les éléments d’un tableau avec la construction du type <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">element</span> <span class="pre">in</span> <span class="pre">tableau:</span></code>.
+Pour remplir un tableau on peut utiliser une construction par compréhension:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tableau</span> <span class="o">=</span> <span class="p">[</span><span class="n">expr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="p-uplet">
+<h3>p-uplet<a class="headerlink" href="#p-uplet" title="Permalink to this headline">¶</a></h3>
+<p>Les p-uplets sont implémentés en python par le type <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. Il s’agit d’un objet non mutable. La syntaxe pour construire un p-uplet ayant N composantes, est:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mon_objet</span> <span class="o">=</span> <span class="p">(</span><span class="n">comp1</span><span class="p">,</span> <span class="n">comp2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">compN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Les différentes composantes sont accessibles par indexation, comme pour un tableau: <code class="docutils literal notranslate"><span class="pre">mon_objet[0]</span></code>, <code class="docutils literal notranslate"><span class="pre">mob_objet[1]</span></code> etc.<br />
+Le parcours est identique à celui d’un tableau.</p>
+</div>
+<div class="section" id="dictionnaires">
+<h3>Dictionnaires<a class="headerlink" href="#dictionnaires" title="Permalink to this headline">¶</a></h3>
+<p>Un dictionnaire est une structure regroupant des paires “clé:valeur”. En python, ces paires sont situées entre accolades et séparées par une virgule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;dog.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;larg&#39;</span><span class="p">:</span><span class="mi">6720</span><span class="p">,</span> <span class="s1">&#39;haut&#39;</span><span class="p">:</span><span class="mi">4480</span><span class="p">,</span> <span class="s1">&#39;taille&#39;</span><span class="p">:</span><span class="mi">3319</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>On peut itérer sur les clés, les valeurs ou les paires clé,valeur avec les méthodes <code class="docutils literal notranslate"><span class="pre">keys()</span></code>, <code class="docutils literal notranslate"><span class="pre">values()</span></code> ou <code class="docutils literal notranslate"><span class="pre">items()</span></code>.</p>
+</div>
+<div class="section" id="p-uplets-nommes">
+<h3>p-uplets nommés<a class="headerlink" href="#p-uplets-nommes" title="Permalink to this headline">¶</a></h3>
+<p>En python, les p-uplets nommés sont implémentés avec des dictionnaires.</p>
+<hr class="docutils" />
+<p>B. DARID
+<img alt="licence" src="../../_images/licence5.png" /></p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../RD_TC1_tableau/Tableaux_Exercices.html" title="previous page">Exercices &amp; correction - Les tableaux</a>
+    <a class='right-next' id="next-link" href="Types_construits_Exercices.html" title="next page">Types construits - Exercices</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

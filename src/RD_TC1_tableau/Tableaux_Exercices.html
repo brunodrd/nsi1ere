@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Exercices - Les tableaux &#8212; Spécialité NSI 1ère</title>
+    <title>Exercices &amp; correction - Les tableaux &#8212; Spécialité NSI 1ère</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -31,6 +31,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="D’AUTRES TYPES CONSTRUITS" href="../RD_TC2_tab-comprehension/Types_construits_suite.html" />
     <link rel="prev" title="TYPES CONSTRUITS - TABLEAUX" href="Types_construits_1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -121,7 +122,13 @@
     <a href="Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
   </li>
   <li class="active">
-    <a href="">Exercices - Les tableaux</a>
+    <a href="">Exercices & correction - Les tableaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_suite.html">D’AUTRES TYPES CONSTRUITS</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_Exercices.html">Types construits - Exercices</a>
   </li>
 </ul>
 </nav>
@@ -258,8 +265,8 @@
         
               <div>
                 
-  <div class="section" id="exercices-les-tableaux">
-<h1>Exercices - Les tableaux<a class="headerlink" href="#exercices-les-tableaux" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="exercices-correction-les-tableaux">
+<h1>Exercices &amp; correction - Les tableaux<a class="headerlink" href="#exercices-correction-les-tableaux" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="exercice-69">
 <h2>Exercice 69<a class="headerlink" href="#exercice-69" title="Permalink to this headline">¶</a></h2>
 <p>On souhaite coder un programme python permettant de travailler sur la pyramide des âges des français. Il fait intervenir un tableau <code class="docutils literal notranslate"><span class="pre">PDA</span> <span class="pre">=</span> <span class="pre">[691165,</span> <span class="pre">710534,</span> <span class="pre">728579,</span> <span class="pre">...]</span></code> dans lequel la case <span class="math notranslate nohighlight">\(i\)</span> contient <strong>le nombre de français ayant l’âge</strong> <span class="math notranslate nohighlight">\(i\)</span>.</p>
@@ -450,10 +457,19 @@ Améliorer ce programme pour que l’utilisateur puisse spécifier une valeur de
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">concatenation</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    A compléter</span>
+<span class="sd">    renvoie la concatenation de t1 et t2 dans un NOUVEAU</span>
+<span class="sd">    tableau.</span>
+<span class="sd">    t1, t2: tableaux dont les éléments sont de type arbitraire.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="n">tfinal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span>
+    <span class="c1"># On copie t1 dans tfinal</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">)):</span>
+        <span class="n">tfinal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">t1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1"># On copie t2 dans tfinal, à partir de l&#39;index len(t1) - 1 + 1 = len(t1)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">)):</span>
+        <span class="n">tfinal</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">t2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">tfinal</span>
 </pre></div>
 </div>
 </div>
@@ -461,9 +477,14 @@ Améliorer ce programme pour que l’utilisateur puisse spécifier une valeur de
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
-<span class="c1">#assert concatenation([-1,3], [8,90]) == [-1, 3, 8, 90]</span>
-<span class="c1">#assert concatenation([], []) == []</span>
-<span class="c1">#print(&quot;Validé&quot;)</span>
+<span class="k">assert</span> <span class="n">concatenation</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">90</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">concatenation</span><span class="p">([],</span> <span class="p">[])</span> <span class="o">==</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validé&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Validé
 </pre></div>
 </div>
 </div>
@@ -479,10 +500,28 @@ Améliorer ce programme pour que l’utilisateur puisse spécifier une valeur de
 
 <span class="k">def</span> <span class="nf">tableau_aleatoire</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    A compléter</span>
+<span class="sd">    renvoie un tableau de n entiers pris aléatoirement.</span>
+<span class="sd">    n, a, b: entiers</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">tableau_aleatoire</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre d&#39;éléments de t: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[-4, -2, 9, 3, -1, 7, 4, -2, 6, 9, -3, 8, 6, -5, -1]
+Nombre d&#39;éléments de t: 15
 </pre></div>
 </div>
 </div>
@@ -496,10 +535,16 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tableau_croissant</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    A compléter</span>
+<span class="sd">     renvoie un tableau de taille n.</span>
+<span class="sd">     n: entier positif</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Erreur: taille tableau&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># met un nb aléatoire dans t[0]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">t</span>
 </pre></div>
 </div>
 </div>
@@ -507,8 +552,8 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
-<span class="c1">#t = tableau_croissant(8)</span>
-<span class="c1">#assert all(t[i] &lt;= t[i+1] for i in range(len(t) - 1))</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">tableau_croissant</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -521,10 +566,13 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">echange_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    A compléter</span>
+<span class="sd">    Echange les valeurs situées aux index i et j</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="c1"># On doit échanger t[i] &lt;--&gt; t[j]</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
 </pre></div>
 </div>
 </div>
@@ -532,9 +580,14 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
-<span class="c1">#t = [1,2,3,4,5,6,10]</span>
-<span class="c1">#echange_tab(t, 1, 6)</span>
-<span class="c1">#print(t)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">echange_tab</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1, 10, 3, 4, 5, 6, 2]
 </pre></div>
 </div>
 </div>
@@ -550,14 +603,31 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <span class="sd">    A compléter</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">s</span>
 
 <span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A compléter</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">somme</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">moyenne</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">8</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">8</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>12.0
+48
 </pre></div>
 </div>
 </div>
@@ -573,7 +643,12 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <span class="sd">    A compléter</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Supprimer la ligne suivante et compléter avec votre code</span>
-    <span class="k">pass</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">p</span>
 </pre></div>
 </div>
 </div>
@@ -581,7 +656,19 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER</span>
-<span class="c1">#assert produit([1,2,3,4,5,6]) == 720</span>
+<span class="k">assert</span> <span class="n">produit</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span> <span class="o">==</span> <span class="mi">720</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">produit</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -599,6 +686,7 @@ Il y a néanmoins une façon plus simple de procéder, consistant à <strong>rem
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="Types_construits_1.html" title="previous page">TYPES CONSTRUITS - TABLEAUX</a>
+    <a class='right-next' id="next-link" href="../RD_TC2_tab-comprehension/Types_construits_suite.html" title="next page">D’AUTRES TYPES CONSTRUITS</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

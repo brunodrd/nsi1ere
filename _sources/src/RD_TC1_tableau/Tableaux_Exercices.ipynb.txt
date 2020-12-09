@@ -2,22 +2,31 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
-    "Exercices - Les tableaux\n",
-    "===================="
+    "Exercices & correction - Les tableaux\n",
+    "==============================="
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 69"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "On souhaite coder un programme python permettant de travailler sur la pyramide des âges des français. Il fait intervenir un tableau `PDA = [691165, 710534, 728579, ...]` dans lequel la case $i$ contient **le nombre de français ayant l'âge** $i$.  \n",
     "\n",
@@ -40,14 +49,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 70"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `occurrences(v, t)` qui renvoie le nombre d'occurrences de la valeur `v` dans le tableau `t` non vide. Justifier la présence de la ligne 5."
    ]
@@ -55,7 +70,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def occurences(v, t):\n",
@@ -70,7 +88,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
@@ -80,14 +101,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 72"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Ecrire une fonction `max_tab(t)` qui prend un tableau `t` non vide en paramètre et qui renvoie l'élément maximum de ce tableau. **Interdiction d'utiliser la fonction native** `max` de python."
    ]
@@ -95,7 +122,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def max_tab(t):\n",
@@ -110,7 +140,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
@@ -122,14 +155,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 73"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `hasard` qui tire au hasard mille entiers entre 1 et 10 et renvoie ensuite le nombre de fois que chaque nombre a été tiré. Appeler la fonction plusieurs fois. Conseil: penser à renvoyer un tableau."
    ]
@@ -137,7 +176,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "from random import randint\n",
@@ -154,7 +196,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
@@ -164,14 +209,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 74"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "En mathématiques, la très célèbre *suite de Fibonacci* est une séquence infinie d'entiers définie de la façon suivante : on part des deux entiers 0 et 1 puis on construit à chaque fois l'entier suivant comme **la somme des deux entiers précédents**. \n",
     "0, 1, 1, 2, 3, 5, ...  \n",
@@ -182,7 +233,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def fibo(k):\n",
@@ -197,7 +251,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
@@ -206,14 +263,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 75"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `copie(t)` qui prend en paramètre un tableau `t` et renvoie une copie de ce tableau. Quelle expérience peut-on faire pour s'assurer qu'on ne s'est pas trompé ?"
    ]
@@ -221,7 +284,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def copie(t):\n",
@@ -235,7 +301,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
@@ -247,14 +316,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 76 "
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `ajout(v, t)` qui crée un nouveau tableau contenant d'abord tous les éléments de `t` puis `v` puis qui renvoie ce tableau."
    ]
@@ -262,7 +337,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def ajout(v, t):\n",
@@ -276,7 +354,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
@@ -287,14 +368,20 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 77 "
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `concatenation(t1, t2)` qui crée un nouveau tableau contenant, dans l'ordre, tous les éléments de `t1` puis tous les éléments de `t2`."
    ]
@@ -302,47 +389,71 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def concatenation(t1, t2):\n",
     "    \"\"\"\n",
-    "    A compléter\n",
+    "    renvoie la concatenation de t1 et t2 dans un NOUVEAU\n",
+    "    tableau.\n",
+    "    t1, t2: tableaux dont les éléments sont de type arbitraire.\n",
     "    \"\"\"\n",
     "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass"
+    "    tfinal = [0] * (len(t1) + len(t2))\n",
+    "    # On copie t1 dans tfinal\n",
+    "    for i in range(len(t1)):\n",
+    "        tfinal[i] = t1[i]\n",
+    "    # On copie t2 dans tfinal, à partir de l'index len(t1) - 1 + 1 = len(t1)\n",
+    "    for k in range(len(t2)):\n",
+    "        tfinal[len(t1) + k] = t2[k]\n",
+    "    return tfinal"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
-    "#assert concatenation([-1,3], [8,90]) == [-1, 3, 8, 90]\n",
-    "#assert concatenation([], []) == []\n",
-    "#print(\"Validé\")"
+    "assert concatenation([-1,3], [8,90]) == [-1, 3, 8, 90]\n",
+    "assert concatenation([], []) == []\n",
+    "print(\"Validé\")"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 78"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `tableau_aleatoire(n, a, b)` qui renvoie un tableau de taille `n` contenant des entiers tirés au hasard entre `a` et `b`."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
-   "metadata": {},
+   "execution_count": 1,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "from random import randint\n",
@@ -350,22 +461,54 @@
     "\n",
     "def tableau_aleatoire(n, a, b):\n",
     "    \"\"\"\n",
-    "    A compléter\n",
+    "    renvoie un tableau de n entiers pris aléatoirement.\n",
+    "    n, a, b: entiers\n",
     "    \"\"\"\n",
-    "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass"
+    "    t = [0] * n\n",
+    "    for i in range(n):\n",
+    "        t[i] = randint(a, b)\n",
+    "    return t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[-4, 5, 9, 9, -2, 5, 4, 3, 2, -4, -2, 9, 8, -3, -1]\n",
+      "Nombre d'éléments de t: 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "t = tableau_aleatoire(15, -5, 10)\n",
+    "print(t)\n",
+    "print(f\"Nombre d'éléments de t: {len(t)}\")"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 79"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `tableau_croissant(n)` qui renvoie un tableau de taille `n` contenant des entiers tirés au hasard et ayant la propriété d'être trié par ordre croissant. Pour faire cela, on pourrait utiliser l'exercice précédent pour construire un tableau aléatoire, puis le trier avec un algorithme de tri (ce que nous verrons au cours de l'année en NSI).  \n",
     "Il y a néanmoins une façon plus simple de procéder, consistant à **remplir le tableau de gauche à droite en ajoutant à chaque fois un entier positif ou nul à l'élément précédent**. Ainsi, le tableau est trié par construction. "
@@ -373,87 +516,123 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def tableau_croissant(n):\n",
     "    \"\"\"\n",
-    "    A compléter\n",
+    "     renvoie un tableau de taille n.\n",
+    "     n: entier positif\n",
     "    \"\"\"\n",
     "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass"
+    "    assert n > 0, \"Erreur: taille tableau\"\n",
+    "    t = [0] * n\n",
+    "    t[0] = randint(0, 10) # met un nb aléatoire dans t[0]\n",
+    "    for i in range(1, n):\n",
+    "        t[i] = t[i - 1] + randint(0, 10)\n",
+    "    return t"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
-    "#t = tableau_croissant(8)\n",
-    "#assert all(t[i] <= t[i+1] for i in range(len(t) - 1))"
+    "t = tableau_croissant(8)\n",
+    "assert all(t[i] <= t[i+1] for i in range(len(t) - 1))"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 80 "
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `echange(tab, i, j)` qui échange dans le tableau `tab` les éléments aux indices `i` et `j`."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def echange_tab(tab, i, j):\n",
     "    \"\"\"\n",
-    "    A compléter\n",
+    "    Echange les valeurs situées aux index i et j\n",
     "    \"\"\"\n",
     "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass"
+    "    # On doit échanger t[i] <--> t[j]\n",
+    "    temp = tab[i]\n",
+    "    tab[i] = tab[j]\n",
+    "    tab[j] = temp"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
-    "#t = [1,2,3,4,5,6,10]\n",
-    "#echange_tab(t, 1, 6)\n",
-    "#print(t)"
+    "t = [1,2,3,4,5,6,10]\n",
+    "echange_tab(t, 1, 6)\n",
+    "print(t)"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 81"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `somme(tab)` qui calcule et renvoie la somme des éléments d'un tableau d'entiers. En déduire une fonction `moyenne(tab)` qui calcule et renvoie la moyenne des éléments du tableau `tab`, supposé non vide. **Interdiction d'utiliser des fonctions natives de python**."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def somme(tab):\n",
@@ -461,34 +640,59 @@
     "    A compléter\n",
     "    \"\"\"\n",
     "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass\n",
+    "    s = 0\n",
+    "    for i in range(len(tab)):\n",
+    "        s = s + tab[i]\n",
+    "    return s\n",
     "\n",
     "def moyenne(tab):\n",
     "    \"\"\"\n",
     "    A compléter\n",
     "    \"\"\"\n",
     "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass"
+    "    return somme(tab) / len(tab)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
+   "outputs": [],
+   "source": [
+    "print(moyenne([0, 20, 20, 8]))\n",
+    "print(somme([0, 20, 20, 8]))"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "## Exercice 82"
    ]
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "source": [
     "Écrire une fonction `produit(tab)` qui calcule et renvoie le produit des éléments d'un tableau d'entiers. Si le tableau contient 0, la fonction devra renvoyer 0 sans terminer le calcul. **Interdiction d'utiliser des fonctions de bibliothèques python**"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "def produit(tab):\n",
@@ -496,21 +700,52 @@
     "    A compléter\n",
     "    \"\"\"\n",
     "    # Supprimer la ligne suivante et compléter avec votre code\n",
-    "    pass"
+    "    p = 1\n",
+    "    for i in range(len(tab)):\n",
+    "        if tab[i] == 0:\n",
+    "            return 0\n",
+    "        p = p * tab[i]\n",
+    "    return p"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
-   "metadata": {},
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
    "outputs": [],
    "source": [
     "# CELLULE DE TESTS - A DECOMMENTER PUIS EXECUTER\n",
-    "#assert produit([1,2,3,4,5,6]) == 720"
+    "assert produit([1,2,3,4,5,6]) == 720"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
+   "outputs": [],
+   "source": [
+    "produit([10,5,6,9,0,7,8,12])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "hideCode": true,
+    "hidePrompt": true
+   },
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
+  "hide_code_all_hidden": true,
   "kernelspec": {
    "display_name": "Python 3",
    "language": "python",

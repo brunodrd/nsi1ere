@@ -398,6 +398,18 @@ La construction par compréhension permet là encore, une écriture compacte:</p
 </pre></div>
 </div>
 <p>Comme avec les tableaux, on peut obtenir la taille d’un tuple avec la fonction native <code class="docutils literal notranslate"><span class="pre">len</span></code> et accéder au <span class="math notranslate nohighlight">\(i^{ème}\)</span> élément avec la notation habituelle des crochets:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Maxime&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> 
+<span class="n">notes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">335979072</span><span class="n">f49</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="mi">1</span> <span class="n">notes</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Maxime&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="n">notes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notes</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Maxime&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -644,7 +656,7 @@ Le parcours est identique à celui d’un tableau.</p>
 <p>En python, les p-uplets nommés sont implémentés avec des dictionnaires.</p>
 <hr class="docutils" />
 <p>B. DARID
-<img alt="licence" src="../../_images/licence5.png" /></p>
+<img alt="licence" src="../../_images/licence6.png" /></p>
 </div>
 </div>
 </div>

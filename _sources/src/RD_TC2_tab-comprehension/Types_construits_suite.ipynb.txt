@@ -225,6 +225,24 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```python\n",
+    "notes = (\"Maxime\", 17, 15, 16) \n",
+    "notes[1] = 7\n",
+    "\n",
+    "---------------------------------------------------------------------------\n",
+    "TypeError                                 Traceback (most recent call last)\n",
+    "<ipython-input-1-335979072f49> in <module>\n",
+    "      1 notes = (\"Maxime\", 17, 15, 16)\n",
+    "----> 2 notes[1] = 7\n",
+    "\n",
+    "TypeError: 'tuple' object does not support item assignment\n",
+    "```"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 3,
    "metadata": {},

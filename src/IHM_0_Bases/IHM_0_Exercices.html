@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 &amp; CSS3 - EXERCICES &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Exercices - Encodage de texte</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Tableaux_Exercices.html">Exercices & correction - Les tableaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_suite.html">D’AUTRES TYPES CONSTRUITS</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_Exercices.html">Types construits - Exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/IHM_0_Bases/IHM_0_Exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/IHM_0_Bases/IHM_0_Exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#connaitre-le-cours" class="nav-link">Connaitre le cours</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-composer-des-balises" class="nav-link">Exercice: composer des balises</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exercice-un-peu-de-mise-en-forme" class="nav-link">Exercice: un peu de mise en forme</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="html5-css3-exercices">
+<h1>HTML5 &amp; CSS3 - EXERCICES<a class="headerlink" href="#html5-css3-exercices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="connaitre-le-cours">
+<h2>Connaitre le cours<a class="headerlink" href="#connaitre-le-cours" title="Permalink to this headline">¶</a></h2>
+<p>On considère le code suivant:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>   &lt;!DOCTYPE html&gt;
+   &lt;html lang=&quot;fr&quot;&gt;
+   &lt;head&gt;
+         &lt;meta charset=&quot;UTF-8&quot;&gt;
+         &lt;title&gt;Les documents HTML&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+         &lt;h1&gt;Structuration de document&lt;/h1&gt;
+         &lt;p&gt;Les &lt;em&gt;balises&lt;/em&gt; HTML doivent rendre compte de la structure de la page.&lt;/p&gt;
+         &lt;h1&gt;Syntaxe des balises HTML&lt;/h1&gt;
+         &lt;p&gt;
+             Les balises HTML respectent une syntaxe simple et stricte :
+         &lt;/p&gt;
+             &lt;ul&gt;
+                 &lt;li&gt;Un chevron ouvrant &lt; &lt;/li&gt;
+                 &lt;li&gt;Le nom de la balise&lt;/li&gt;
+                 &lt;li&gt;Des attributs (optionnels). Un espace, suivi du nom de l&#39;attribut, 
+                     d&#39;un signe égal (=) et d&#39;une valeur entre doubles quotes (&quot;&quot;).&lt;/li&gt;
+                 &lt;li&gt;Un chevron fermant &gt; &lt;/li&gt;
+             &lt;/ul&gt;
+          
+   &lt;/body&gt;
+   &lt;/html&gt; 
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Quel est le langage qui permet de présenter le contenu et la structure d’un document?</p></li>
+<li><p>Quel est le rôle des éléments présents entre <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;/head&gt;</span></code> ?</p></li>
+<li><p>Donner la signification des balises <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>.</p></li>
+<li><p>On souhaiterait ajouter un lien vers le site MDN web docs (référence sur HTML) <code class="docutils literal notranslate"><span class="pre">https://developer.mozilla.org/fr/docs/Apprendre/HTML/Balises_HTML</span></code>. Que faut-il ajouter au code précédent ?</p></li>
+<li><p>Quel langage permet de mettre en forme cette page?</p></li>
+<li><p>Peut-on inclure les instructions de ce langage dans le document HTML? Est-ce une bonne pratique?</p></li>
+<li><p>Les instructions de la question précédente sont les suivantes:</p></li>
+</ol>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="n">gray</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">p</span> <span class="p">{</span>
+    <span class="n">text</span><span class="o">-</span><span class="nl">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Quelles seront les conséquences sur le document?</p></li>
+<li><p>La mise en forme va concerner tous les éléments <code class="docutils literal notranslate"><span class="pre">p</span></code>. Que faut-il faire et dans quel fichier intervenir, si on veut cibler un paragraphe en particulier?</p></li>
+</ul>
+</div>
+<div class="section" id="exercice-composer-des-balises">
+<h2>Exercice: composer des balises<a class="headerlink" href="#exercice-composer-des-balises" title="Permalink to this headline">¶</a></h2>
+<p>Dans le texte ci-dessous :</p>
+<ul class="simple">
+<li><p>Informatique est un titre de niveau 1</p></li>
+<li><p>Définition et Histoire sont des titres de niveau 2</p></li>
+<li><p>Chacune des sept autres portions de texte est un paragraphe</p></li>
+<li><p>Chaque titre et les paragraphes le suivant constitue une section</p></li>
+<li><p>L’ensemble du document constitue un article</p></li>
+</ul>
+<p>Réaliser un fichier HTML permettant de répondre à une telle structure. Rajouter pied de page contenant un lien vers <code class="docutils literal notranslate"><span class="pre">https://fr.wikipedia.org/wiki/Informatique</span></code>.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Informatique
+
+L&#39;informatique est un domaine d&#39;activité scientifique, technique et industriel concernant le traitement automatique de l&#39;information par l&#39;exécution de programmes informatiques par des machines : des systèmes embarqués, des ordinateurs, des robots, des automates, etc.
+
+Ces champs d&#39;application peuvent être séparés en deux branches, l&#39;une, de nature théorique, qui concerne la définition de concepts et modèles, et l&#39;autre, de nature pratique, qui s&#39;intéresse aux techniques concrètes de mise en oeuvre. Certains domaines de l&#39;informatique peuvent être très abstraits, comme la complexité algorithmique, et d&#39;autres peuvent être plus proches d&#39;un public profane. Ainsi, la théorie des langages demeure un domaine davantage accessible aux professionnels formés (description des ordinateurs et méthodes de programmation), tandis que les métiers liés aux interfaces homme-machine sont accessibles à un plus large public.
+
+Définition
+
+La science informatique n&#39;est pas plus la science des ordinateurs que l&#39;astronomie n&#39;est celle des télescopes.
+
+Le terme &quot;informatique&quot; résulte de l&#39;association du terme &quot;information&quot; au suffixe &quot;-ique&quot; signifiant &quot;qui est propre à&quot;. Comme adjectif, il s&#39;applique à l&#39;ensemble des traitements liés à l&#39;emploi des ordinateurs et systèmes numériques. Comme substantif, il désigne les activités liées à la conception et à la mise en œuvre de ces machines. Des questions de télécommunications comme le traitement du signal ou la théorie de l&#39;information, aussi bien que des problèmes mathématiques comme la calculabilité s&#39;y rattachent. Dans le vocabulaire universitaire américain, l&#39;informatique (&quot;computer science&quot;) désigne surtout l&#39;informatique théorique : un ensemble de sciences formelles qui ont pour objet d&#39;étude la notion d&#39;information et des procédés de traitement automatique de celle-ci, l&#39;algorithmique.
+
+Les applications de l&#39;informatique depuis les années 1950 forment la base du secteur d&#39;activité des technologies de l&#39;information et de la communication. Ce secteur industriel et commercial est lié à la fois aux procédés (logiciel, architectures de systèmes) et au matériel (électronique, télécommunication). Le secteur fournit également de nombreux services liés à l&#39;utilisation de ses produits : développement, maintenance, enseignement, assistance, surveillance et entretien.
+
+Histoire
+
+Depuis des millénaires, l&#39;Homme a créé et utilisé des outils l&#39;aidant à calculer (abaque, boulier, etc.), exigeant, comme les opérations manuelles, des algorithmes de calcul, dont des tables datant de l&#39;époque d&#39;Hammourabi (environ -1750) figurent parmi les exemples les plus anciens.
+
+Si les machines à calculer évoluent constamment depuis l&#39;Antiquité, elles n&#39;exécutent pas elles-mêmes l&#39;algorithme : c&#39;est l&#39;homme qui doit apprendre et exécuter la suite des opérations, comme pour réaliser les différentes étapes d&#39;une division euclidienne). En 1642, Blaise Pascal imagine une machine à calculer, la Pascaline, qui fut commercialisée. Sept exemplaires subsistent dans des musées comme celui des arts et métiers et dont deux, qui sont dans des collections privées (IBM en possède une). Joseph Marie Jacquard avec ses métiers à tisser à cartes perforées illustre en premier le concept de programmation, comme enchaînement automatique d&#39;opérations élémentaires. George Boole et Ada Lovelace esquissent une théorie de la programmation des opérations mathématiques.
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercice-un-peu-de-mise-en-forme">
+<h2>Exercice: un peu de mise en forme<a class="headerlink" href="#exercice-un-peu-de-mise-en-forme" title="Permalink to this headline">¶</a></h2>
+<p>L’élément <code class="docutils literal notranslate"><span class="pre">body</span></code> d’un document HTML contient le code suivant:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mon article<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Première section<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Premier paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Deuxième section<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Deuxième paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Troisième paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Créer une feuille de style de manière à:</p>
+<ul class="simple">
+<li><p>changer la couleur par défaut du texte de tous les paragraphes;</p></li>
+<li><p>changer la couleur de fond du premier titre de niveau 2.</p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

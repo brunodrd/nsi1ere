@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Exercices de logique booléenne &#8212; Spécialité NSI 1ère</title>
+    <title>INTERACTIONS CLIENT-SERVEUR: protocole HTTP &#8212; Spécialité NSI 1ère</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -31,8 +31,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Encodage des entiers relatifs" href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html" />
-    <link rel="prev" title="Expressions booléennes" href="Expressions_booleennes.html" />
+    <link rel="prev" title="IHM_1_Interaction_web_Exercices" href="../IHM_1_Elements_interaction/IHM_1_Exercices.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -98,10 +97,10 @@
     <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
   </li>
   <li class="">
-    <a href="Expressions_booleennes.html">Expressions booléennes</a>
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
   </li>
-  <li class="active">
-    <a href="">Exercices de logique booléenne</a>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
   </li>
   <li class="">
     <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
@@ -142,8 +141,8 @@
   <li class="">
     <a href="../IHM_1_Elements_interaction/IHM_1_Exercices.html">IHM_1_Interaction_web_Exercices</a>
   </li>
-  <li class="">
-    <a href="../IHM_2_Client-Serveur/IHM_2_client_serveur.html">INTERACTIONS CLIENT-SERVEUR: protocole HTTP</a>
+  <li class="active">
+    <a href="">INTERACTIONS CLIENT-SERVEUR: protocole HTTP</a>
   </li>
 </ul>
 </nav>
@@ -182,7 +181,7 @@
                 <!-- ipynb file if we had a myst markdown file -->
                 
                 <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../../_sources/src/RD_3_Expressions_booleennes/Exercices_logiques.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <a class="dropdown-buttons" href="../../_sources/src/IHM_2_Client-Serveur/IHM_2_client_serveur.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
                 <!-- Download PDF via print -->
                 <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
             </div>
@@ -201,7 +200,7 @@
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
             <div class="dropdown-buttons">
                 
-                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/RD_3_Expressions_booleennes/Exercices_logiques.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/IHM_2_Client-Serveur/IHM_2_client_serveur.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
                 
                 
                 
@@ -218,15 +217,29 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#l-operateur-xor" class="nav-link">L’opérateur XOR</a>
+            <a href="#modele-client-serveur-et-protocole-http" class="nav-link">Modèle client-serveur et protocole http.</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#l-operateur-logique-nand" class="nav-link">L’opérateur logique NAND</a>
+            <a href="#les-outils-utilises" class="nav-link">Les outils utilisés</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#l-operateur-logique-nor" class="nav-link">L’opérateur logique NOR</a>
+            <a href="#analyse-d-un-echange" class="nav-link">Analyse d’un échange</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#que-se-passe-t-il-apres-avoir-saisi-une-url" class="nav-link">Que se passe-t-il après avoir saisi une URL?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#envoi-d-une-requete-par-le-client" class="nav-link">Envoi d’une requête par le client</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#lecture-de-la-reponse-du-serveur" class="nav-link">Lecture de la réponse du serveur</a>
+        </li>
+    
+            </ul>
         </li>
     
     </ul>
@@ -240,42 +253,55 @@
         
               <div>
                 
-  <div class="section" id="exercices-de-logique-booleenne">
-<h1>Exercices de logique booléenne<a class="headerlink" href="#exercices-de-logique-booleenne" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="l-operateur-xor">
-<h2>L’opérateur XOR<a class="headerlink" href="#l-operateur-xor" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>En s’appuyant sur une simulation réalisée en cours (<em>Dilemme</em>) écrire une fonction python <code class="docutils literal notranslate"><span class="pre">xor</span></code> qui prend en paramètre deux variables booléennes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> et qui renvoie le résultat de <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">xor</span> <span class="pre">b</span></code>.</p></li>
-<li><p>Vérifier l’égalité <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">xor</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">(a</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">b)</span> <span class="pre">or</span> <span class="pre">((not</span> <span class="pre">a)</span> <span class="pre">and</span> <span class="pre">b)</span></code>.</p></li>
-</ol>
+  <div class="section" id="interactions-client-serveur-protocole-http">
+<h1>INTERACTIONS CLIENT-SERVEUR: protocole HTTP<a class="headerlink" href="#interactions-client-serveur-protocole-http" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="modele-client-serveur-et-protocole-http">
+<h2>Modèle client-serveur et protocole http.<a class="headerlink" href="#modele-client-serveur-et-protocole-http" title="Permalink to this headline">¶</a></h2>
+<p>On appelle interaction client-serveur un mode de communication entre un programme qualifié de <em>client</em> qui <strong>envoie des requêtes</strong> et un programme dit <em>serveur</em> qui y <strong>répond</strong>.<br />
+Dans le cas du Web, le client peut être un navigateur (<em>Google Chrome, Firefox, etc</em>) et le serveur un programme tel que <em>Apache, Nginx, etc</em>.<br />
+Le protocole utilisé est <strong>HTTP</strong>.</p>
 </div>
-<div class="section" id="l-operateur-logique-nand">
-<h2>L’opérateur logique NAND<a class="headerlink" href="#l-operateur-logique-nand" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Ecrire une fonction python <code class="docutils literal notranslate"><span class="pre">nand</span></code> (<em>pour not and</em>) qui prend en paramètres deux variables booléennes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> et qui renvoie le résultat de <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">nand</span> <span class="pre">b</span></code>.</p></li>
-<li><p>Ecrire la table de vérité.</p></li>
-<li><p>Comparer les expressions suivantes:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nand(a,a)</span></code> et <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span></code>;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nand(nand(a,</span> <span class="pre">b),</span> <span class="pre">nand(a,</span> <span class="pre">b))</span></code> et <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code>;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nand(nand(a,</span> <span class="pre">a),</span> <span class="pre">nand(b,</span> <span class="pre">b))</span></code> et <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code></p></li>
-</ul>
-</li>
-</ol>
+<div class="section" id="les-outils-utilises">
+<h2>Les outils utilisés<a class="headerlink" href="#les-outils-utilises" title="Permalink to this headline">¶</a></h2>
+<p>On utilisera le navigateur <em>Firefox</em> avec sa console de développement (voir la vidéo pour la configuration) côté client.<br />
+Côté serveur, on utilisera un programme léger écrit en Javascript (<em>Node.js</em> plus exactement). L’adresse de ce serveur noté <code class="docutils literal notranslate"><span class="pre">xxx.xxx.xxx.xxx:8080</span></code> sera fournie par le professeur au cours de la séance.</p>
 </div>
-<div class="section" id="l-operateur-logique-nor">
-<h2>L’opérateur logique NOR<a class="headerlink" href="#l-operateur-logique-nor" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Ecrire une fonction python <code class="docutils literal notranslate"><span class="pre">nor</span></code> (<em>pour not or</em>) qui prend en paramètres deux variables booléennes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> et qui renvoie le résultat de <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">nor</span> <span class="pre">b</span></code>.</p></li>
-<li><p>Ecrire la table de vérité.</p></li>
-<li><p>Comparer les expressions suivantes:</p>
+<div class="section" id="analyse-d-un-echange">
+<h2>Analyse d’un échange<a class="headerlink" href="#analyse-d-un-echange" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="que-se-passe-t-il-apres-avoir-saisi-une-url">
+<h3>Que se passe-t-il après avoir saisi une URL?<a class="headerlink" href="#que-se-passe-t-il-apres-avoir-saisi-une-url" title="Permalink to this headline">¶</a></h3>
+<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;">Ouvrir l'URL http://xxx.xxx.xxx.xxx:8080/ dans Firefox ainsi que la console de développement.</p><p><img alt="accueil" src="../../_images/accueil.png" /></p>
+<p><em>Rappel</em><br />
+L’URL est composée de la manière suivante: <strong>protocole://adresse-ou-nom/ressource</strong>. Le protocole est souvent HTTP (ou HTTPS); on écrit généralement un nom plutôt qu’une adresse (le DNS fait la conversion) et la ressource peut être une page HTML, un image, une vidéo etc.</p>
+<p>La partie haute de la console de développement liste les fichiers nécessaires à l’affichage de la page.<br />
+<img alt="requetes" src="../../_images/requetes.png" /></p>
+<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;">Combien de requêtes sont nécessaires à l'affichage de la page '/' ? Quels types de fichiers sont demandés?</p><p>L’accès à une ressource se fait selon le protocole HTTP. Le détail de l’échange peut être suivi dans la console de développement.</p>
+<p>Pour afficher une page web le navigateur (client) réalise les opérations suivantes:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nor(a,a)</span></code> et <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span></code>;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nor(nor(a,</span> <span class="pre">b),</span> <span class="pre">nor(a,</span> <span class="pre">b))</span></code> et <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code>;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nor(nor(a,</span> <span class="pre">a),</span> <span class="pre">nor(b,</span> <span class="pre">b))</span></code> et <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code></p></li>
+<li><p>ouverture d’une connection TCP à destination du serveur;</p></li>
+<li><p>envoi d’un <em>message</em> HTTP (qui est lisible en version 1.1);</p></li>
+<li><p>lecture de la réponse du serveur;</p></li>
+<li><p>fermeture ou réutilisation de la connection pour d’autres requêtes.</p></li>
 </ul>
-</li>
-</ol>
+</div>
+<div class="section" id="envoi-d-une-requete-par-le-client">
+<h3>Envoi d’une requête par le client<a class="headerlink" href="#envoi-d-une-requete-par-le-client" title="Permalink to this headline">¶</a></h3>
+<p>La deuxième partie de la console détaille, entre autres, les requêtes du client (navigateur) envoyées au serveur. Une requête HTTP est composée d’une première ligne où figurent la <strong>méthode</strong>, le <strong>chemin</strong> de la ressource et la <strong>version du protocole</strong>. Ensuite, on trouve plusieurs lignes d’entête.<br />
+<img alt="http" src="../../_images/HTTP_Request_2.png" />
+On peut avoir une signification de chaque entête en cliquant sur le point d’interrogation associé (bouton <em>Texte brut</em> désactivé) dans la console de développement.</p>
+<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;">Quel est le chemin de la ressource associée à la troisième requête lors de l'affichage de la page précdente?</p><p><img alt="requete3" src="../../_images/requetes3.png" /></p>
+<p>La méthode <em>GET</em> est utilisée pour récupérer une ressource. D’autres méthodes existent, on pourra consulter <a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode">cette page</a> pour avoir une liste complète. On utilisera notamment la méthode <em>POST</em> dans le prochain chapitre.</p>
+</div>
+<div class="section" id="lecture-de-la-reponse-du-serveur">
+<h3>Lecture de la réponse du serveur<a class="headerlink" href="#lecture-de-la-reponse-du-serveur" title="Permalink to this headline">¶</a></h3>
+<p>La première ligne contient la version du protocole, un code de retour et un message de retour. On trouve ensuite des ligne d’entête comme pour les requêtes.<br />
+<img alt="response" src="../../_images/HTTP_Response_2.png" /></p>
+<p>On pourra trouver à <a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/HTTP/Status">cette adresse</a>, les codes de réponse du protocole HTTP.</p>
+<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;">Saisir l'URL <em>http://xxx.xxx.xxx.xxx:8080/Exercice</em> puis commentez la réponse du serveur.</p></div>
 </div>
 </div>
 
@@ -288,8 +314,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Expressions_booleennes.html" title="previous page">Expressions booléennes</a>
-    <a class='right-next' id="next-link" href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html" title="next page">Encodage des entiers relatifs</a>
+    <a class='left-prev' id="prev-link" href="../IHM_1_Elements_interaction/IHM_1_Exercices.html" title="previous page">IHM_1_Interaction_web_Exercices</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

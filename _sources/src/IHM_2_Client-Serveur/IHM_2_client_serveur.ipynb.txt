@@ -1,0 +1,212 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "INTERACTIONS CLIENT-SERVEUR: protocole HTTP\n",
+    "=========================================="
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Modèle client-serveur et protocole http.\n",
+    "\n",
+    "On appelle interaction client-serveur un mode de communication entre un programme qualifié de *client* qui **envoie des requêtes** et un programme dit *serveur* qui y **répond**.  \n",
+    "Dans le cas du Web, le client peut être un navigateur (*Google Chrome, Firefox, etc*) et le serveur un programme tel que *Apache, Nginx, etc*.  \n",
+    "Le protocole utilisé est **HTTP**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Les outils utilisés"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On utilisera le navigateur *Firefox* avec sa console de développement (voir la vidéo pour la configuration) côté client.  \n",
+    "Côté serveur, on utilisera un programme léger écrit en Javascript (*Node.js* plus exactement). L'adresse de ce serveur noté `xxx.xxx.xxx.xxx:8080` sera fournie par le professeur au cours de la séance."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Analyse d'un échange"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Que se passe-t-il après avoir saisi une URL?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Ouvrir l'URL http://xxx.xxx.xxx.xxx:8080/ dans Firefox ainsi que la console de développement.</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![accueil](img/accueil.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*Rappel*  \n",
+    "L'URL est composée de la manière suivante: **protocole://adresse-ou-nom/ressource**. Le protocole est souvent HTTP (ou HTTPS); on écrit généralement un nom plutôt qu'une adresse (le DNS fait la conversion) et la ressource peut être une page HTML, un image, une vidéo etc. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La partie haute de la console de développement liste les fichiers nécessaires à l'affichage de la page.  \n",
+    "![requetes](img/requetes.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Combien de requêtes sont nécessaires à l'affichage de la page '/' ? Quels types de fichiers sont demandés?</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "L'accès à une ressource se fait selon le protocole HTTP. Le détail de l'échange peut être suivi dans la console de développement."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Pour afficher une page web le navigateur (client) réalise les opérations suivantes:  \n",
+    "\n",
+    "* ouverture d'une connection TCP à destination du serveur;\n",
+    "* envoi d'un *message* HTTP (qui est lisible en version 1.1);\n",
+    "* lecture de la réponse du serveur;\n",
+    "* fermeture ou réutilisation de la connection pour d'autres requêtes. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Envoi d'une requête par le client"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La deuxième partie de la console détaille, entre autres, les requêtes du client (navigateur) envoyées au serveur. Une requête HTTP est composée d'une première ligne où figurent la **méthode**, le **chemin** de la ressource et la **version du protocole**. Ensuite, on trouve plusieurs lignes d'entête.  \n",
+    "![http](img/HTTP_Request_2.png)\n",
+    "On peut avoir une signification de chaque entête en cliquant sur le point d'interrogation associé (bouton *Texte brut* désactivé) dans la console de développement."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Quel est le chemin de la ressource associée à la troisième requête lors de l'affichage de la page précdente?</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![requete3](img/requetes3.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La méthode *GET* est utilisée pour récupérer une ressource. D'autres méthodes existent, on pourra consulter [cette page](https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode) pour avoir une liste complète. On utilisera notamment la méthode *POST* dans le prochain chapitre."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Lecture de la réponse du serveur"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La première ligne contient la version du protocole, un code de retour et un message de retour. On trouve ensuite des ligne d'entête comme pour les requêtes.   \n",
+    "![response](img/HTTP_Response_2.png)\n",
+    "\n",
+    "On pourra trouver à [cette adresse](https://developer.mozilla.org/fr/docs/Web/HTTP/Status), les codes de réponse du protocole HTTP."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Saisir l'URL <em>http://xxx.xxx.xxx.xxx:8080/Exercice</em> puis commentez la réponse du serveur.</p>"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {
+    "height": "calc(100% - 180px)",
+    "left": "10px",
+    "top": "150px",
+    "width": "369.594px"
+   },
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

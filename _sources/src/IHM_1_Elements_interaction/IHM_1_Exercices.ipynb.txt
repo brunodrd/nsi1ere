@@ -1,0 +1,243 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "IHM_1_Interaction_web_Exercices\n",
+    "============================"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Capacités**  \n",
+    "\n",
+    "* Identifier les différents composants graphiques permettant d’interagir avec une application Web.\n",
+    "* Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Pour atteindre ces objectifs**  \n",
+    "\n",
+    "Il s’agira:  \n",
+    "* d’examiner le code HTML d’une page comprenant des composants graphiques;\n",
+    "* de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (*réaction aux événements*) programmé par exemple en JavaScript."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## QCM"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Dans le code HTML les délimiteurs tels que `<body>` et `</body>` s’appellent:  \n",
+    "\n",
+    "    A. des bornes;  \n",
+    "    B. des balises;  \n",
+    "    C. des paragraphes;  \n",
+    "    D. des liens."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "2. Dans une page HTML, lequel de ces codes permet la présence d'un bouton qui appelle la fonction javascript `afficher_reponse()` lorsque l'utilisateur clique dessus ?  \n",
+    "\n",
+    "    A. `<a href=\"afficher_reponse()\">Cliquez ici</a>`  \n",
+    "    B. `<button if_clicked=\"afficher_reponse()\">Cliquez ici</button>`  \n",
+    "    C. `<button  value=\"Cliquez ici\"><a> afficher_reponse()</a></button>`  \n",
+    "    D. `<button onclick=\"afficher_reponse()\">Cliquez ici</button>`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "3. On considère le formulaire ci-dessous :\n",
+    "Quel est votre langage préféré ?\n",
+    "Python □ Java □ Php □\n",
+    "Quelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?  \n",
+    "    A. `<input type=\"radio\">`  \n",
+    "    B. `<input type=\"circle\">`  \n",
+    "    C. `<input type=\"checkbox\">`  \n",
+    "    D. `<input type=\"square\">`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "4. On souhaite qu’un menu apparaisse à chaque fois que l’utilisateur passe sa souris sur l’image de bannière du site. L’attribut de la balise `img` dans lequel on doit mettre un code Javascript à cet effet est :  \n",
+    "    A. `onclick`  \n",
+    "    B. `src`  \n",
+    "    C. `alt`  \n",
+    "    D. `onmouseover`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "5. Quel est le nom de l’événement généré lorsque l’utilisateur clique sur un bouton de type button dans une page HTML ?  \n",
+    "    A. `action`  \n",
+    "    B. `mouse`  \n",
+    "    C. `submit`  \n",
+    "    D. `click`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "6. Voici un extrait d'un document HTML  \n",
+    "```html\n",
+    "<body>\n",
+    "  .........\n",
+    "    Clic !\n",
+    "  </button>\n",
+    "  <h1><span id=\"valeur\">2000</span></h1>\n",
+    "</body>\n",
+    "<html>\n",
+    "```\n",
+    "Quelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction javascript `actionBouton()`?  \n",
+    "    A. `<button click = \"actionBouton();\">`  \n",
+    "    B. `<button onclick = \"actionBouton();\">`  \n",
+    "    C. `<button onclick => \"actionBouton();\"`  \n",
+    "    D. `<button> onclick = \"actionBouton();\"`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "7.  Comment doit-on procéder pour insérer des instructions en javascript dans un fichier html ?  \n",
+    "    A. Il suffit de mettre les instructions entre les balises <javascript> et </javascript>  \n",
+    "    B. Il faut utiliser une balise `<script>`  \n",
+    "    C. Il faut les insérer dans le fichier CSS  \n",
+    "    D. Il est inutile de mettre des balises spéciales"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Une horloge dans une page web"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Ouvrir la page `horloge.html` et examiner les codes sources disponibles. Quel est l'élément graphique qui permet une interaction avec l'utilisateur? (*donner la balise HTML*)\n",
+    "2. Décrire l'évènement qui provoque un changement sur la page.\n",
+    "3. Cet évènement est-il géré directement dans la page HTML? Dans la négative où est-il géré?\n",
+    "4. Que réalise cette portion de code du fichier `horloge.js`?\n",
+    "```javascript\n",
+    "cadre.addEventListener('mouseover', (event) => {\n",
+    "    doc.style.visibility = \"visible\";\n",
+    "});\n",
+    "```\n",
+    "5. Même question pour:\n",
+    "```javascript\n",
+    "cadre.addEventListener('mouseleave', (event) => {\n",
+    "    doc.style.visibility = \"hidden\";\n",
+    "});\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Couleur en RGB"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On souhaite afficher la couleur associée aux valeurs des composantes rouge, vert et bleue. Le résultat dans une page web aurait l'allure suivante:  \n",
+    "![couleur](img/couleur.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On fournit les codes sources suivants:  \n",
+    "\n",
+    "* `couleur.html`;\n",
+    "* `couleur.css`;\n",
+    "* deux fichiers javascript `script_couleur1.js` et `script_couleur2.js`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Lier le fichier de mise en forme CSS au code HTML.\n",
+    "2. Combien de composants graphiques ou *widget* en anglais permettant l'interaction, peut-on identifier sur la page `couleur.html`? Donner le nom de l'élément HTML associé pour chacun d'eux.\n",
+    "3. On souhaite afficher la couleur résultant du mélange des composantes rouge bleue et verte dans un cadre prévu à cet effet. On dispose pour cela de deux scripts écrits en Javascript et directement utilisable sans modification de leur code. En modifiant la page `couleur.html` proposer deux façons de résoudre le problème posé. "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

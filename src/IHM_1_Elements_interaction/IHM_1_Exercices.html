@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>IHM_1_Interaction_web_Exercices &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="ELEMENTS D’INTERACTION DANS UNE PAGE WEB" href="IHM_1_interaction_web.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Exercices - Encodage de texte</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Tableaux_Exercices.html">Exercices & correction - Les tableaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_suite.html">D’AUTRES TYPES CONSTRUITS</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_Exercices.html">Types construits - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../IHM_0_Bases/IHM_0_Les_Bases.html">HTML5 & CSS3: LES BASES</a>
+  </li>
+  <li class="">
+    <a href="../IHM_0_Bases/IHM_0_Exercices.html">HTML5 & CSS3 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="IHM_1_interaction_web.html">ELEMENTS D’INTERACTION DANS UNE PAGE WEB</a>
+  </li>
+  <li class="active">
+    <a href="">IHM_1_Interaction_web_Exercices</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/IHM_1_Elements_interaction/IHM_1_Exercices.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/IHM_1_Elements_interaction/IHM_1_Exercices.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#qcm" class="nav-link">QCM</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#une-horloge-dans-une-page-web" class="nav-link">Une horloge dans une page web</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#couleur-en-rgb" class="nav-link">Couleur en RGB</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ihm-1-interaction-web-exercices">
+<h1>IHM_1_Interaction_web_Exercices<a class="headerlink" href="#ihm-1-interaction-web-exercices" title="Permalink to this headline">¶</a></h1>
+<p><strong>Capacités</strong></p>
+<ul class="simple">
+<li><p>Identifier les différents composants graphiques permettant d’interagir avec une application Web.</p></li>
+<li><p>Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.</p></li>
+</ul>
+<p><strong>Pour atteindre ces objectifs</strong></p>
+<p>Il s’agira:</p>
+<ul class="simple">
+<li><p>d’examiner le code HTML d’une page comprenant des composants graphiques;</p></li>
+<li><p>de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (<em>réaction aux événements</em>) programmé par exemple en JavaScript.</p></li>
+</ul>
+<div class="section" id="qcm">
+<h2>QCM<a class="headerlink" href="#qcm" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Dans le code HTML les délimiteurs tels que <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;/body&gt;</span></code> s’appellent:</p>
+<p>A. des bornes;<br />
+B. des balises;<br />
+C. des paragraphes;<br />
+D. des liens.</p>
+</li>
+</ol>
+<ol>
+<li><p>Dans une page HTML, lequel de ces codes permet la présence d’un bouton qui appelle la fonction javascript <code class="docutils literal notranslate"><span class="pre">afficher_reponse()</span></code> lorsque l’utilisateur clique dessus ?</p>
+<p>A. <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=&quot;afficher_reponse()&quot;&gt;Cliquez</span> <span class="pre">ici&lt;/a&gt;</span></code><br />
+B. <code class="docutils literal notranslate"><span class="pre">&lt;button</span> <span class="pre">if_clicked=&quot;afficher_reponse()&quot;&gt;Cliquez</span> <span class="pre">ici&lt;/button&gt;</span></code><br />
+C. <code class="docutils literal notranslate"><span class="pre">&lt;button</span>&#160; <span class="pre">value=&quot;Cliquez</span> <span class="pre">ici&quot;&gt;&lt;a&gt;</span> <span class="pre">afficher_reponse()&lt;/a&gt;&lt;/button&gt;</span></code><br />
+D. <code class="docutils literal notranslate"><span class="pre">&lt;button</span> <span class="pre">onclick=&quot;afficher_reponse()&quot;&gt;Cliquez</span> <span class="pre">ici&lt;/button&gt;</span></code></p>
+</li>
+</ol>
+<ol class="simple">
+<li><p>On considère le formulaire ci-dessous :
+Quel est votre langage préféré ?
+Python □ Java □ Php □
+Quelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?<br />
+A. <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;radio&quot;&gt;</span></code><br />
+B. <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;circle&quot;&gt;</span></code><br />
+C. <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;checkbox&quot;&gt;</span></code><br />
+D. <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;square&quot;&gt;</span></code></p></li>
+</ol>
+<ol class="simple">
+<li><p>On souhaite qu’un menu apparaisse à chaque fois que l’utilisateur passe sa souris sur l’image de bannière du site. L’attribut de la balise <code class="docutils literal notranslate"><span class="pre">img</span></code> dans lequel on doit mettre un code Javascript à cet effet est :<br />
+A. <code class="docutils literal notranslate"><span class="pre">onclick</span></code><br />
+B. <code class="docutils literal notranslate"><span class="pre">src</span></code><br />
+C. <code class="docutils literal notranslate"><span class="pre">alt</span></code><br />
+D. <code class="docutils literal notranslate"><span class="pre">onmouseover</span></code></p></li>
+</ol>
+<ol class="simple">
+<li><p>Quel est le nom de l’événement généré lorsque l’utilisateur clique sur un bouton de type button dans une page HTML ?<br />
+A. <code class="docutils literal notranslate"><span class="pre">action</span></code><br />
+B. <code class="docutils literal notranslate"><span class="pre">mouse</span></code><br />
+C. <code class="docutils literal notranslate"><span class="pre">submit</span></code><br />
+D. <code class="docutils literal notranslate"><span class="pre">click</span></code></p></li>
+</ol>
+<ol class="simple">
+<li><p>Voici un extrait d’un document HTML</p></li>
+</ol>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  .........
+    Clic !
+  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;valeur&quot;</span><span class="p">&gt;</span>2000<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Quelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l’appui déclenche la fonction javascript <code class="docutils literal notranslate"><span class="pre">actionBouton()</span></code>?<br />
+A. <code class="docutils literal notranslate"><span class="pre">&lt;button</span> <span class="pre">click</span> <span class="pre">=</span> <span class="pre">&quot;actionBouton();&quot;&gt;</span></code><br />
+B. <code class="docutils literal notranslate"><span class="pre">&lt;button</span> <span class="pre">onclick</span> <span class="pre">=</span> <span class="pre">&quot;actionBouton();&quot;&gt;</span></code><br />
+C. <code class="docutils literal notranslate"><span class="pre">&lt;button</span> <span class="pre">onclick</span> <span class="pre">=&gt;</span> <span class="pre">&quot;actionBouton();&quot;</span></code><br />
+D. <code class="docutils literal notranslate"><span class="pre">&lt;button&gt;</span> <span class="pre">onclick</span> <span class="pre">=</span> <span class="pre">&quot;actionBouton();&quot;</span></code></p>
+<ol class="simple">
+<li><p>Comment doit-on procéder pour insérer des instructions en javascript dans un fichier html ?<br />
+A. Il suffit de mettre les instructions entre les balises <javascript> et </javascript><br />
+B. Il faut utiliser une balise <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code><br />
+C. Il faut les insérer dans le fichier CSS<br />
+D. Il est inutile de mettre des balises spéciales</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="une-horloge-dans-une-page-web">
+<h2>Une horloge dans une page web<a class="headerlink" href="#une-horloge-dans-une-page-web" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Ouvrir la page <code class="docutils literal notranslate"><span class="pre">horloge.html</span></code> et examiner les codes sources disponibles. Quel est l’élément graphique qui permet une interaction avec l’utilisateur? (<em>donner la balise HTML</em>)</p></li>
+<li><p>Décrire l’évènement qui provoque un changement sur la page.</p></li>
+<li><p>Cet évènement est-il géré directement dans la page HTML? Dans la négative où est-il géré?</p></li>
+<li><p>Que réalise cette portion de code du fichier <code class="docutils literal notranslate"><span class="pre">horloge.js</span></code>?</p></li>
+</ol>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cadre</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;mouseover&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">doc</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span> <span class="o">=</span> <span class="s2">&quot;visible&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Même question pour:</p></li>
+</ol>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cadre</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">doc</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span> <span class="o">=</span> <span class="s2">&quot;hidden&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="couleur-en-rgb">
+<h2>Couleur en RGB<a class="headerlink" href="#couleur-en-rgb" title="Permalink to this headline">¶</a></h2>
+<p>On souhaite afficher la couleur associée aux valeurs des composantes rouge, vert et bleue. Le résultat dans une page web aurait l’allure suivante:<br />
+<img alt="couleur" src="../../_images/couleur.png" /></p>
+<p>On fournit les codes sources suivants:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">couleur.html</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">couleur.css</span></code>;</p></li>
+<li><p>deux fichiers javascript <code class="docutils literal notranslate"><span class="pre">script_couleur1.js</span></code> et <code class="docutils literal notranslate"><span class="pre">script_couleur2.js</span></code>.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Lier le fichier de mise en forme CSS au code HTML.</p></li>
+<li><p>Combien de composants graphiques ou <em>widget</em> en anglais permettant l’interaction, peut-on identifier sur la page <code class="docutils literal notranslate"><span class="pre">couleur.html</span></code>? Donner le nom de l’élément HTML associé pour chacun d’eux.</p></li>
+<li><p>On souhaite afficher la couleur résultant du mélange des composantes rouge bleue et verte dans un cadre prévu à cet effet. On dispose pour cela de deux scripts écrits en Javascript et directement utilisable sans modification de leur code. En modifiant la page <code class="docutils literal notranslate"><span class="pre">couleur.html</span></code> proposer deux façons de résoudre le problème posé.</p></li>
+</ol>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="IHM_1_interaction_web.html" title="previous page">ELEMENTS D’INTERACTION DANS UNE PAGE WEB</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

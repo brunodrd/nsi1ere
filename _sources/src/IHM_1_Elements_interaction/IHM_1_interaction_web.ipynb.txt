@@ -1,0 +1,588 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "ELEMENTS D'INTERACTION DANS UNE PAGE WEB\n",
+    "=========================================="
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Analyse d'une page web"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Les composants graphiques permettant l'interaction avec l'utilisateur"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Dans une page web, des éléments servent à structurer la page et à fournir sa *sémantique*. D'autres vont permettre à l'utilisateur d'interagir avec la page."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Saisir et exécuter le code ci-dessous dans <a href=\"https://jsfiddle.net\">jsfiddle</a> ou avec VSCode + Chrome</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```html\n",
+    "<!DOCTYPE html>\n",
+    "<html lang=\"fr\">\n",
+    "<head>\n",
+    "    <meta charset=\"UTF-8\">\n",
+    "    <title>IHM sur le web en NSI</title>\n",
+    "    <style>\n",
+    "        span:hover {\n",
+    "            color: royalblue;\n",
+    "            font-size: 120%;\n",
+    "        }\n",
+    "    </style>\n",
+    "</head>\n",
+    "<body>\n",
+    "    <article>\n",
+    "        <h1>Identification</h1>\n",
+    "\n",
+    "        <form action=\"\">\n",
+    "            <label for=\"nom\">Votre Nom</label> \n",
+    "            <input type=\"text\" name=\"nom\" id=\"nom\">\n",
+    "            <label for=\"prenom\">Votre prénom</label>\n",
+    "            <input type=\"text\" name=\"prenom\" id=\"prenom\">\n",
+    "            <label for=\"mdp\">Mot de passe</label>\n",
+    "            <input type=\"password\" name=\"mdp\" id=\"mdp\">\n",
+    "            <input type=\"submit\" value=\"Valider\">\n",
+    "        </form>\n",
+    "    <h1>Les ressources</h1>\n",
+    "    <p> \n",
+    "    Le site incontournable pour l'étudiant ayant un parcours <span>Web</span> dans son cursus est le site \n",
+    "    <strong>MDN  web docs</strong>. il s'agit d'une communauté ouverte de développeurs et rédacteurs \n",
+    "    qui créent des ressources afin de rendre le <span>Web</span> meilleur. <br>\n",
+    "    <a href=\"https://developer.mozilla.org/fr/docs/Apprendre\" target=\"_blank\">Adresse du site</a>   \n",
+    "    </p>\n",
+    "    <p>Son dernier logo</p>\n",
+    "    <img src=\"https://www.mozilla.org/media/protocol/img/logos/mozilla/black.40d1af88c248.svg\" alt=\"logo de la mdn\">\n",
+    "    <h1>Les langages</h1>\n",
+    "    <p>Les trois langages à connaître sont:</p>\n",
+    "    <ol>\n",
+    "        <li>HTML</li>\n",
+    "        <li>CSS</li>\n",
+    "        <li>Javascript</li>\n",
+    "    </ol>\n",
+    "    <label for=\"langage\">Sélectionner votre niveau dans ces trois langages</label>\n",
+    "    <select name=\"listlangages\" id=\"langages\">\n",
+    "        <option value=\"debutant\">Débutant</option>\n",
+    "        <option value=\"inter\">Intermédiaire</option>\n",
+    "        <option value=\"expert\">Expert</option>\n",
+    "    </select>\n",
+    "    </article>\n",
+    "</body>\n",
+    "</html>\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Une possibilité d'interaction avec la page est donnée par l'utilisation de *composants graphiques* (formulaire, liste déroulante, case à cocher, bouton, etc.). On trouvera une liste exhaustive de toutes les possibilités à cette [adresse](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Quels sont les éléments qui permettent une interaction dans la page précédente? </p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Quels événements sont associés aux composants graphiques?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Découvrir les attributs d'événements"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">\n",
+    "    Ouvrir le fichier <em>evenement.html</em> avec <em>Chrome</em>. Ouvrir <em>la console de développement web</em> (touche F12).\n",
+    "</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![chrome](img/image_chrome1.png)\n",
+    "\n",
+    "1. Quel élément graphique de la page permet d'interagir avec l'utilisateur ?\n",
+    "2. Lister tous les attributs de cet élément. Etant donné le caractère explicite de leur nom, faire une hypothèse sur leur rôle.\n",
+    "3. Quel événement provoque un changement dans la page ?\n",
+    "4. Cet événement est lié à quel attribut?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Qu'appelle-t-on événement et comment est-il lié à une page web?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On appelle **événement** une action de l'utilisateur ou d'un composant du navigateur. Les événements associés à des balises HTML sont nombreux. Voici quelques exemples:\n",
+    "\n",
+    "| Dénomination de l'événement (event en anglais) | Description                           | Domaine d'utilisation    |\n",
+    "|------------------------------------------------|---------------------------------------|--------------------------|\n",
+    "| onclick                                        | Clic du bouton gauche                 | Pointage souris          |\n",
+    "| oninput                                        | Modification de champ d'un formulaire | Formulaire               |\n",
+    "| onload                                         | Chargement complet d'une page         | Traitement des pages web |\n",
+    "\n",
+    "Ils sont liés aux éléments d'une page web en tant qu'**attribut**. Les attributs d'événements portent un nom préfixé par `on`. La syntaxe habituelle est:  \n",
+    "\n",
+    "`<tag on....=\"action()\"></tag>`  \n",
+    "\n",
+    "Dans cette écriture, `tag` est le nom d'une balise, le terme `on....` est l'événement et `action()` est une fonction qui traite l'événement (voir paragraphe suivant).  \n",
+    "On trouvera sur le site [W3Schools.com](https://www.w3schools.com/tags/ref_eventattributes.asp) une liste exhaustive des attributs d'événements."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Première application\n",
+    "\n",
+    "On dispose d'une page `exercice.html` (dans le dossier `fichiersTravail` puis `Exercices`) dans laquelle on souhaiterait:  \n",
+    "\n",
+    "1. rendre le lien soit actif (adresse du site: https://www.w3schools.com/)\n",
+    "2. que le lien réagisse à un clic en ouvrant un popup (*fenêtre surgissante*) qui indique 'Très bon choix !'. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Réaliser ces deux consignes</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Indications**: l'ouverture d'un popup (l'action à réaliser) se fait avec la méthode `alert()` à qui on passe le texte à afficher. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Comment modifier le traitement des événements?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Le langage utilisé\n",
+    "Le troisième langage incontournable du web est incontestablement **Javascript** (*autre dénomination ECMAScript*). Il est utilisé pour implémenter l'interactivité dans les pages web. Le programme de première NSI ne prévoit pas une étude approfondie de ce langage, aussi pour les curieux pourront visiter les excellentes adresses suivantes:\n",
+    "\n",
+    "* [Openclassrooms](https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript) (*en français*);\n",
+    "* [W3Schools](https://www.w3schools.com/js/default.asp) (*en anglais*)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Présentation de quelques exemples"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exemple 1: manipuler date et heure\n",
+    "Dans ce premier exemple simple, on souhaite afficher la date et l'heure si l'utilisateur clique sur le bouton."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Saisir et exécuter le code ci-dessous dans <a href=\"https://jsfiddle.net\">jsfiddle</a> ou avec VSCode + Chrome</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```html\n",
+    "<!DOCTYPE html>\n",
+    "<html lang=\"fr\">\n",
+    "<head>\n",
+    "    <meta charset=\"UTF-8\">\n",
+    "    <title>Exemple 1</title>\n",
+    "</head>\n",
+    "<body>\n",
+    "    <p>Pour afficher la date et l'heure, cliquer sur le bouton</p>\n",
+    "    <button onclick=\"alert('Nous sommes le : '+ Date())\">Quelle heure est-il?</button>\n",
+    "</body>\n",
+    "</html>\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Ici l'événement traité est le clic (*du bouton gauche*) de la souris sur le bouton. Lorsque cet événement se produit, la fonction `alert` qui permet d'afficher un message dans une fenêtre de type *popup*. Le message est concaténé ici avec l'objet `Date` de Javascript.  \n",
+    "\n",
+    "Les fonctions de traitement d'événements peuvent être beaucoup plus longue que dans ce premier exemple. **On évitera de passer tout le code dans l'attribut de l'élément comme dans cet exemple et on privilégiera une des méthodes traitées dans les prochains exemples**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exemple 2: utilisation de la balise script\n",
+    "On reprend le même exemple mais en déportant le traitement de l'événement `onclick` dans une fonction définie dans un élément `<script>`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Saisir et exécuter le code ci-dessous dans <a href=\"https://jsfiddle.net\">jsfiddle</a> ou avec VSCode + Chrome</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```html\n",
+    "<!DOCTYPE html>\n",
+    "<html lang=\"fr\">\n",
+    "<head>\n",
+    "    <meta charset=\"UTF-8\">\n",
+    "    <title>Exemple 2</title>\n",
+    "    <script defer>\n",
+    "        function displayDate() {\n",
+    "            alert('Nous sommes le: ' + Date());\n",
+    "        }\n",
+    "    </script>\n",
+    "</head>\n",
+    "<body>\n",
+    "    <p>Cliquer sur le bouton pour afficher la date et l'heure.</p>\n",
+    "    <button onclick=\"displayDate()\">Quelle heure est-il?</button>    \n",
+    "</body>\n",
+    "</html>\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "En Javascript une façon de déclarer une fonction est d'utiliser le mot clé `function` suivi d'un nom et d'éventuels paramètres entre parenthèses.  \n",
+    "L'attribut `defer` indique au navigateur de charger tous les éléments de la page avant d'exécuter le script. \n",
+    "\n",
+    "**Cette façon de procéder est acceptable**.  \n",
+    "***"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exemple 3: changer la couleur d'un paragraphe"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On considère le code de l'exemple 3 suivant:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```html\n",
+    "<!DOCTYPE html>\n",
+    "<html lang=\"fr\">\n",
+    "<head>\n",
+    "    <meta charset=\"UTF-8\">\n",
+    "    <title>Exemple 3</title>\n",
+    "    <script defer>\n",
+    "        function dblClic() {\n",
+    "            let paraCible = document.getElementById(\"para1\");\n",
+    "            paraCible.style.color = \"red\";\n",
+    "        }\n",
+    "    </script>\n",
+    "</head>\n",
+    "<body>\n",
+    "    <p id=\"para1\">Double-cliquer sur ce paragraphe pour changer la couleur.</p>\n",
+    "\n",
+    "    <p id=\"para2\">\n",
+    "        L'exercice <br>\n",
+    "        La fonction 'dblClic()' doit être appelée lorsque l'utilisateur double clique sur le paragraphe identifié par \"para1\"\n",
+    "        Cette fonction modifie la couleur du texte de ce paragraphe.\n",
+    "    </p>\n",
+    "</body>\n",
+    "</html>\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "On souhaiterait modifier l'élément `p` approprié de cette page de sorte que le texte du paragraphe 1 passe en rouge lorsque l'utilisateur double-clique dessus. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Saisir et exécuter le code ci-dessus dans <a href=\"https://jsfiddle.net\">jsfiddle</a> ou avec VSCode + Chrome et apporter les modifications nécessaires</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Un extrait de la documentation sur les attributs événementiels est donné ci-après:\n",
+    "\n",
+    "| Attribute    | Value  | Description                                                        |\n",
+    "|--------------|--------|--------------------------------------------------------------------|\n",
+    "| onclick      | script | Fires on a mouse click on the element                              |\n",
+    "| ondblclick   | script | Fires on a mouse double-click on the element                       |\n",
+    "| onmousedown  | script | Fires when a mouse button is pressed down on an element            |\n",
+    "| onmousemove  | script | Fires when the mouse pointer is moving while it is over an element |\n",
+    "| onmouseout   | script | Fires when the mouse pointer moves out of an element               |\n",
+    "| onmouseover  | script | Fires when the mouse pointer moves over an element                 |\n",
+    "| onmouseup    | script | Fires when a mouse button is released over an element              |\n",
+    "| onmousewheel | script | Deprecated. Use the onwheel attribute instead                      |\n",
+    "| onwheel      | script | Fires when the mouse wheel rolls up or down over an element        |\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exemple 4: code javascript déporté"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Une bonne pratique à adopter est de déporter le code javascript dans un fichier externe. Analysons le code HTML puis Javascript de la page `evenement.html` rencontrée plus haut.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">Ouvrir la page evenement.html avec Chrome avec sa console de développement web (F12)</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La gestion d'un clic sur le bouton est assurée par la ligne:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "`<button id=\"boutonSolution\" onclick=\"afficheMasque()\">Afficher solution</button>`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "L'évènement `onclick` est géré par l'appel de la fonction `afficheMasque()` qui est définie dans le fichier externe `script1.js`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*En complément: le code javascript de la fonction afficheMasque gérant le clic sur le bouton*.\n",
+    "\n",
+    "\n",
+    "```javascript\n",
+    "const afficheMasque = function () {\n",
+    "    // On utilise la propriété CSS visibility pour rendre visible ou pour masquer un élément\n",
+    "\n",
+    "    let sol = document.getElementById(\"solution1\")//sélection du bloc html contenant la solution \n",
+    "    let etatAffichage = getComputedStyle(sol, null)//détermination de sa propriété visible ou caché\n",
+    "\n",
+    "    let btn = document.getElementById(\"boutonSolution\")\n",
+    "    //sélection de l'élément bouton\n",
+    "\n",
+    "    if (etatAffichage.visibility == \"hidden\") {\n",
+    "        /*\n",
+    "        Si le bloc solution est caché, un clic le rendra visible;\n",
+    "        On change aussi le texte du bouton.\n",
+    "        */\n",
+    "        sol.style.visibility = \"visible\";\n",
+    "        btn.innerHTML = \"Cacher solution\"\n",
+    "    } else {\n",
+    "        /*\n",
+    "        Si le bloc solution est visible, un clic le rendra caché;\n",
+    "        On change aussi le texte du bouton.\n",
+    "        */\n",
+    "        sol.style.visibility = \"hidden\"; \n",
+    "        btn.innerHTML = \"Afficher solution\"\n",
+    "    }\n",
+    "}\n",
+    "```\n",
+    "En Javascript, les blocs d'instructions sont délimités par les accolades `{` et `}`. L'indentation n'est significative comme en python, cependant elle améliore la lisibilité du code.  \n",
+    "Les commentaires sont signalés par `//` ou la paire `/*`, `*/` selon qu'ils tiennent sur une ligne ou plusieurs lignes. Le mot clé `let` permet de déclarer des variables.  \n",
+    "Javascript est utilisé ici pour modifier les propriétés CSS du bloc `div` contenant la solution:  \n",
+    "`visibility = \"visible\"` ou `visibility = \"hidden\"`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "##### Alternative plus élégante\n",
+    "\n",
+    "Une deuxième façon de procéder (plus élégante) est de ne pas surcharger le code HTML avec l'attribut `onclick` mais de gérer l'évènement `click` dans un fichier Javascript (voir fichier `script2.js`) avec une définition du type:  \n",
+    "\n",
+    "```javascript\n",
+    "btn.addEventListener('click', (e) => {\n",
+    "...\n",
+    "});\n",
+    "```\n",
+    "\n",
+    "On indique ainsi que l'on *écoute* l'événement `click` sur le bouton ciblé par `btn`, et que lorsque le clic survient, on exécute le traitement approprié."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exercice 5: pour les plus curieux/rapides\n",
+    "\n",
+    "On souhaiterait modifier légèrement le code de la fonction `afficheMasque()` de manière à ce que même si l'utilisateur clique sur `Afficher solution` celle-ci soit automatiquement cachée au bout de 5 secondes.  \n",
+    "\n",
+    "On utilisera la méthode javascript `setTimeout` à qui on passera deux arguments: la fonction qui *cachera* le code à nouveau et le temps (*en millisecondes*) au bout duquel cette fonction sera exécutée. Typiquement, cette fonction sera appelée avec la syntaxe suivante:\n",
+    "\n",
+    "```javascript\n",
+    "const cacher = function () {\n",
+    "    ....\n",
+    "};\n",
+    "\n",
+    "setTimeout(cacher, 5000);\n",
+    "```\n",
+    "\n",
+    "On peut trouver des exemples sur [le site MDN](https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "----\n",
+    "**En résumé**\n",
+    "****\n",
+    "\n",
+    "Les principaux éléments d'interaction d'une page web sont:\n",
+    "\n",
+    "* les styles CSS;\n",
+    "* des éléments graphiques HTML comme des boutons, associés à des fonctions de traitements d'événements par le biais de leurs attributs.\n",
+    "\n",
+    "Les fonctions de traitements des événements sont codées en javascript. On déportera les codes javascript dans un fichier externe. Dans les cas simples, il s'agira de:\n",
+    "\n",
+    "* sélectionner un élément HTMl avec une méthode appropriée;\n",
+    "* modifier une propriété CSS de cet élément."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "*- 2021 - B. DARID*  \n",
+    "![logo](img/licence.png)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

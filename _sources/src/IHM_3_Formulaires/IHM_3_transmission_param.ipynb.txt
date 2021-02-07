@@ -1,0 +1,265 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres\n",
+    "====================================================="
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Formulaire dans une page web"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Qu'est-ce qu'un formulaire?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Les formulaires HTML sont des objets permettant l'interaction entre un utilisateur et un site web ou une application. Grâce à eux l'utilisateur d'envoyer des données au site web.  \n",
+    "La plupart du temps, ces données sont envoyées à des serveurs web mais la page peut aussi les intercepter et les utiliser elle-même comme nous le verrons dans le premier exemple.  \n",
+    "Les formulaires utilisent divers composants graphiques comme:  \n",
+    "\n",
+    "* des zones de saisie de texte;\n",
+    "* des cases à cocher;\n",
+    "* des listes déroulantes;\n",
+    "* des boutons;\n",
+    "* etc.\n",
+    "\n",
+    "L'élément HTML utilisé est l'élément `<form> ... </form>`. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Mise en oeuvre d'un premier formulaire HTML: syntaxe"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Le premier exemple choisi est celui d'un convertisseur de température des degrés Celcius vers le Kelvin ou les degrés Fahrenheit. Le fichier source est `convertisseur.html`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\">\n",
+    "    Ouvrir le fichier <em>convertisseur.html</em> dans Visual Studio Code afin de consulter le code source <strong>ET</strong> dans un navigateur.\n",
+    "</p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La saisie de la température est réalisée dans un formulaire. La portion de code concernée est la suivante:  \n",
+    "\n",
+    "```html\n",
+    "<form action=\"\">\n",
+    "        <label for=\"saisie\">Température en degré Celcius</label>\n",
+    "        <input type=\"text\" name=\"valeur\" id=\"saisie\" value=\"\">       \n",
+    "        <div id=\"units\">\n",
+    "            <label for=\"unites\">Choisir une unité</label>\n",
+    "            <select name=\"temp\" id=\"unites\">\n",
+    "                <option value=\"\">--Choisir une unité de conversion--</option>\n",
+    "                <option value=\"kelvin\">Kelvin</option>\n",
+    "                <option value=\"fahrenheit\">Fahrenheit</option>\n",
+    "            </select>\n",
+    "        </div>\n",
+    "        <input type=\"submit\" value=\"Convertir\">\n",
+    "</form>\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La balise `form` comporte souvent un attribut `action` qui indique la ressource qui va traiter les données du formulaire. Dans notre cas ce sera la page elle-même, par le biais d'un script annexe.  \n",
+    "\n",
+    "Notre formulaire est composé des éléments suivants:  \n",
+    "\n",
+    "* une zone de saisie de texte, repérée par l'élément `<input type=\"text\" ...>`;\n",
+    "* une liste déroulante avec une option à sélectionner, repérée par `<select> ... </select>`;\n",
+    "* un bouton pour soumettre les données, repéré par `<input type=\"submit\" ...>`.\n",
+    "\n",
+    "Il est très courant d'associer un *label* aux éléments d'un formulaire. La syntaxe est `<label for=\"...\"> ...</label>`. La valeur de l'attribut `for` correspond à la valeur de l'attribut `id` de l'élément de formulaire associé (*input, select, etc.*).  \n",
+    "\n",
+    "Enfin, l'élément `<div>` présent ne correspond pas à une entrée du formulaire. C'est ici un élément structurant dont l'identifiant sera utilisé en CSS.  \n",
+    "\n",
+    "Une documentation intéressantes est disponible [sur le site de la MDN](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Transmission de requêtes par méthode GET"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div>\n",
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\"> Ouvrir la page web située à http://xxx.xxx.xxx.xxx:8080/ dans Firefox, puis choisir \"Exemple 1 méthode GET\". \n",
+    "</p>\n",
+    "</div>\n",
+    "<div style=\"margin-top: 20px;\">\n",
+    "    <p>Ouvrir la console de développement en sélectionnnant <em>Inspecteur</em></p>\n",
+    "    <img src=\"img/inspecteur.png\" width=\"729\" heigth=\"42\" align=\"left\" alt=\"inspecteur\" />\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. En utilisant la console de développement, repérer la portion de code correspondant au formulaire présent sur cette page. Quelle est la principale différence avec le formulaire de l'exemple précédent?\n",
+    "2. Quitter l'Inspecteur et choisir Réseau.\n",
+    "3. Compléter le formulaire et valider. \n",
+    "4. Commentez. Observer notamment l'URL dans la barre d'adresse"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<hr style=\"height:2px;border-width:0;color:gray;background-color:gray;width:400px;\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "En utilisant la méthode GET dans un formulaire, le navigateur est en mesure d'envoyer des informations vers un serveur. Il procède de la manière suivante:  \n",
+    "\n",
+    "* pour chaque élément graphique, formation d'un couple `paramètre=valeur` où `paramètre` est la chaîne correspondant à l'attribut `name` et `valeur` la valeur saisie ou sélectionnée (ou cochée);\n",
+    "* formation d'une chaîne de caractères `param1=val1&param2=val2&...&param_n=val_n`, les couples paramètre-valeur sont séparés par le caractère `&`;\n",
+    "* formation de l'url: `http://xxx.xxx.xxx.xxx/page_traitement?param1=val1&param2=val2&...&param_n=val_n`.\n",
+    "\n",
+    "**Dans la méthode GET, les données sont transmises au serveur DANS L'URL et EN CLAIR.** Ce qui peut poser un gros problème de confidentialité (cas de mot de passe). Il faudra faire attention également au fait que l'URL a une taille limitée.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Transmission de requêtes par méthode POST "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div>\n",
+    "<img src=\"img/icone3.png\" align=\"left\" width=\"40\" height=\"40\" alt=\"icone\">\n",
+    "<p style=\"display:inline-block;padding-left: 1.5em;\"> Ouvrir la page web située à http://xxx.xxx.xxx.xxx:8080/ dans Firefox, puis choisir \"Exemple 2 méthode POST\". \n",
+    "</p>\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Compléter le formulaire et valider.\n",
+    "2. Les paramètres sont-ils présents dans l'URL?\n",
+    "3. Comment ont été transmis les paramètres? Indication: voir le détail de la première requête dans la console de développement."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<hr style=\"height:2px;border-width:0;color:gray;background-color:gray;width:400px;\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Dans la méthode POST, les paramètres sont passés **dans le corps de la requête**. Ils ne sont plus visibles dans l'URL.  \n",
+    "Cette méthode permet en outre, d'envoyer du contenu plus long."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Transmission chiffrée"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Un gros problème avec le protocole HTTP est que celui-ci manipule des données *en clair* et donc lisible de n'importe qui. C'est particulièrement problématique dans le cas de données confidentielles.  \n",
+    "Pour pallier à cette insuffisance, on a recours (*presque systématiquement maintenant, la majorité des serveurs l'impose*) à la version sécurisée: **HTTPS**. Le `s` de https signifie `secured`.  Une fois l'identitée du serveur confirmée, l'échange se poursuit de manière chiffrée.\n",
+    "\n",
+    "D'un point de vue pratique, on reconnait une connection sécurisée par la présence d'un cadenas à côté de l'URL.  \n",
+    "![https](img/https.png)\n",
+    "\n",
+    "On peut aussi consulter les détails d'échanges préliminaires de certificats avec un outil en ligne de commande.  \n",
+    "![handshake](img/handshake.png)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

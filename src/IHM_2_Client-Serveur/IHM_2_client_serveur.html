@@ -31,6 +31,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres" href="../IHM_3_Formulaires/IHM_3_transmission_param.html" />
     <link rel="prev" title="IHM_1_Interaction_web_Exercices" href="../IHM_1_Elements_interaction/IHM_1_Exercices.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,6 +144,9 @@
   </li>
   <li class="active">
     <a href="">INTERACTIONS CLIENT-SERVEUR: protocole HTTP</a>
+  </li>
+  <li class="">
+    <a href="../IHM_3_Formulaires/IHM_3_transmission_param.html">INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres</a>
   </li>
 </ul>
 </nav>
@@ -270,13 +274,13 @@ Côté serveur, on utilisera un programme léger écrit en Javascript (<em>Node.
 <h2>Analyse d’un échange<a class="headerlink" href="#analyse-d-un-echange" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="que-se-passe-t-il-apres-avoir-saisi-une-url">
 <h3>Que se passe-t-il après avoir saisi une URL?<a class="headerlink" href="#que-se-passe-t-il-apres-avoir-saisi-une-url" title="Permalink to this headline">¶</a></h3>
-<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
 <p style="display:inline-block;padding-left: 1.5em;">Ouvrir l'URL http://xxx.xxx.xxx.xxx:8080/ dans Firefox ainsi que la console de développement.</p><p><img alt="accueil" src="../../_images/accueil.png" /></p>
 <p><em>Rappel</em><br />
 L’URL est composée de la manière suivante: <strong>protocole://adresse-ou-nom/ressource</strong>. Le protocole est souvent HTTP (ou HTTPS); on écrit généralement un nom plutôt qu’une adresse (le DNS fait la conversion) et la ressource peut être une page HTML, un image, une vidéo etc.</p>
 <p>La partie haute de la console de développement liste les fichiers nécessaires à l’affichage de la page.<br />
 <img alt="requetes" src="../../_images/requetes.png" /></p>
-<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
 <p style="display:inline-block;padding-left: 1.5em;">Combien de requêtes sont nécessaires à l'affichage de la page '/' ? Quels types de fichiers sont demandés?</p><p>L’accès à une ressource se fait selon le protocole HTTP. Le détail de l’échange peut être suivi dans la console de développement.</p>
 <p>Pour afficher une page web le navigateur (client) réalise les opérations suivantes:</p>
 <ul class="simple">
@@ -291,7 +295,7 @@ L’URL est composée de la manière suivante: <strong>protocole://adresse-ou-no
 <p>La deuxième partie de la console détaille, entre autres, les requêtes du client (navigateur) envoyées au serveur. Une requête HTTP est composée d’une première ligne où figurent la <strong>méthode</strong>, le <strong>chemin</strong> de la ressource et la <strong>version du protocole</strong>. Ensuite, on trouve plusieurs lignes d’entête.<br />
 <img alt="http" src="../../_images/HTTP_Request_2.png" />
 On peut avoir une signification de chaque entête en cliquant sur le point d’interrogation associé (bouton <em>Texte brut</em> désactivé) dans la console de développement.</p>
-<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
 <p style="display:inline-block;padding-left: 1.5em;">Quel est le chemin de la ressource associée à la troisième requête lors de l'affichage de la page précdente?</p><p><img alt="requete3" src="../../_images/requetes3.png" /></p>
 <p>La méthode <em>GET</em> est utilisée pour récupérer une ressource. D’autres méthodes existent, on pourra consulter <a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode">cette page</a> pour avoir une liste complète. On utilisera notamment la méthode <em>POST</em> dans le prochain chapitre.</p>
 </div>
@@ -300,7 +304,7 @@ On peut avoir une signification de chaque entête en cliquant sur le point d’i
 <p>La première ligne contient la version du protocole, un code de retour et un message de retour. On trouve ensuite des ligne d’entête comme pour les requêtes.<br />
 <img alt="response" src="../../_images/HTTP_Response_2.png" /></p>
 <p>On pourra trouver à <a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/HTTP/Status">cette adresse</a>, les codes de réponse du protocole HTTP.</p>
-<img src="img/icone3.png" align="left" width="40" height="40" alt="icone">
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
 <p style="display:inline-block;padding-left: 1.5em;">Saisir l'URL <em>http://xxx.xxx.xxx.xxx:8080/Exercice</em> puis commentez la réponse du serveur.</p></div>
 </div>
 </div>
@@ -315,6 +319,7 @@ On peut avoir une signification de chaque entête en cliquant sur le point d’i
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../IHM_1_Elements_interaction/IHM_1_Exercices.html" title="previous page">IHM_1_Interaction_web_Exercices</a>
+    <a class='right-next' id="next-link" href="../IHM_3_Formulaires/IHM_3_transmission_param.html" title="next page">INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

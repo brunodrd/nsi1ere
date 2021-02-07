@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres &#8212; Spécialité NSI 1ère</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="INTERACTIONS CLIENT-SERVEUR: protocole HTTP" href="../IHM_2_Client-Serveur/IHM_2_client_serveur.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_LBO.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Spécialité NSI 1ère</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../intro.html">NUMERIQUE & SCIENCE INFORMATIQUE - 1ERE</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1.html">ARCHITECTURE DES ORDINATEURS - MODELE DE VON NEUMANN</a>
+  </li>
+  <li class="">
+    <a href="../Architecture_partie_1_exercices.html">ARCHITECTURE 1 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../systeme_exploitation.html">SYSTEME D’EXPLOITATION</a>
+  </li>
+  <li class="">
+    <a href="../Langage.html">Langage - Constructions élémentaires</a>
+  </li>
+  <li class="">
+    <a href="../langage_exercices_1309.html">Eléments du langage - exercices</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions.html">Les fonctions</a>
+  </li>
+  <li class="">
+    <a href="../Fonctions_exercices.html">S’approprier les fonctions - exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/Representation_information.html">TRAVAILLER EN BASE 2, 10 ET 16</a>
+  </li>
+  <li class="">
+    <a href="../RD1_Repr-bin-hexa/repr_information_Exercices.html">Représentation de l’information - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Expressions_booleennes.html">Expressions booléennes</a>
+  </li>
+  <li class="">
+    <a href="../RD_3_Expressions_booleennes/Exercices_logiques.html">Exercices de logique booléenne</a>
+  </li>
+  <li class="">
+    <a href="../RD_2_Codage_entiers_relatifs/Entiers_relatifs.html">Encodage des entiers relatifs</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Codage_decimaux.html">CODAGE DES NOMBRES DECIMAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_4_codage_reels/Nombres_flottants.html">Exercices: Codage des nombres décimaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/EncodageTexte.html">REPRESENTATION DE TEXTE</a>
+  </li>
+  <li class="">
+    <a href="../RD_5_Encodage_texte/Encodage_Texte-Exercices.html">Exercices - Encodage de texte</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Types_construits_1.html">TYPES CONSTRUITS - TABLEAUX</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC1_tableau/Tableaux_Exercices.html">Exercices & correction - Les tableaux</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_suite.html">D’AUTRES TYPES CONSTRUITS</a>
+  </li>
+  <li class="">
+    <a href="../RD_TC2_tab-comprehension/Types_construits_Exercices.html">Types construits - Exercices</a>
+  </li>
+  <li class="">
+    <a href="../IHM_0_Bases/IHM_0_Les_Bases.html">HTML5 & CSS3: LES BASES</a>
+  </li>
+  <li class="">
+    <a href="../IHM_0_Bases/IHM_0_Exercices.html">HTML5 & CSS3 - EXERCICES</a>
+  </li>
+  <li class="">
+    <a href="../IHM_1_Elements_interaction/IHM_1_interaction_web.html">ELEMENTS D’INTERACTION DANS UNE PAGE WEB</a>
+  </li>
+  <li class="">
+    <a href="../IHM_1_Elements_interaction/IHM_1_Exercices.html">IHM_1_Interaction_web_Exercices</a>
+  </li>
+  <li class="">
+    <a href="../IHM_2_Client-Serveur/IHM_2_client_serveur.html">INTERACTIONS CLIENT-SERVEUR: protocole HTTP</a>
+  </li>
+  <li class="active">
+    <a href="">INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/src/IHM_3_Formulaires/IHM_3_transmission_param.ipynb.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.ipynb</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Edit this page -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+            <div class="dropdown-buttons">
+                
+                <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/IHM_3_Formulaires/IHM_3_transmission_param.ipynb"><button type="button" class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip" data-placement="left"><img class="binder-button-logo" src="../../_static/images/logo_binder.svg" alt="Interact on binder">Binder</button></a>
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#formulaire-dans-une-page-web" class="nav-link">Formulaire dans une page web</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#qu-est-ce-qu-un-formulaire" class="nav-link">Qu’est-ce qu’un formulaire?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#mise-en-oeuvre-d-un-premier-formulaire-html-syntaxe" class="nav-link">Mise en oeuvre d’un premier formulaire HTML: syntaxe</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#transmission-de-requetes-par-methode-get" class="nav-link">Transmission de requêtes par méthode GET</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#transmission-de-requetes-par-methode-post" class="nav-link">Transmission de requêtes par méthode POST</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#transmission-chiffree" class="nav-link">Transmission chiffrée</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="interactions-client-serveur-transmission-de-parametres">
+<h1>INTERACTIONS CLIENT-SERVEUR: Transmission de paramètres<a class="headerlink" href="#interactions-client-serveur-transmission-de-parametres" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="formulaire-dans-une-page-web">
+<h2>Formulaire dans une page web<a class="headerlink" href="#formulaire-dans-une-page-web" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="qu-est-ce-qu-un-formulaire">
+<h3>Qu’est-ce qu’un formulaire?<a class="headerlink" href="#qu-est-ce-qu-un-formulaire" title="Permalink to this headline">¶</a></h3>
+<p>Les formulaires HTML sont des objets permettant l’interaction entre un utilisateur et un site web ou une application. Grâce à eux l’utilisateur d’envoyer des données au site web.<br />
+La plupart du temps, ces données sont envoyées à des serveurs web mais la page peut aussi les intercepter et les utiliser elle-même comme nous le verrons dans le premier exemple.<br />
+Les formulaires utilisent divers composants graphiques comme:</p>
+<ul class="simple">
+<li><p>des zones de saisie de texte;</p></li>
+<li><p>des cases à cocher;</p></li>
+<li><p>des listes déroulantes;</p></li>
+<li><p>des boutons;</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>L’élément HTML utilisé est l’élément <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/form&gt;</span></code>.</p>
+</div>
+<div class="section" id="mise-en-oeuvre-d-un-premier-formulaire-html-syntaxe">
+<h3>Mise en oeuvre d’un premier formulaire HTML: syntaxe<a class="headerlink" href="#mise-en-oeuvre-d-un-premier-formulaire-html-syntaxe" title="Permalink to this headline">¶</a></h3>
+<p>Le premier exemple choisi est celui d’un convertisseur de température des degrés Celcius vers le Kelvin ou les degrés Fahrenheit. Le fichier source est <code class="docutils literal notranslate"><span class="pre">convertisseur.html</span></code>.</p>
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;">
+    Ouvrir le fichier <em>convertisseur.html</em> dans Visual Studio Code afin de consulter le code source <strong>ET</strong> dans un navigateur.
+</p><p>La saisie de la température est réalisée dans un formulaire. La portion de code concernée est la suivante:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span><span class="p">&gt;</span>Température en degré Celcius<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;valeur&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>       
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;units&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;unites&quot;</span><span class="p">&gt;</span>Choisir une unité<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;temp&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;unites&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>--Choisir une unité de conversion--<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;kelvin&quot;</span><span class="p">&gt;</span>Kelvin<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;fahrenheit&quot;</span><span class="p">&gt;</span>Fahrenheit<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Convertir&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>La balise <code class="docutils literal notranslate"><span class="pre">form</span></code> comporte souvent un attribut <code class="docutils literal notranslate"><span class="pre">action</span></code> qui indique la ressource qui va traiter les données du formulaire. Dans notre cas ce sera la page elle-même, par le biais d’un script annexe.</p>
+<p>Notre formulaire est composé des éléments suivants:</p>
+<ul class="simple">
+<li><p>une zone de saisie de texte, repérée par l’élément <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;text&quot;</span> <span class="pre">...&gt;</span></code>;</p></li>
+<li><p>une liste déroulante avec une option à sélectionner, repérée par <code class="docutils literal notranslate"><span class="pre">&lt;select&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/select&gt;</span></code>;</p></li>
+<li><p>un bouton pour soumettre les données, repéré par <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=&quot;submit&quot;</span> <span class="pre">...&gt;</span></code>.</p></li>
+</ul>
+<p>Il est très courant d’associer un <em>label</em> aux éléments d’un formulaire. La syntaxe est <code class="docutils literal notranslate"><span class="pre">&lt;label</span> <span class="pre">for=&quot;...&quot;&gt;</span> <span class="pre">...&lt;/label&gt;</span></code>. La valeur de l’attribut <code class="docutils literal notranslate"><span class="pre">for</span></code> correspond à la valeur de l’attribut <code class="docutils literal notranslate"><span class="pre">id</span></code> de l’élément de formulaire associé (<em>input, select, etc.</em>).</p>
+<p>Enfin, l’élément <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> présent ne correspond pas à une entrée du formulaire. C’est ici un élément structurant dont l’identifiant sera utilisé en CSS.</p>
+<p>Une documentation intéressantes est disponible <a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">sur le site de la MDN</a>.</p>
+</div>
+</div>
+<div class="section" id="transmission-de-requetes-par-methode-get">
+<h2>Transmission de requêtes par méthode GET<a class="headerlink" href="#transmission-de-requetes-par-methode-get" title="Permalink to this headline">¶</a></h2>
+<div>
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;"> Ouvrir la page web située à http://xxx.xxx.xxx.xxx:8080/ dans Firefox, puis choisir "Exemple 1 méthode GET". 
+</p>
+</div>
+<div style="margin-top: 20px;">
+    <p>Ouvrir la console de développement en sélectionnnant <em>Inspecteur</em></p>
+    <img src="../../_images/inspecteur.png" width="729" heigth="42" align="left" alt="inspecteur" />
+</div><ol class="simple">
+<li><p>En utilisant la console de développement, repérer la portion de code correspondant au formulaire présent sur cette page. Quelle est la principale différence avec le formulaire de l’exemple précédent?</p></li>
+<li><p>Quitter l’Inspecteur et choisir Réseau.</p></li>
+<li><p>Compléter le formulaire et valider.</p></li>
+<li><p>Commentez. Observer notamment l’URL dans la barre d’adresse</p></li>
+</ol>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray;width:400px;"><p>En utilisant la méthode GET dans un formulaire, le navigateur est en mesure d’envoyer des informations vers un serveur. Il procède de la manière suivante:</p>
+<ul class="simple">
+<li><p>pour chaque élément graphique, formation d’un couple <code class="docutils literal notranslate"><span class="pre">paramètre=valeur</span></code> où <code class="docutils literal notranslate"><span class="pre">paramètre</span></code> est la chaîne correspondant à l’attribut <code class="docutils literal notranslate"><span class="pre">name</span></code> et <code class="docutils literal notranslate"><span class="pre">valeur</span></code> la valeur saisie ou sélectionnée (ou cochée);</p></li>
+<li><p>formation d’une chaîne de caractères <code class="docutils literal notranslate"><span class="pre">param1=val1&amp;param2=val2&amp;...&amp;param_n=val_n</span></code>, les couples paramètre-valeur sont séparés par le caractère <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>;</p></li>
+<li><p>formation de l’url: <code class="docutils literal notranslate"><span class="pre">http://xxx.xxx.xxx.xxx/page_traitement?param1=val1&amp;param2=val2&amp;...&amp;param_n=val_n</span></code>.</p></li>
+</ul>
+<p><strong>Dans la méthode GET, les données sont transmises au serveur DANS L’URL et EN CLAIR.</strong> Ce qui peut poser un gros problème de confidentialité (cas de mot de passe). Il faudra faire attention également au fait que l’URL a une taille limitée.</p>
+</div>
+<div class="section" id="transmission-de-requetes-par-methode-post">
+<h2>Transmission de requêtes par méthode POST<a class="headerlink" href="#transmission-de-requetes-par-methode-post" title="Permalink to this headline">¶</a></h2>
+<div>
+<img src="../../_images/icone3.png" align="left" width="40" height="40" alt="icone">
+<p style="display:inline-block;padding-left: 1.5em;"> Ouvrir la page web située à http://xxx.xxx.xxx.xxx:8080/ dans Firefox, puis choisir "Exemple 2 méthode POST". 
+</p>
+</div><ol class="simple">
+<li><p>Compléter le formulaire et valider.</p></li>
+<li><p>Les paramètres sont-ils présents dans l’URL?</p></li>
+<li><p>Comment ont été transmis les paramètres? Indication: voir le détail de la première requête dans la console de développement.</p></li>
+</ol>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray;width:400px;"><p>Dans la méthode POST, les paramètres sont passés <strong>dans le corps de la requête</strong>. Ils ne sont plus visibles dans l’URL.<br />
+Cette méthode permet en outre, d’envoyer du contenu plus long.</p>
+</div>
+<div class="section" id="transmission-chiffree">
+<h2>Transmission chiffrée<a class="headerlink" href="#transmission-chiffree" title="Permalink to this headline">¶</a></h2>
+<p>Un gros problème avec le protocole HTTP est que celui-ci manipule des données <em>en clair</em> et donc lisible de n’importe qui. C’est particulièrement problématique dans le cas de données confidentielles.<br />
+Pour pallier à cette insuffisance, on a recours (<em>presque systématiquement maintenant, la majorité des serveurs l’impose</em>) à la version sécurisée: <strong>HTTPS</strong>. Le <code class="docutils literal notranslate"><span class="pre">s</span></code> de https signifie <code class="docutils literal notranslate"><span class="pre">secured</span></code>.  Une fois l’identitée du serveur confirmée, l’échange se poursuit de manière chiffrée.</p>
+<p>D’un point de vue pratique, on reconnait une connection sécurisée par la présence d’un cadenas à côté de l’URL.<br />
+<img alt="https" src="../../_images/https.png" /></p>
+<p>On peut aussi consulter les détails d’échanges préliminaires de certificats avec un outil en ligne de commande.<br />
+<img alt="handshake" src="../../_images/handshake.png" /></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../IHM_2_Client-Serveur/IHM_2_client_serveur.html" title="previous page">INTERACTIONS CLIENT-SERVEUR: protocole HTTP</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bruno DARID<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
